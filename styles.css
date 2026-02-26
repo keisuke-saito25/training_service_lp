@@ -1793,13 +1793,14 @@ img {
     background: var(--accent-gradient);
 }
 
-.footer-content {
+.footer-content,
+.footer-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 24px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    margin-bottom: 20px;
 }
 
 .footer-logo {
@@ -1827,6 +1828,36 @@ img {
 
 .footer-links a:hover {
     color: #fff;
+}
+
+.footer-company {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 48px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    margin-bottom: 20px;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-company .footer-company-item {
+    display: flex;
+    gap: 12px;
+    font-size: 0.78rem;
+    align-items: baseline;
+}
+
+.footer-dt {
+    color: rgba(255, 255, 255, 0.35);
+    font-weight: 600;
+    white-space: nowrap;
+    min-width: 56px;
+}
+
+.footer-dd {
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .footer-copy {
@@ -2401,10 +2432,11 @@ img {
         padding: 24px;
     }
 
-    /* 繝輔ャ繧ｿ繝ｼ */
-    .footer-content {
+    /* フッター */
+    .footer-content,
+    .footer-top {
         flex-direction: column;
-        gap: 24px;
+        gap: 16px;
         text-align: center;
     }
 
@@ -2412,6 +2444,18 @@ img {
         flex-direction: column;
         gap: 12px;
         align-items: center;
+    }
+
+    .footer-company {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+
+    .footer-company .footer-company-item {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 2px;
     }
 
     /* 菫｡鬆ｼ繝舌・ */
@@ -3150,14 +3194,16 @@ img {
 }
 
 @media (max-width: 480px) {
+    .cta-certificate .curriculum-certificate-inner {
+        flex-direction: column;
+        text-align: center;
+        padding: 18px;
+        gap: 16px;
+    }
+
     .cta-certificate .curriculum-certificate-img {
         flex: none;
         width: 100px;
-    }
-
-    .cta-certificate .curriculum-certificate-inner {
-        padding: 18px;
-        gap: 16px;
     }
 }
 
@@ -3358,36 +3404,6 @@ details[open]>.legal-title {
 
 .form-privacy-link:hover {
     opacity: 0.8;
-}
-
-/* フッター運営会社情報（インライン） */
-.footer-company-info {
-    padding-top: 20px;
-    margin-top: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.footer-company-dl {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px 32px;
-    justify-content: center;
-}
-
-.footer-company-item {
-    display: flex;
-    gap: 8px;
-    font-size: 0.75rem;
-}
-
-.footer-company-item dt {
-    color: rgba(255, 255, 255, 0.4);
-    font-weight: 600;
-    white-space: nowrap;
-}
-
-.footer-company-item dd {
-    color: rgba(255, 255, 255, 0.6);
 }
 
 @media (max-width: 480px) {

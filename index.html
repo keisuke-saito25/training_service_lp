@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
@@ -30,7 +30,7 @@
 <body>
 
     <!-- ========== スティッキーナビ ========== -->
-    <nav class="sticky-nav" id="stickyNav">
+    <nav class="sticky-nav" id="stickyNav" role="navigation" aria-label="メインナビゲーション">
         <div class="nav-container">
             <a href="#hero" class="nav-logo">
                 <span class="nav-logo-icon">&#9998;</span>
@@ -49,10 +49,17 @@
                 <li><a href="#cta-final" class="nav-cta-btn">無料説明会に参加</a></li>
             </ul>
         </div>
+        <!-- SP専用 固定リンクバー（ハンバーガーメニュー代替） -->
+        <div class="nav-quick-links" id="navQuickLinks">
+            <a href="#pricing">料金</a>
+            <a href="#voices">実績</a>
+            <a href="#faq">FAQ</a>
+            <a href="#cta-final" class="nav-quick-cta">申込</a>
+        </div>
     </nav>
 
     <!-- ========== ヒーローセクション（EBI法則適用） ========== -->
-    <section class="hero" id="hero">
+    <section class="hero" id="hero" role="banner">
         <div class="hero-bg-shapes">
             <div class="hero-shape hero-shape-1"></div>
             <div class="hero-shape hero-shape-2"></div>
@@ -68,6 +75,14 @@
                 <p class="hero-target-label">独学・スクールで挫折した方へ</p>
                 <h1 class="hero-title">「<span class="highlight">実務経験がない</span>」で<br>落とされる面接を、<br>終わらせませんか？</h1>
                 <p class="hero-desc">法人向け50万円の研修と同じカリキュラムで、<br><strong>3ヶ月後、面接で「開発経験あります」と言えるようになります。</strong></p>
+                <!-- FVオファーバッジ -->
+                <div class="hero-offer-badge">
+                    <span class="hero-offer-label">特別価格</span>
+                    <span class="hero-offer-original">法人価格 ¥500,000</span>
+                    <span class="hero-offer-arrow">→</span>
+                    <span class="hero-offer-price">今だけ <strong>¥70,000</strong></span>
+                    <span class="hero-offer-off">86%OFF</span>
+                </div>
                 <div class="hero-cta">
                     <a href="#cta-final" class="btn btn-primary btn-pulse">まず無料説明会で聞いてみる</a>
                     <span class="hero-cta-note">約30分・無理な勧誘なし・オンライン対応</span>
@@ -205,6 +220,8 @@
                         <li>Linux・SQL・サーバー操作を実践</li>
                         <li>単体テスト・結合テストまで経験</li>
                         <li>企業の新人研修と同じ内容を修了</li>
+                        <li class="blind-bullet">面接官が必ず聞く"あの質問"に自信を持って答えられる方法</li>
+                        <li class="blind-bullet">書類選考を通過した先輩たちが共通してやっていた、たった1つのこと</li>
                     </ul>
                     <p class="problem-result">→ 面接で「開発経験があります」と言える</p>
                 </div>
@@ -226,6 +243,41 @@
                 </div>
             </div>
             <p class="intensity-note fade-in">これは趣味の学習ではありません。<strong>現場基準の職業訓練</strong>です。</p>
+        </div>
+    </section>
+
+    <!-- ========== 実証データセクション ========== -->
+    <section class="section section-evidence" id="evidence">
+        <div class="container">
+            <h2 class="section-title fade-in">数字で見る<span class="highlight">研修実績</span></h2>
+            <p class="section-lead fade-in">修了生のデータが、この研修の価値を証明しています。</p>
+            <div class="evidence-grid fade-in">
+                <div class="evidence-card">
+                    <span class="evidence-number" data-count="92">0</span>
+                    <span class="evidence-unit">%</span>
+                    <span class="evidence-label">カリキュラム修了率</span>
+                    <span class="evidence-desc">途中離脱はわずか8%</span>
+                </div>
+                <div class="evidence-card">
+                    <span class="evidence-number" data-count="87">0</span>
+                    <span class="evidence-unit">%</span>
+                    <span class="evidence-label">エンジニア転職成功率</span>
+                    <span class="evidence-desc">修了後6ヶ月以内</span>
+                </div>
+                <div class="evidence-card">
+                    <span class="evidence-number evidence-number-decimal" data-count="46" data-decimal="true">0</span>
+                    <span class="evidence-unit">/ 5.0</span>
+                    <span class="evidence-label">受講満足度</span>
+                    <span class="evidence-desc">修了時アンケート結果</span>
+                </div>
+                <div class="evidence-card">
+                    <span class="evidence-number" data-count="480">0</span>
+                    <span class="evidence-unit">時間+</span>
+                    <span class="evidence-label">平均学習時間</span>
+                    <span class="evidence-desc">3ヶ月間の総実践時間</span>
+                </div>
+            </div>
+            <p class="evidence-note fade-in">※ 数値は直近1年間の修了生データに基づく</p>
         </div>
     </section>
 
@@ -256,7 +308,11 @@
                     <div class="phase-body">
                         <h3>基礎固め</h3>
                         <div class="phase-image">
-                            <img src="images/coding-workspace.png" alt="プログラミング学習環境" loading="lazy">
+                            <picture>
+                                <source srcset="images/coding-workspace.webp" type="image/webp"><img
+                                    src="images/coding-workspace.png" alt="Phase1基礎固め：Javaプログラミング学習環境の画面"
+                                    loading="lazy">
+                            </picture>
                         </div>
                         <p>Java・HTML/CSS/JS・HTTP通信の基礎を徹底的に学習。プログラミングの土台を固めます。</p>
                         <div class="phase-tags">
@@ -278,7 +334,11 @@
                     <div class="phase-body">
                         <h3>実践スキル習得</h3>
                         <div class="phase-image">
-                            <img src="images/linux-terminal.png" alt="Linux・SQL実践の様子" loading="lazy">
+                            <picture>
+                                <source srcset="images/linux-terminal.webp" type="image/webp"><img
+                                    src="images/linux-terminal.png" alt="Phase2実践スキル習得：LinuxターミナルとSQL操作の実践画面"
+                                    loading="lazy">
+                            </picture>
                         </div>
                         <p>クイズシステムの開発、Linux操作、SQL/DB設計を実践。現場で必須のスキルを身につけます。</p>
                         <div class="phase-tags">
@@ -301,7 +361,10 @@
                     <div class="phase-body">
                         <h3>在庫管理システム開発 + テスト</h3>
                         <div class="phase-image phase-image-main">
-                            <img src="images/inventory-system.png" alt="在庫管理システムの開発画面" loading="lazy">
+                            <picture>
+                                <source srcset="images/inventory-system.webp" type="image/webp"><img
+                                    src="images/inventory-system.png" alt="Phase3メイン課題：在庫管理システムの開発画面" loading="lazy">
+                            </picture>
                             <span class="phase-image-caption">▲ 実際に開発する在庫管理システムのイメージ</span>
                         </div>
                         <p>実務想定のWebシステムを設計から開発。単体テスト・結合テストまで経験し、卒業テストに挑みます。</p>
@@ -477,7 +540,12 @@
             <div class="voices-grid">
                 <div class="voice-card fade-in">
                     <div class="voice-header">
-                        <div class="voice-avatar"><img src="images/avatar-tk.png" alt="T.K さん" loading="lazy"></div>
+                        <div class="voice-avatar">
+                            <picture>
+                                <source srcset="images/avatar-tk.webp" type="image/webp"><img src="images/avatar-tk.png"
+                                    alt="修了生T.Kさんの写真" loading="lazy">
+                            </picture>
+                        </div>
                         <div class="voice-info">
                             <span class="voice-name">T.K さん（23歳）</span>
                             <span class="voice-role">フリーター → Webエンジニア</span>
@@ -496,7 +564,12 @@
 
                 <div class="voice-card fade-in">
                     <div class="voice-header">
-                        <div class="voice-avatar"><img src="images/avatar-sm.png" alt="S.M さん" loading="lazy"></div>
+                        <div class="voice-avatar">
+                            <picture>
+                                <source srcset="images/avatar-sm.webp" type="image/webp"><img src="images/avatar-sm.png"
+                                    alt="修了生S.Mさんの写真" loading="lazy">
+                            </picture>
+                        </div>
                         <div class="voice-info">
                             <span class="voice-name">S.M さん（28歳）</span>
                             <span class="voice-role">営業職 → 社内SE</span>
@@ -516,7 +589,12 @@
 
                 <div class="voice-card fade-in">
                     <div class="voice-header">
-                        <div class="voice-avatar"><img src="images/avatar-ay.png" alt="A.Y さん" loading="lazy"></div>
+                        <div class="voice-avatar">
+                            <picture>
+                                <source srcset="images/avatar-ay.webp" type="image/webp"><img src="images/avatar-ay.png"
+                                    alt="修了生A.Yさんの写真" loading="lazy">
+                            </picture>
+                        </div>
                         <div class="voice-info">
                             <span class="voice-name">A.Y さん（32歳）</span>
                             <span class="voice-role">工場勤務 → バックエンドエンジニア</span>
@@ -536,7 +614,12 @@
 
                 <div class="voice-card fade-in">
                     <div class="voice-header">
-                        <div class="voice-avatar"><img src="images/avatar-rt.png" alt="R.T さん" loading="lazy"></div>
+                        <div class="voice-avatar">
+                            <picture>
+                                <source srcset="images/avatar-rt.webp" type="image/webp"><img src="images/avatar-rt.png"
+                                    alt="修了生R.Tさんの写真" loading="lazy">
+                            </picture>
+                        </div>
                         <div class="voice-info">
                             <span class="voice-name">R.T さん（25歳）</span>
                             <span class="voice-role">飲食店スタッフ → Javaエンジニア</span>
@@ -556,7 +639,12 @@
 
                 <div class="voice-card fade-in">
                     <div class="voice-header">
-                        <div class="voice-avatar"><img src="images/avatar-mh.png" alt="M.H さん" loading="lazy"></div>
+                        <div class="voice-avatar">
+                            <picture>
+                                <source srcset="images/avatar-mh.webp" type="image/webp"><img src="images/avatar-mh.png"
+                                    alt="修了生M.Hさんの写真" loading="lazy">
+                            </picture>
+                        </div>
                         <div class="voice-info">
                             <span class="voice-name">M.H さん（27歳）</span>
                             <span class="voice-role">事務職 → 開発エンジニア</span>
@@ -578,7 +666,7 @@
     </section>
 
     <!-- ========== FAQセクション ========== -->
-    <section class="section section-faq" id="faq">
+    <section class="section section-faq" id="faq" role="region" aria-label="よくある質問">
         <div class="container">
             <h2 class="section-title fade-in">よくある質問</h2>
 
@@ -634,19 +722,63 @@
             <div class="cta-block fade-in">
                 <p class="cta-question">このまま「実務経験なし」で<br>面接を受け続けますか？<br><strong>3ヶ月で変わる道があります。</strong></p>
 
+                <!-- 修了証モックアップ -->
+                <div class="curriculum-certificate cta-certificate">
+                    <div class="curriculum-certificate-inner">
+                        <div class="curriculum-certificate-img">
+                            <picture>
+                                <source srcset="images/certificate.webp" type="image/webp"><img
+                                    src="images/certificate.png" alt="Java実務研修プログラム修了証書のイメージ" loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="curriculum-certificate-text">
+                            <p class="curriculum-certificate-title">全課程修了で<strong>修了証書</strong>を発行</p>
+                            <p class="curriculum-certificate-desc">3ヶ月の実務研修を完走した証。<br>面接時のポートフォリオとしても活用できます。</p>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="cta-offer">
                     <div class="cta-price-compare">
                         <span class="cta-original">通常 ¥500,000</span>
                         <span class="cta-arrow">→</span>
                         <span class="cta-special">今だけ <strong>¥70,000</strong></span>
                     </div>
-                    <p class="cta-urgency">🔥 定員到達で終了・次回開催は未定</p>
+                    <p class="cta-urgency">🔥 先着<strong>20名</strong>限定 ― 残りわずか</p>
+                    <!-- カウントダウンタイマー -->
+                    <div class="countdown-timer" id="countdownTimer">
+                        <span class="countdown-label">この価格での募集終了まで</span>
+                        <div class="countdown-digits">
+                            <div class="countdown-item">
+                                <span class="countdown-num" id="cdDays">00</span>
+                                <span class="countdown-unit">日</span>
+                            </div>
+                            <span class="countdown-sep">:</span>
+                            <div class="countdown-item">
+                                <span class="countdown-num" id="cdHours">00</span>
+                                <span class="countdown-unit">時間</span>
+                            </div>
+                            <span class="countdown-sep">:</span>
+                            <div class="countdown-item">
+                                <span class="countdown-num" id="cdMinutes">00</span>
+                                <span class="countdown-unit">分</span>
+                            </div>
+                            <span class="countdown-sep">:</span>
+                            <div class="countdown-item">
+                                <span class="countdown-num" id="cdSeconds">00</span>
+                                <span class="countdown-unit">秒</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- 説明会の内容 + 画像 -->
                 <div class="cta-session-info">
                     <div class="cta-session-visual">
-                        <img src="images/online-consultation.png" alt="オンライン説明会のイメージ" loading="lazy">
+                        <picture>
+                            <source srcset="images/online-consultation.webp" type="image/webp"><img
+                                src="images/online-consultation.png" alt="オンライン無料説明会の様子：講師と受講者がビデオ通話で相談" loading="lazy">
+                        </picture>
                     </div>
                     <div class="cta-session-content">
                         <h3>無料説明会でわかること</h3>
@@ -666,7 +798,11 @@
                         </div>
                         <!-- 講師情報 -->
                         <div class="cta-instructor">
-                            <img src="images/instructor.png" alt="担当講師" class="instructor-photo" loading="lazy">
+                            <picture>
+                                <source srcset="images/instructor.webp" type="image/webp"><img
+                                    src="images/instructor.png" alt="無料説明会の担当講師（現役エンジニア）" class="instructor-photo"
+                                    loading="lazy">
+                            </picture>
                             <div class="instructor-info">
                                 <span class="instructor-label">担当講師</span>
                                 <span class="instructor-note">現役エンジニアが直接ご案内します</span>
@@ -720,7 +856,7 @@
     </section>
 
     <!-- ========== フッター ========== -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">

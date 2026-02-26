@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initFAQ();
     initStepForm();
     initCountUp();
+    initCountdown();
+    initEvidenceCountUp();
 });
 
 /* ----- スティッキーナビ ----- */
@@ -176,6 +178,101 @@ function animateCount(el, target) {
             requestAnimationFrame(update);
         } else {
             el.textContent = target;
+        }
+    }
+
+    requestAnimationFrame(update);
+}
+
+/* ----- カウントダウンタイマー ----- */
+function initCountdown() {
+    const timer = document.getElementById('countdownTimer');
+    if (!timer) return;
+
+    // 月末の23:59:59を締切とする
+    function getDeadline() {
+        const now = new Date();
+        const lastDay = new Date(now.getFullYear(), now.getMonth() + 1, 0, 23, 59, 59);
+        return lastDay;
+    }
+
+    const deadline = getDeadline();
+
+    function update() {
+        const now = new Date();
+        const diff = deadline - now;
+
+        if (diff <= 0) {
+            document.getElementById('cdDays').textContent = '00';
+            document.getElementById('cdHours').textContent = '00';
+            document.getElementById('cdMinutes').textContent = '00';
+            document.getElementById('cdSeconds').textContent = '00';
+            return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        document.getElementById('cdDays').textContent = String(days).padStart(2, '0');
+        document.getElementById('cdHours').textContent = String(hours).padStart(2, '0');
+        document.getElementById('cdMinutes').textContent = String(minutes).padStart(2, '0');
+        document.getElementById('cdSeconds').textContent = String(seconds).padStart(2, '0');
+    }
+
+    update();
+    setInterval(update, 1000);
+}
+
+/* ----- 実証データカウントアップ ----- */
+function initEvidenceCountUp() {
+    const counters = document.querySelectorAll('.evidence-number[data-count]');
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const target = parseInt(el.getAttribute('data-count'), 10);
+                    const isDecimal = el.getAttribute('data-decimal') === 'true';
+                    animateEvidenceCount(el, target, isDecimal);
+                    observer.unobserve(el);
+                }
+            });
+        },
+        { threshold: 0.5 }
+    );
+
+    counters.forEach(counter => observer.observe(counter));
+}
+
+function animateEvidenceCount(el, target, isDecimal) {
+    const duration = 1800;
+    const startTime = performance.now();
+
+    function update(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+
+        // easeOutCubic
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = Math.round(eased * target);
+
+        if (isDecimal) {
+            el.textContent = (current / 10).toFixed(1);
+        } else {
+            el.textContent = current;
+        }
+
+        if (progress < 1) {
+            requestAnimationFrame(update);
+        } else {
+            if (isDecimal) {
+                el.textContent = (target / 10).toFixed(1);
+            } else {
+                el.textContent = target;
+            }
         }
     }
 

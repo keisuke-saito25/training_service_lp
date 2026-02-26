@@ -3113,17 +3113,25 @@ img {
 .cta-certificate {
     margin-top: 0;
     margin-bottom: 32px;
-    max-width: 500px;
+    max-width: 480px;
 }
 
 .cta-certificate .curriculum-certificate-inner {
     background: rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(10px);
     border-color: rgba(255, 255, 255, 0.2);
+    padding: 24px;
+    gap: 24px;
+}
+
+.cta-certificate .curriculum-certificate-img {
+    flex: 0 0 120px;
+    width: 120px;
 }
 
 .cta-certificate .curriculum-certificate-title {
     color: #fff;
+    font-size: 1.05rem;
 }
 
 .cta-certificate .curriculum-certificate-title strong {
@@ -3134,10 +3142,23 @@ img {
 
 .cta-certificate .curriculum-certificate-desc {
     color: rgba(255, 255, 255, 0.75);
+    font-size: 0.85rem;
 }
 
 .cta-certificate .curriculum-certificate-img img {
     border: 2px solid rgba(255, 255, 255, 0.25);
+}
+
+@media (max-width: 480px) {
+    .cta-certificate .curriculum-certificate-img {
+        flex: none;
+        width: 100px;
+    }
+
+    .cta-certificate .curriculum-certificate-inner {
+        padding: 18px;
+        gap: 16px;
+    }
 }
 
 /* =============================================

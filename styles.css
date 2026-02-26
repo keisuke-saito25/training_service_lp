@@ -1842,7 +1842,8 @@ img {
 .hero-company {
     font-size: 0.8rem;
     color: rgba(255, 255, 255, 0.5);
-    margin-bottom: 24px;
+    margin-bottom: 0;
+    margin-top: 4px;
 }
 
 .hero-cta-note {

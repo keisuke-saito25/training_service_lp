@@ -1,8 +1,8 @@
-/* =============================================
-   デザインシステム - プレミアムテーマ
+﻿/* =============================================
+   繝・じ繧､繝ｳ繧ｷ繧ｹ繝・Β - 繝励Ξ繝溘い繝繝・・繝・
    ============================================= */
 :root {
-    /* カラー */
+    /* 繧ｫ繝ｩ繝ｼ */
     --bg-primary: #f6f8fc;
     --bg-white: #ffffff;
     --bg-light: #eef2fb;
@@ -16,49 +16,49 @@
 
     --accent-blue: #2563eb;
     --accent-sky: #06b6d4;
-    --accent-indigo: #6366f1;
-    --accent-violet: #8b5cf6;
-    --accent-gradient: linear-gradient(135deg, #2563eb 0%, #6366f1 50%, #8b5cf6 100%);
-    --accent-gradient-subtle: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
-    --accent-gradient-soft: linear-gradient(135deg, rgba(37, 99, 235, 0.07) 0%, rgba(99, 102, 241, 0.07) 50%, rgba(139, 92, 246, 0.07) 100%);
+    --accent-indigo: #1B72E8;
+    --accent-violet: #1B72E8;
+    --accent-gradient: #1B72E8;
+    --accent-gradient-subtle: #1B72E8;
+    --accent-gradient-soft: rgba(27, 114, 232, 0.06);
 
     --danger: #ef4444;
     --success: #10b981;
     --warning: #f59e0b;
 
-    /* スペーシング */
+    /* 繧ｹ繝壹・繧ｷ繝ｳ繧ｰ */
     --section-padding: 110px 0;
     --container-max: 1100px;
     --container-padding: 0 24px;
 
-    /* タイポグラフィ */
+    /* 繧ｿ繧､繝昴げ繝ｩ繝輔ぅ */
     --font-family: 'Noto Sans JP', sans-serif;
-    --font-size-hero: clamp(2rem, 5vw, 3.2rem);
+    --font-size-hero: clamp(1.8rem, 3.5vw, 2.2rem);
     --font-size-h2: clamp(1.6rem, 4vw, 2.4rem);
     --font-size-h3: clamp(1.05rem, 2.5vw, 1.3rem);
     --font-size-body: 1rem;
     --font-size-small: 0.875rem;
 
-    /* ボーダー */
+    /* 繝懊・繝繝ｼ */
     --border-color: rgba(148, 163, 184, 0.18);
     --border-radius: 16px;
     --border-radius-lg: 24px;
 
-    /* シャドウ - 多層レイヤード */
+    /* 繧ｷ繝｣繝峨え - 螟壼ｱ､繝ｬ繧､繝､繝ｼ繝・*/
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.03);
     --shadow-card: 0 4px 6px rgba(0, 0, 0, 0.03), 0 10px 24px rgba(0, 0, 0, 0.06);
     --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.04), 0 20px 48px rgba(0, 0, 0, 0.08);
-    --shadow-blue: 0 4px 14px rgba(37, 99, 235, 0.18), 0 8px 32px rgba(99, 102, 241, 0.12);
-    --shadow-glow: 0 0 20px rgba(99, 102, 241, 0.15), 0 0 60px rgba(139, 92, 246, 0.08);
+    --shadow-blue: 0 4px 14px rgba(37, 99, 235, 0.18), 0 8px 32px rgba(27, 114, 232, 0.12);
+    --shadow-glow: 0 0 20px rgba(27, 114, 232, 0.15), 0 0 60px rgba(27, 114, 232, 0.08);
 
-    /* トランジション */
+    /* 繝医Λ繝ｳ繧ｸ繧ｷ繝ｧ繝ｳ */
     --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-normal: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* =============================================
-   リセット & ベース
+   繝ｪ繧ｻ繝・ヨ & 繝吶・繧ｹ
    ============================================= */
 *,
 *::before,
@@ -120,7 +120,7 @@ img {
 }
 
 /* =============================================
-   共通コンポーネント
+   蜈ｱ騾壹さ繝ｳ繝昴・繝阪Φ繝・
    ============================================= */
 .section-title {
     font-size: var(--font-size-h2);
@@ -163,7 +163,7 @@ img {
     opacity: 0.5;
 }
 
-/* ボタン */
+/* 繝懊ち繝ｳ */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -188,7 +188,7 @@ img {
 
 .btn-primary:hover {
     transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3), 0 16px 48px rgba(99, 102, 241, 0.2);
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3), 0 16px 48px rgba(27, 114, 232, 0.2);
     color: #fff;
 }
 
@@ -218,15 +218,15 @@ img {
 
     0%,
     100% {
-        box-shadow: 0 4px 14px rgba(37, 99, 235, 0.18), 0 8px 32px rgba(99, 102, 241, 0.12);
+        box-shadow: 0 4px 14px rgba(37, 99, 235, 0.18), 0 8px 32px rgba(27, 114, 232, 0.12);
     }
 
     50% {
-        box-shadow: 0 4px 20px rgba(37, 99, 235, 0.28), 0 12px 44px rgba(99, 102, 241, 0.2);
+        box-shadow: 0 4px 20px rgba(37, 99, 235, 0.28), 0 12px 44px rgba(27, 114, 232, 0.2);
     }
 }
 
-/* フェードインアニメーション */
+/* 繝輔ぉ繝ｼ繝峨う繝ｳ繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ */
 .fade-in {
     opacity: 0;
     transform: translateY(24px);
@@ -239,7 +239,7 @@ img {
 }
 
 /* =============================================
-   スティッキーナビ
+   繧ｹ繝・ぅ繝・く繝ｼ繝翫ン
    ============================================= */
 .sticky-nav {
     position: fixed;
@@ -348,23 +348,34 @@ img {
 
 .nav-cta-btn:hover {
     color: #fff !important;
-    box-shadow: 0 4px 16px rgba(37, 99, 235, 0.35), 0 0 24px rgba(99, 102, 241, 0.15);
+    box-shadow: 0 4px 16px rgba(37, 99, 235, 0.35), 0 0 24px rgba(27, 114, 232, 0.15);
     transform: translateY(-1px);
 }
 
 /* =============================================
-   ヒーローセクション
+   繝偵・繝ｭ繝ｼ繧ｻ繧ｯ繧ｷ繝ｧ繝ｳ
    ============================================= */
 .hero {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     position: relative;
-    padding: 100px 24px 60px;
-    background: linear-gradient(160deg, #f6f8fc 0%, #eef2fb 30%, #e8ecf8 60%, #f0edfb 100%);
+    padding: 100px 24px 40px;
+    background: url('images/hero.jpg') center center / cover no-repeat;
     overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+            rgba(15, 23, 42, 0.70) 0%,
+            rgba(15, 23, 42, 0.55) 35%,
+            rgba(15, 23, 42, 0.45) 65%,
+            rgba(15, 23, 42, 0.2) 100%);
+    z-index: 0;
 }
 
 .hero-bg-shapes {
@@ -395,7 +406,7 @@ img {
 .hero-shape-2 {
     width: 500px;
     height: 500px;
-    background: rgba(99, 102, 241, 0.09);
+    background: rgba(27, 114, 232, 0.09);
     bottom: -200px;
     left: -100px;
     animation: floatShape 25s ease-in-out infinite reverse;
@@ -404,7 +415,7 @@ img {
 .hero-shape-3 {
     width: 400px;
     height: 400px;
-    background: rgba(139, 92, 246, 0.07);
+    background: rgba(27, 114, 232, 0.07);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -434,17 +445,16 @@ img {
 .hero-inner {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 60px;
+    justify-content: flex-start;
     max-width: 1200px;
     width: 100%;
+    flex-grow: 1;
     z-index: 1;
-    margin-bottom: 48px;
+    margin-bottom: 32px;
 }
 
 .hero-content {
-    flex: 1;
-    max-width: 560px;
+    max-width: 620px;
 }
 
 .hero-badges {
@@ -459,23 +469,22 @@ img {
     align-items: center;
     gap: 6px;
     padding: 6px 16px;
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(148, 163, 184, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 30px;
     font-size: 0.78rem;
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.9);
     font-weight: 500;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
 }
 
 .badge-icon {
-    color: var(--accent-blue);
+    color: #93c5fd;
     font-weight: 700;
 }
 
 .hero-sub {
-    color: var(--accent-blue);
+    color: #93c5fd;
     font-size: 0.85rem;
     letter-spacing: 0.15em;
     margin-bottom: 16px;
@@ -488,9 +497,7 @@ img {
     line-height: 1.5;
     margin-bottom: 20px;
     letter-spacing: -0.03em;
-    color: var(--text-primary);
-    word-break: keep-all;
-    overflow-wrap: anywhere;
+    color: #ffffff;
 }
 
 .hero-title-line {
@@ -499,13 +506,13 @@ img {
 
 .hero-desc {
     font-size: 1.1rem;
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.85);
     margin-bottom: 32px;
     line-height: 1.8;
 }
 
 .hero-desc strong {
-    color: var(--accent-blue);
+    color: #fbbf24;
     font-size: 1.25rem;
 }
 
@@ -515,19 +522,20 @@ img {
     gap: 14px;
 }
 
-/* ヒーロー画像 */
+/* 繝偵・繝ｭ繝ｼ逕ｻ蜒・*/
 .hero-image {
-    flex: 1;
-    max-width: 500px;
+    flex: 1 1 600px;
+    max-width: 680px;
     position: relative;
 }
 
 .hero-image img {
     width: 100%;
     height: auto;
-    border-radius: var(--border-radius-lg);
+    border-radius: 20px;
     box-shadow: var(--shadow-lg);
     object-fit: cover;
+    aspect-ratio: 4 / 3;
 }
 
 .hero-image-badge {
@@ -579,7 +587,7 @@ img {
     }
 }
 
-/* 実績カード */
+/* 螳溽ｸｾ繧ｫ繝ｼ繝・*/
 .hero-stats {
     display: flex;
     justify-content: center;
@@ -587,24 +595,24 @@ img {
     flex-wrap: wrap;
     z-index: 1;
     width: 100%;
-    max-width: 800px;
+    max-width: 1000px;
 }
 
 .stat-card {
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(148, 163, 184, 0.15);
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: var(--border-radius);
     padding: 20px 28px;
     text-align: center;
     min-width: 140px;
     transition: all var(--transition-normal);
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 .stat-card:hover {
-    border-color: rgba(99, 102, 241, 0.3);
-    box-shadow: var(--shadow-blue);
+    border-color: rgba(147, 197, 253, 0.4);
+    box-shadow: 0 4px 24px rgba(37, 99, 235, 0.2);
     transform: translateY(-4px) scale(1.02);
 }
 
@@ -630,12 +638,28 @@ img {
 .stat-label {
     display: block;
     font-size: 0.8rem;
-    color: var(--text-muted);
+    color: rgba(255, 255, 255, 0.8);
     margin-top: 4px;
 }
 
+/* 繝偵・繝ｭ繝ｼ蜀・・繧｢繧ｯ繧ｻ繝ｳ繝医き繝ｩ繝ｼ隱ｿ謨ｴ */
+.hero .highlight {
+    color: #93c5fd;
+}
+
+.hero .btn-secondary {
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.35);
+}
+
+.hero .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.6);
+    color: #ffffff;
+}
+
 /* =============================================
-   問題提起セクション
+   蝠城｡梧署襍ｷ繧ｻ繧ｯ繧ｷ繝ｧ繝ｳ
    ============================================= */
 .section-problem {
     background: var(--bg-light);
@@ -771,7 +795,7 @@ img {
     color: var(--success);
 }
 
-/* 強度ブロック */
+/* 蠑ｷ蠎ｦ繝悶Ο繝・け */
 .intensity-block {
     display: flex;
     align-items: center;
@@ -824,7 +848,7 @@ img {
 }
 
 /* =============================================
-   カリキュラムセクション
+   繧ｫ繝ｪ繧ｭ繝･繝ｩ繝繧ｻ繧ｯ繧ｷ繝ｧ繝ｳ
    ============================================= */
 .section-curriculum {
     background: var(--bg-white);
@@ -939,8 +963,8 @@ img {
 
 .tag {
     padding: 4px 14px;
-    background: rgba(99, 102, 241, 0.06);
-    border: 1px solid rgba(99, 102, 241, 0.1);
+    background: rgba(27, 114, 232, 0.06);
+    border: 1px solid rgba(27, 114, 232, 0.1);
     border-radius: 20px;
     font-size: 0.75rem;
     color: var(--accent-indigo);
@@ -963,7 +987,7 @@ img {
 }
 
 .curriculum-details li::before {
-    content: '▸';
+    content: '笆ｸ';
     position: absolute;
     left: 0;
     color: var(--accent-blue);
@@ -977,7 +1001,7 @@ img {
 }
 
 /* =============================================
-   価格セクション
+   萓｡譬ｼ繧ｻ繧ｯ繧ｷ繝ｧ繝ｳ
    ============================================= */
 .section-pricing {
     background: var(--bg-light);
@@ -1116,7 +1140,7 @@ img {
 .reason-card:hover {
     transform: translateY(-6px);
     box-shadow: var(--shadow-card);
-    border-color: rgba(99, 102, 241, 0.15);
+    border-color: rgba(27, 114, 232, 0.15);
 }
 
 .reason-icon {
@@ -1146,7 +1170,7 @@ img {
 }
 
 /* =============================================
-   未来セクション
+   譛ｪ譚･繧ｻ繧ｯ繧ｷ繝ｧ繝ｳ
    ============================================= */
 .section-future {
     background: var(--bg-white);
@@ -1249,7 +1273,7 @@ img {
 }
 
 /* =============================================
-   受講者の声セクション
+   蜿苓ｬ幄・・螢ｰ繧ｻ繧ｯ繧ｷ繝ｧ繝ｳ
    ============================================= */
 .section-voices {
     background: var(--bg-light);
@@ -1304,15 +1328,16 @@ img {
     width: 52px;
     height: 52px;
     border-radius: 50%;
-    background: var(--accent-gradient);
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 900;
-    font-size: 0.85rem;
+    overflow: hidden;
     flex-shrink: 0;
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, 1), 0 0 0 5px rgba(99, 102, 241, 0.2);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 1), 0 0 0 5px rgba(27, 114, 232, 0.2);
+}
+
+.voice-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .voice-info {
@@ -1341,8 +1366,10 @@ img {
 .voice-text {
     color: var(--text-secondary);
     font-size: 0.92rem;
-    line-height: 1.8;
+    line-height: 2;
     margin-bottom: 12px;
+    letter-spacing: 0.02em;
+    word-break: auto-phrase;
 }
 
 .voice-note {
@@ -1351,7 +1378,7 @@ img {
 }
 
 /* =============================================
-   対象者セクション
+   蟇ｾ雎｡閠・そ繧ｯ繧ｷ繝ｧ繝ｳ
    ============================================= */
 .section-target {
     background: var(--bg-white);
@@ -1435,7 +1462,7 @@ img {
 }
 
 /* =============================================
-   FAQセクション
+   FAQ繧ｻ繧ｯ繧ｷ繝ｧ繝ｳ
    ============================================= */
 .section-faq {
     background: var(--bg-light);
@@ -1457,12 +1484,12 @@ img {
 }
 
 .faq-item:hover {
-    border-color: rgba(99, 102, 241, 0.15);
+    border-color: rgba(27, 114, 232, 0.15);
     box-shadow: var(--shadow-card);
 }
 
 .faq-item.active {
-    border-color: rgba(99, 102, 241, 0.25);
+    border-color: rgba(27, 114, 232, 0.25);
     box-shadow: var(--shadow-card);
     border-left: 3px solid var(--accent-indigo);
 }
@@ -1520,10 +1547,10 @@ img {
 }
 
 /* =============================================
-   CTAセクション
+   CTA繧ｻ繧ｯ繧ｷ繝ｧ繝ｳ
    ============================================= */
 .section-cta {
-    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 25%, #6366f1 50%, #8b5cf6 75%, #7c3aed 100%);
+    background: #1B72E8;
     color: #fff;
     padding: 90px 0;
     position: relative;
@@ -1537,8 +1564,8 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(ellipse at 20% 50%, rgba(99, 102, 241, 0.3) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 20%, rgba(139, 92, 246, 0.25) 0%, transparent 50%),
+    background: radial-gradient(ellipse at 20% 50%, rgba(27, 114, 232, 0.3) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(27, 114, 232, 0.25) 0%, transparent 50%),
         radial-gradient(ellipse at 50% 80%, rgba(37, 99, 235, 0.2) 0%, transparent 50%);
     pointer-events: none;
 }
@@ -1599,7 +1626,7 @@ img {
     font-weight: 700;
 }
 
-/* ステップフォーム */
+/* 繧ｹ繝・ャ繝励ヵ繧ｩ繝ｼ繝 */
 .step-form {
     max-width: 500px;
     margin: 0 auto;
@@ -1729,7 +1756,7 @@ img {
 }
 
 /* =============================================
-   フッター
+   繝輔ャ繧ｿ繝ｼ
    ============================================= */
 .footer {
     background: var(--bg-dark);
@@ -1791,7 +1818,398 @@ img {
 }
 
 /* =============================================
-   レスポンシブ
+   繝偵・繝ｭ繝ｼ霑ｽ蜉隕∫ｴ
+   ============================================= */
+.hero-target-label {
+    display: inline-block;
+    color: #fbbf24;
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    padding: 4px 16px;
+    background: rgba(251, 191, 36, 0.12);
+    border: 1px solid rgba(251, 191, 36, 0.25);
+    border-radius: 30px;
+    letter-spacing: 0.05em;
+}
+
+.hero-company {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 24px;
+}
+
+.hero-cta-note {
+    display: block;
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 8px;
+    letter-spacing: 0.02em;
+}
+
+/* =============================================
+   菫｡鬆ｼ繝舌・
+   ============================================= */
+.trust-bar {
+    background: var(--bg-white);
+    border-bottom: 1px solid var(--border-color);
+    padding: 20px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.trust-bar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--accent-gradient);
+}
+
+.trust-bar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    flex-wrap: wrap;
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 24px;
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    white-space: nowrap;
+}
+
+.trust-item strong {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+.trust-icon {
+    font-size: 1.2rem;
+}
+
+.trust-divider {
+    width: 1px;
+    height: 28px;
+    background: var(--border-color);
+    flex-shrink: 0;
+}
+
+/* =============================================
+   繝溘ルCTA
+   ============================================= */
+.mini-cta {
+    background: var(--accent-gradient-soft);
+    padding: 24px 0;
+    border-top: 1px solid rgba(27, 114, 232, 0.08);
+    border-bottom: 1px solid rgba(27, 114, 232, 0.08);
+}
+
+.mini-cta-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.mini-cta-text {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.btn-sm {
+    padding: 10px 28px;
+    font-size: 0.88rem;
+}
+
+/* =============================================
+   繝輔ぉ繝ｼ繧ｺ繧ｫ繝ｼ繝会ｼ医き繝ｪ繧ｭ繝･繝ｩ繝3蛻・牡・・
+   ============================================= */
+.phase-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.phase-card {
+    background: var(--bg-white);
+    border: 1px solid rgba(148, 163, 184, 0.12);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    transition: all var(--transition-normal);
+    box-shadow: var(--shadow-sm);
+}
+
+.phase-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-card);
+}
+
+.phase-card-main {
+    grid-column: 1 / -1;
+    border: 2px solid rgba(27, 114, 232, 0.2);
+    box-shadow: var(--shadow-card);
+}
+
+.phase-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 24px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.phase-1 {
+    background: #1B72E8;
+}
+
+.phase-2 {
+    background: #1B72E8;
+}
+
+.phase-3 {
+    background: #1B72E8;
+}
+
+.phase-number {
+    font-size: 0.85rem;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+}
+
+.phase-period {
+    font-size: 0.78rem;
+    opacity: 0.85;
+    font-weight: 500;
+}
+
+.phase-badge {
+    margin-left: auto;
+    background: rgba(255, 255, 255, 0.25);
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 900;
+}
+
+.phase-body {
+    padding: 24px;
+}
+
+.phase-body h3 {
+    font-size: var(--font-size-h3);
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.phase-body>p {
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.phase-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.phase-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 16px;
+    margin: 12px 0;
+}
+
+.phase-details li {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    padding: 4px 0;
+    padding-left: 16px;
+    position: relative;
+}
+
+.phase-details li::before {
+    content: '笆ｸ';
+    position: absolute;
+    left: 0;
+    color: var(--accent-blue);
+}
+
+.phase-emphasis {
+    color: var(--accent-blue) !important;
+    font-weight: 700;
+    font-size: 1rem !important;
+    margin-top: 12px;
+}
+
+/* =============================================
+   豈碑ｼ・ユ繝ｼ繝悶Ν
+   ============================================= */
+.compare-table-wrapper {
+    margin: 48px 0;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.compare-title {
+    text-align: center;
+    font-size: var(--font-size-h3);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+}
+
+.compare-table th,
+.compare-table td {
+    padding: 14px 18px;
+    text-align: left;
+    font-size: 0.9rem;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.compare-table thead th {
+    background: var(--bg-dark);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.compare-table thead th.compare-highlight {
+    background: var(--accent-blue);
+}
+
+.compare-table tbody tr {
+    background: var(--bg-white);
+    transition: background var(--transition-fast);
+}
+
+.compare-table tbody tr:hover {
+    background: var(--bg-light);
+}
+
+.compare-table td:first-child {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.compare-table td.compare-highlight {
+    color: var(--accent-blue);
+    background: rgba(37, 99, 235, 0.03);
+}
+
+/* =============================================
+   譁咎≡ 驥崎ｦ∵ュ蝣ｱ・・AQ縺九ｉ譏・ｼ・・
+   ============================================= */
+.pricing-essential {
+    margin-top: 48px;
+    background: var(--bg-white);
+    border: 1px solid rgba(148, 163, 184, 0.12);
+    border-radius: var(--border-radius-lg);
+    padding: 36px;
+    box-shadow: var(--shadow-sm);
+}
+
+.pricing-essential h3 {
+    font-size: var(--font-size-h3);
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.pricing-essential-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.essential-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 12px;
+    transition: background var(--transition-fast);
+}
+
+.essential-item:hover {
+    background: var(--bg-light);
+}
+
+.essential-icon {
+    font-size: 1.3rem;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent-gradient-soft);
+    border-radius: 10px;
+}
+
+.essential-item strong {
+    display: block;
+    font-size: 0.92rem;
+    margin-bottom: 2px;
+}
+
+.essential-item p {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* CTA説明会情報：旧スタイル削除済み。新スタイルはファイル末尾参照 */
+
+
+/* 繧ｹ繝・ャ繝励ヵ繧ｩ繝ｼ繝邨先棡繝・く繧ｹ繝・*/
+.step-result-text {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+/* =============================================
+   蜿苓ｬ幄・・螢ｰ 霑ｽ蜉隕∫ｴ
+   ============================================= */
+.voice-transition {
+    font-size: 0.72rem;
+    color: var(--success);
+    font-weight: 600;
+    background: rgba(16, 185, 129, 0.08);
+    padding: 2px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 2px;
+}
+
+/* =============================================
+   繝ｬ繧ｹ繝昴Φ繧ｷ繝・
    ============================================= */
 @media (max-width: 1024px) {
     .hero-inner {
@@ -1834,7 +2252,7 @@ img {
         display: inline;
     }
 
-    /* ナビ */
+    /* 繝翫ン */
     .nav-toggle {
         display: flex;
     }
@@ -1876,7 +2294,7 @@ img {
         border-radius: 30px;
     }
 
-    /* ヒーロー */
+    /* 繝偵・繝ｭ繝ｼ */
     .hero {
         padding: 90px 20px 48px;
         min-height: auto;
@@ -1891,20 +2309,22 @@ img {
     }
 
     .hero-stats {
-        gap: 12px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        max-width: 400px;
     }
 
     .stat-card {
-        padding: 14px 20px;
+        padding: 14px 16px;
         min-width: 0;
-        flex: 1;
     }
 
     .stat-number {
         font-size: 1.6rem;
     }
 
-    /* グリッド */
+    /* 繧ｰ繝ｪ繝・ラ */
     .problem-grid,
     .target-grid {
         grid-template-columns: 1fr;
@@ -1922,7 +2342,7 @@ img {
         grid-template-columns: 1fr 1fr;
     }
 
-    /* タイムライン */
+    /* 繧ｿ繧､繝繝ｩ繧､繝ｳ */
     .timeline {
         padding-left: 48px;
     }
@@ -1959,7 +2379,7 @@ img {
         padding: 24px;
     }
 
-    /* フッター */
+    /* 繝輔ャ繧ｿ繝ｼ */
     .footer-content {
         flex-direction: column;
         gap: 24px;
@@ -1970,6 +2390,53 @@ img {
         flex-direction: column;
         gap: 12px;
         align-items: center;
+    }
+
+    /* 菫｡鬆ｼ繝舌・ */
+    .trust-bar-inner {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .trust-divider {
+        display: none;
+    }
+
+    .trust-item {
+        padding: 4px 16px;
+        font-size: 0.82rem;
+    }
+
+    /* 繝輔ぉ繝ｼ繧ｺ繧ｫ繝ｼ繝・*/
+    .phase-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .phase-card-main {
+        grid-column: auto;
+    }
+
+    .phase-details {
+        grid-template-columns: 1fr;
+    }
+
+    /* 譁咎≡驥崎ｦ∵ュ蝣ｱ */
+    .pricing-essential-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* 繝溘ルCTA */
+    .mini-cta-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+
+    /* 豈碑ｼ・ユ繝ｼ繝悶Ν */
+    .compare-table th,
+    .compare-table td {
+        padding: 10px 12px;
+        font-size: 0.82rem;
     }
 }
 
@@ -2003,5 +2470,222 @@ img {
 
     .cta-special strong {
         font-size: 1.8rem;
+    }
+
+    .compare-table-wrapper {
+        margin: 24px 0;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .compare-table {
+        min-width: 340px;
+    }
+}
+
+/* =============================================
+   画像配置スタイル
+   ============================================= */
+
+/* 問題提起セクション内の画像 */
+.problem-image {
+    margin: 16px 0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.problem-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+/* カリキュラム フェーズ画像 */
+.phase-image {
+    margin: 16px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.phase-image img {
+    width: 100%;
+    height: auto;
+    max-height: 240px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.phase-image-main {
+    position: relative;
+}
+
+.phase-image-main img {
+    max-height: 320px;
+}
+
+.phase-image-caption {
+    display: block;
+    text-align: center;
+    padding: 8px 12px;
+    background: var(--bg-light);
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* CTA セクション：説明会ビジュアル + 講師情報 */
+.cta-session-info {
+    display: flex;
+    gap: 0;
+    align-items: stretch;
+    margin: 40px auto;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    overflow: hidden;
+    max-width: 800px;
+}
+
+.cta-session-visual {
+    flex: 0 0 300px;
+    overflow: hidden;
+}
+
+.cta-session-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.cta-session-content {
+    flex: 1;
+    padding: 32px 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cta-session-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+}
+
+.session-items {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.session-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 500;
+}
+
+.session-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    font-size: 0.85rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* 講師情報 */
+.cta-instructor {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 4px;
+    padding: 14px 18px;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.instructor-photo {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.instructor-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.instructor-label {
+    font-size: 0.75rem;
+    opacity: 0.65;
+    letter-spacing: 0.05em;
+}
+
+.instructor-note {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+/* レスポンシブ：画像関連 */
+@media (max-width: 768px) {
+    .cta-session-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cta-session-visual {
+        flex: none;
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .cta-session-content {
+        width: 100%;
+    }
+
+    .session-items {
+        align-items: center;
+    }
+
+    .cta-instructor {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-session-visual {
+        max-width: 100%;
+    }
+
+    .phase-image {
+        margin: 12px -8px;
+        border-radius: 8px;
+    }
+
+    .instructor-photo {
+        width: 44px;
+        height: 44px;
     }
 }

@@ -768,7 +768,7 @@ img {
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    margin-top: 0.55em;
+    margin-top: 0.6em;
 }
 
 .problem-bad li::before {
@@ -1899,7 +1899,9 @@ img {
 }
 
 .trust-icon {
-    font-size: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    color: var(--accent-blue);
 }
 
 .trust-divider {
@@ -2175,6 +2177,7 @@ img {
     justify-content: center;
     background: var(--accent-gradient-soft);
     border-radius: 10px;
+    color: var(--accent-blue);
 }
 
 .essential-item strong {

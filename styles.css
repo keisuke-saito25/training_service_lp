@@ -2659,7 +2659,6 @@ img {
     .cta-session-info {
         flex-direction: column;
         align-items: center;
-        text-align: center;
     }
 
     .cta-session-visual {
@@ -2670,10 +2669,15 @@ img {
 
     .cta-session-content {
         width: 100%;
+        text-align: left;
+    }
+
+    .cta-session-content h3 {
+        text-align: center;
     }
 
     .session-items {
-        align-items: center;
+        align-items: flex-start;
     }
 
     .cta-instructor {

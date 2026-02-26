@@ -764,8 +764,7 @@ img {
     content: '';
     position: absolute;
     left: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 12px;
     width: 6px;
     height: 6px;
     border-radius: 50%;
@@ -2594,11 +2593,12 @@ img {
 
 .session-item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 12px;
     font-size: 1rem;
     color: rgba(255, 255, 255, 0.95);
     font-weight: 500;
+    line-height: 1.6;
 }
 
 .session-num {

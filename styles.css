@@ -3259,7 +3259,11 @@ button:focus-visible,
    ============================================= */
 .section-legal {
     background: var(--bg-light);
-    padding: 60px 0;
+    padding: 12px 0;
+}
+
+.section-legal+.section-legal {
+    padding-top: 0;
 }
 
 .legal-title {

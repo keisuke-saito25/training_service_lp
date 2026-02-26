@@ -1447,18 +1447,23 @@ img {
     color: var(--text-secondary);
     font-size: 0.95rem;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 8px;
+    line-height: 1.6;
 }
 
 .check {
     color: var(--success);
     font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 2px;
 }
 
 .cross {
     color: var(--danger);
     font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 2px;
 }
 
 /* =============================================
@@ -2044,7 +2049,7 @@ img {
 }
 
 .phase-details li::before {
-    content: '笆ｸ';
+    content: '\25B8';
     position: absolute;
     left: 0;
     color: var(--accent-blue);

@@ -756,18 +756,19 @@ img {
     padding: 6px 0;
     color: var(--text-secondary);
     font-size: 0.95rem;
-    position: relative;
-    padding-left: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    line-height: 1.6;
 }
 
 .problem-card li::before {
     content: '';
-    position: absolute;
-    left: 0;
-    top: 12px;
+    flex-shrink: 0;
     width: 6px;
     height: 6px;
     border-radius: 50%;
+    margin-top: 0.55em;
 }
 
 .problem-bad li::before {

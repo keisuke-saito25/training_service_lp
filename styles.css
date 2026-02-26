@@ -518,8 +518,9 @@ img {
 
 .hero-cta {
     display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
 }
 
 /* 繝偵・繝ｭ繝ｼ逕ｻ蜒・*/

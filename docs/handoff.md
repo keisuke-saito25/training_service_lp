@@ -1,6 +1,6 @@
 # freeks Training Service LP — 引き継ぎドキュメント
 
-最終更新: 2026-02-26
+最終更新: 2026-02-27
 
 ---
 
@@ -18,16 +18,20 @@
 ```
 training_service_lp/
 ├── index.html          # LP本体（1ファイル完結）
-├── styles.css          # 全スタイル（約2,700行）
-├── script.js           # アニメーション・FAQ・ステップフォーム
+├── privacy-policy.html # プライバシーポリシー
+├── styles.css          # 全スタイル（約3,600行）
+├── script.js           # アニメーション・FAQ・ステップフォーム・GA4イベント
+├── sitemap.xml         # 検索エンジン用サイトマップ
+├── robots.txt          # クロール制御
 ├── images/
-│   ├── hero.jpg / hero.png       # FV背景画像
-│   ├── coding-workspace.png      # カリキュラム Phase 1（AI生成）
-│   ├── linux-terminal.png        # カリキュラム Phase 2（AI生成）
-│   ├── inventory-system.png      # カリキュラム Phase 3（AI生成）
-│   ├── online-consultation.png   # CTA 説明会イメージ（AI生成）
-│   ├── instructor.png            # CTA 講師写真（AI生成）
-│   └── training-scene.png        # 未使用（HTMLから削除済み）
+│   ├── hero.jpg / hero-bg.webp  # FV背景画像（PC用）
+│   ├── hero-sp.png / hero-sp.webp # FV背景画像（SP用）
+│   ├── coding-workspace.png/webp  # カリキュラム Phase 1
+│   ├── linux-terminal.png/webp    # カリキュラム Phase 2
+│   ├── inventory-system.png/webp  # カリキュラム Phase 3
+│   ├── online-consultation.png/webp # CTA 説明会イメージ
+│   ├── instructor.png/webp        # CTA 講師写真
+│   └── avatar-*.png/webp          # 受講者の声アバター
 ├── v1/                 # v1バックアップ
 └── docs/
     └── handoff.md      # このファイル
@@ -79,6 +83,14 @@ training_service_lp/
 - [x] FVオーバーレイの左側を明るく調整（0.88→0.70）
 - [x] stat-cardの背景・ラベル視認性向上
 - [x] stat-cardのSP表示を2列×2行グリッドに修正
+- [x] GA4 計測タグ設置（プレースホルダーID）
+- [x] CVイベント設計5種（CTAクリック/フォーム進捗/スクロール深度/FAQ開閉）
+- [x] 画像WebP最適化（hero-sp 547KB→25KB、hero-bg 112KB→42KB）
+- [x] CSS背景をWebPに切替（PC/SP両対応）
+- [x] canonical URL / dns-prefetch 追加
+- [x] JSON-LD 構造化データ（FAQPage 8問 + Service）
+- [x] アクセシビリティ改善（スキップナビ/main/aria-labelledby/focus-visible）
+- [x] sitemap.xml / robots.txt 作成
 
 ---
 
@@ -88,18 +100,18 @@ training_service_lp/
 
 | # | 課題 | 詳細 |
 |---|------|------|
-| 1 | **~~SP全体レスポンシブ確認~~** | ✅ 完了 — 料金比較テーブルのoverflow修正済み |
-| 2 | **フォームリンク先** | 説明会予約ボタンのhrefが `#` のまま。実際の予約URL/フォームへの差し替えが必要 |
+| 1 | **~~SP全体レスポンシブ確認~~** | ✅ 完了 |
+| 2 | **フォームリンク先** | 説明会予約ボタンのhrefが `#` のまま。実際の予約URLへの差し替えが必要 |
+| 3 | **GA4 Measurement ID 差替** | `G-XXXXXXXXXX` プレースホルダーを実際のIDに差し替え（index.html L33, L38） |
 
 ### 🟡 優先度中
 
 | # | 課題 | 詳細 |
 |---|------|------|
-| 3 | **~~受講者の顔写真~~** | ✅ 完了 — AI生成アバター5枚に差し替え済み |
 | 4 | **導入企業ロゴ** | 信頼バーに法人研修導入企業のロゴを配置すると権威性UP（実素材が必要） |
-| 5 | **画像最適化** | 現在PNG(60〜80KB)。WebP変換+圧縮で表示速度改善可能（cwebpインストールが必要） |
-| 6 | **~~OGP/SNS対応~~** | ✅ 完了 — og:image/title/description + Twitter Card 設定済み |
-| 7 | **~~favicon~~** | ✅ 完了 — SVGファビコン設定済み |
+| 5 | **~~画像最適化~~** | ✅ 完了 — WebP変換済み（hero-sp 95%削減） |
+| 6 | **~~OGP/SNS対応~~** | ✅ 完了 |
+| 7 | **~~favicon~~** | ✅ 完了 |
 
 ### 🟢 余裕があれば
 
@@ -107,7 +119,7 @@ training_service_lp/
 |---|------|------|
 | 8 | **動画コンテンツ** | FV直下に1〜2分の研修紹介動画を配置（撮影が必要） |
 | 9 | **受講者の声カルーセル化** | SP向けに横スワイプ型にすると省スペース+滞在時間UP |
-| 10 | **アクセシビリティ** | カラーコントラスト比のチェック未実施 |
+| 10 | **~~アクセシビリティ~~** | ✅ 完了 — スキップナビ/main/aria-labelledby/focus-visible 実装済み |
 
 ---
 

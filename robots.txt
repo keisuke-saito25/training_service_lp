@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://keisuke-saito25.github.io/training_service_lp/sitemap.xml

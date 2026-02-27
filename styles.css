@@ -99,6 +99,39 @@ ul {
     list-style: none;
 }
 
+/* スキップナビゲーション（アクセシビリティ） */
+.skip-nav {
+    position: absolute;
+    top: -100px;
+    left: 16px;
+    z-index: 10000;
+    background: var(--accent-indigo);
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 0 0 8px 8px;
+    font-weight: 700;
+    font-size: 0.875rem;
+    transition: top 0.2s ease;
+    text-decoration: none;
+}
+
+.skip-nav:focus {
+    top: 0;
+    color: #fff;
+}
+
+/* フォーカスインジケーター（アクセシビリティ） */
+:focus-visible {
+    outline: 3px solid var(--accent-indigo);
+    outline-offset: 2px;
+}
+
+.btn:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 3px;
+    box-shadow: 0 0 0 6px var(--accent-indigo);
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -362,7 +395,7 @@ img {
     align-items: center;
     position: relative;
     padding: 100px 24px 40px;
-    background: url('images/hero.jpg') center center / cover no-repeat;
+    background: url('images/hero-bg.webp') center center / cover no-repeat;
     overflow: hidden;
 }
 
@@ -639,7 +672,8 @@ img {
 .stat-label {
     display: block;
     font-size: 0.8rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
     margin-top: 4px;
 }
 
@@ -2351,7 +2385,7 @@ img {
     .hero {
         padding: 130px 20px 48px;
         min-height: auto;
-        background-image: url('images/hero-sp.png');
+        background-image: url('images/hero-sp.webp');
         background-size: cover;
         background-position: center center;
     }
@@ -3469,6 +3503,18 @@ details[open]>.legal-title {
     border-left: 3px solid var(--accent-blue);
 }
 
+.pp-heading {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: baseline;
+}
+
+.pp-num {
+    flex-shrink: 0;
+    white-space: nowrap;
+    margin-right: 0.4em;
+}
+
 .pp-content ul {
     padding-left: 24px;
     margin: 10px 0;
@@ -3504,6 +3550,23 @@ details[open]>.legal-title {
     border-radius: var(--border-radius);
     border: 1px solid rgba(148, 163, 184, 0.12);
     line-height: 1.8;
+}
+
+@media (max-width: 480px) {
+    .pp-title {
+        font-size: 1.4rem;
+        margin-bottom: 36px;
+    }
+
+    .pp-content h2 {
+        font-size: 0.92rem;
+        padding-left: 10px;
+        margin-top: 28px;
+    }
+
+    .pp-content {
+        font-size: 0.85rem;
+    }
 }
 
 .pp-back {

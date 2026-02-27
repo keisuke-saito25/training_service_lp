@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initCountUp();
     initCountdown();
     initEvidenceCountUp();
+    initAnalyticsEvents();
 });
 
 /* ----- スティッキーナビ ----- */
@@ -102,6 +103,8 @@ function initFAQ() {
             if (!isActive) {
                 item.classList.add('active');
                 btn.setAttribute('aria-expanded', 'true');
+                // GA4: FAQ開閉イベント
+                trackEvent('faq_open', { question: btn.textContent.trim().replace(/[+\-]/g, '').trim() });
             }
         });
     });
@@ -115,6 +118,7 @@ function initStepForm() {
     form.querySelectorAll('.step-option:not(.step-final)').forEach(option => {
         option.addEventListener('click', () => {
             const nextStep = option.getAttribute('data-next');
+            const value = option.getAttribute('data-value');
             if (!nextStep) return;
 
             // 現在のパネルを非表示
@@ -135,8 +139,19 @@ function initStepForm() {
 
             if (currentDot) currentDot.classList.replace('active', 'completed');
             if (nextDot) nextDot.classList.add('active');
+
+            // GA4: ステップフォーム進捗イベント
+            trackEvent('step_form_progress', { step: currentStepNum, value: value });
         });
     });
+
+    // GA4: フォーム最終ステップクリック
+    const finalBtn = form.querySelector('.step-final');
+    if (finalBtn) {
+        finalBtn.addEventListener('click', () => {
+            trackEvent('step_form_complete', { action: 'reservation_click' });
+        });
+    }
 }
 
 /* ----- カウントアップアニメーション ----- */
@@ -277,4 +292,50 @@ function animateEvidenceCount(el, target, isDecimal) {
     }
 
     requestAnimationFrame(update);
+}
+
+/* =============================================
+   GA4 コンバージョンイベントトラッキング
+   ============================================= */
+
+// 安全な gtag 呼び出しラッパー（GA4未設定時もエラーにならない）
+function trackEvent(eventName, params) {
+    if (typeof gtag === 'function') {
+        gtag('event', eventName, params || {});
+    }
+}
+
+function initAnalyticsEvents() {
+    // --- CTAボタンクリックトラッキング ---
+    document.querySelectorAll('.btn-primary, .nav-cta-btn, .nav-quick-cta').forEach(btn => {
+        btn.addEventListener('click', () => {
+            // ボタンの位置を特定
+            let location = 'unknown';
+            if (btn.closest('.hero')) location = 'hero';
+            else if (btn.closest('.mini-cta')) location = 'mini_cta';
+            else if (btn.closest('.section-cta')) location = 'final_cta';
+            else if (btn.closest('.sticky-nav')) location = 'nav';
+
+            trackEvent('cta_click', { button_location: location, button_text: btn.textContent.trim() });
+        });
+    });
+
+    // --- スクロール深度トラッキング ---
+    const scrollThresholds = [25, 50, 75, 100];
+    const firedThresholds = new Set();
+
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        if (docHeight <= 0) return;
+
+        const scrollPercent = Math.round((scrollTop / docHeight) * 100);
+
+        scrollThresholds.forEach(threshold => {
+            if (scrollPercent >= threshold && !firedThresholds.has(threshold)) {
+                firedThresholds.add(threshold);
+                trackEvent('scroll_depth', { depth_percent: threshold });
+            }
+        });
+    }, { passive: true });
 }

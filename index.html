@@ -21,13 +21,27 @@
     <meta name="twitter:image" content="https://keisuke-saito25.github.io/training_service_lp/images/ogp.png">
     <!-- favicon -->
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <!-- canonical -->
+    <link rel="canonical" href="https://keisuke-saito25.github.io/training_service_lp/">
+    <!-- リソースヒント -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <!-- Google Analytics (GA4) — Measurement ID を取得後に G-XXXXXXXXXX を差し替えてください -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
 </head>
 
 <body>
+    <!-- スキップナビゲーション（アクセシビリティ） -->
+    <a href="#main-content" class="skip-nav">メインコンテンツへスキップ</a>
 
     <!-- ========== スティッキーナビ ========== -->
     <nav class="sticky-nav" id="stickyNav" role="navigation" aria-label="メインナビゲーション">
@@ -59,874 +73,883 @@
     </nav>
 
     <!-- ========== ヒーローセクション（EBI法則適用） ========== -->
-    <section class="hero" id="hero" role="banner">
-        <div class="hero-bg-shapes">
-            <div class="hero-shape hero-shape-1"></div>
-            <div class="hero-shape hero-shape-2"></div>
-            <div class="hero-shape hero-shape-3"></div>
-        </div>
-        <div class="hero-inner">
-            <div class="hero-content">
-                <div class="hero-badges">
-                    <span class="badge"><span class="badge-icon">✔</span> 累計500名以上修了</span>
-                    <span class="badge"><span class="badge-icon">✔</span> 法人研修と同一カリキュラム</span>
-                    <span class="badge"><span class="badge-icon">✔</span> 20〜35歳限定</span>
-                </div>
-                <p class="hero-target-label">独学・スクールで挫折した方へ</p>
-                <h1 class="hero-title">「<span class="highlight">実務経験がない</span>」で<br>落とされる面接を、<br>終わらせませんか？</h1>
-                <p class="hero-desc">法人向け50万円の研修と同じカリキュラムで、<br><strong>3ヶ月後、面接で「開発経験あります」と言えるようになります。</strong></p>
-                <!-- FVオファーバッジ -->
-                <div class="hero-offer-badge">
-                    <span class="hero-offer-label">特別価格</span>
-                    <span class="hero-offer-original">法人価格 ¥500,000</span>
-                    <span class="hero-offer-arrow">→</span>
-                    <span class="hero-offer-price">今だけ <strong>¥70,000</strong></span>
-                    <span class="hero-offer-off">86%OFF</span>
-                </div>
-                <div class="hero-cta">
-                    <a href="#cta-final" class="btn btn-primary btn-pulse">まず無料説明会で聞いてみる</a>
-                    <span class="hero-cta-note">約30分・無理な勧誘なし・オンライン対応</span>
-                    <p class="hero-company">運営：freeks株式会社（IT人材事業 / 法人研修事業）</p>
-                </div>
+    <main id="main-content">
+        <section class="hero" id="hero" role="banner">
+            <div class="hero-bg-shapes">
+                <div class="hero-shape hero-shape-1"></div>
+                <div class="hero-shape hero-shape-2"></div>
+                <div class="hero-shape hero-shape-3"></div>
             </div>
-        </div>
-        <div class="hero-stats">
-            <div class="stat-card fade-in">
-                <span class="stat-number" data-count="500">0</span>
-                <span class="stat-unit">名+</span>
-                <span class="stat-label">累計修了者</span>
-            </div>
-            <div class="stat-card fade-in">
-                <span class="stat-number" data-count="3">0</span>
-                <span class="stat-unit">ヶ月</span>
-                <span class="stat-label">研修期間</span>
-            </div>
-            <div class="stat-card fade-in">
-                <span class="stat-number" data-count="7">0</span>
-                <span class="stat-unit">万円</span>
-                <span class="stat-label">受講料金</span>
-            </div>
-            <div class="stat-card fade-in">
-                <span class="stat-number" data-count="86">0</span>
-                <span class="stat-unit">%OFF</span>
-                <span class="stat-label">法人価格から</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== 信頼バー ========== -->
-    <section class="trust-bar" id="trust">
-        <div class="container">
-            <div class="trust-bar-inner">
-                <div class="trust-item">
-                    <span class="trust-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M3 21h18" />
-                            <path d="M5 21V7l8-4v18" />
-                            <path d="M19 21V11l-6-4" />
-                            <path d="M9 9v.01" />
-                            <path d="M9 12v.01" />
-                            <path d="M9 15v.01" />
-                            <path d="M9 18v.01" />
-                        </svg></span>
-                    <span class="trust-text">法人研修<strong>導入実績あり</strong></span>
-                </div>
-                <div class="trust-divider"></div>
-                <div class="trust-item">
-                    <span class="trust-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="3" width="20" height="14" rx="2" />
-                            <path d="M8 21h8" />
-                            <path d="M12 17v4" />
-                            <path d="M7 8h2" />
-                            <path d="M7 11h4" />
-                        </svg></span>
-                    <span class="trust-text">自社エンジニア育成にも<strong>同一カリキュラム使用</strong></span>
-                </div>
-                <div class="trust-divider"></div>
-                <div class="trust-item">
-                    <span class="trust-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M17 20h-1a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1" />
-                            <path d="M12 20h-1a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h1" />
-                            <path d="M7 20H6a2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2h1" />
-                        </svg></span>
-                    <span class="trust-text">累計<strong>500名以上</strong>が修了</span>
-                </div>
-                <div class="trust-divider"></div>
-                <div class="trust-item">
-                    <span class="trust-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-                            <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" />
-                        </svg></span>
-                    <span class="trust-text">修了生の<strong>多数がエンジニア転職</strong>に成功</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== 対象者セクション ========== -->
-    <section class="section section-target" id="target">
-        <div class="container">
-            <h2 class="section-title fade-in">この研修は<span class="highlight">あなたのため</span>に<br class="sp-only">作られました</h2>
-            <p class="section-lead fade-in">3ヶ月間フルタイムで学ぶ覚悟がある、<strong>20〜35歳</strong>の方が対象です。</p>
-            <div class="target-grid fade-in">
-                <div class="target-card target-yes">
-                    <h3>こんな方におすすめ</h3>
-                    <ul>
-                        <li><span class="check">✔</span> 独学やスクールで学んだが、面接で手応えがない</li>
-                        <li><span class="check">✔</span> 「実務経験がない」と言われて転職がうまくいかない</li>
-                        <li><span class="check">✔</span> 本気でエンジニアに転職したい（20〜35歳）</li>
-                        <li><span class="check">✔</span> 3ヶ月間、フルタイムでやり切る覚悟がある</li>
-                    </ul>
-                </div>
-                <div class="target-card target-no">
-                    <h3>正直に言うと、向いていない方</h3>
-                    <ul>
-                        <li><span class="cross">✕</span> まずは軽く触ってみたい程度の方</li>
-                        <li><span class="cross">✕</span> 動画を見て学びたい方（本研修は実践型です）</li>
-                        <li><span class="cross">✕</span> 3ヶ月間の学習時間を確保できない方</li>
-                        <li><span class="cross">✕</span> 研修期間中に収入が必要な方</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== 問題提起セクション ========== -->
-    <section class="section section-problem" id="problem">
-        <div class="container">
-            <h2 class="section-title fade-in">Progate、Udemy、スクール…<br><span class="highlight">それでも面接で落ちる</span>理由</h2>
-            <p class="section-lead fade-in">努力が足りないのではありません。<br><strong>「面接で語れる開発経験」がない</strong>だけです。</p>
-
-            <div class="problem-grid fade-in">
-                <div class="problem-card problem-bad">
-                    <div class="problem-icon">✕</div>
-                    <h3>よくあるパターン</h3>
-                    <ul>
-                        <li>動画講座を見て「わかった気」になる</li>
-                        <li>ポートフォリオはあるが実務とかけ離れている</li>
-                        <li>LinuxやSQLを触ったことがない</li>
-                        <li>テスト工程を知らない</li>
-                    </ul>
-                    <p class="problem-result">→ 面接で「実務経験は？」と聞かれて詰まる</p>
-                </div>
-                <div class="problem-card problem-good">
-                    <div class="problem-icon">◎</div>
-                    <h3>この研修で変わること</h3>
-                    <ul>
-                        <li>実務想定の在庫管理システムを設計〜実装</li>
-                        <li>Linux・SQL・サーバー操作を実践</li>
-                        <li>単体テスト・結合テストまで経験</li>
-                        <li>企業の新人研修と同じ内容を修了</li>
-                        <li class="blind-bullet">面接官が必ず聞く"あの質問"に自信を持って答えられる方法</li>
-                        <li class="blind-bullet">書類選考を通過した先輩たちが共通してやっていた、たった1つのこと</li>
-                    </ul>
-                    <p class="problem-result">→ 面接で「開発経験があります」と言える</p>
-                </div>
-            </div>
-
-            <div class="intensity-block fade-in">
-                <div class="intensity-item">
-                    <span class="intensity-number">8</span>
-                    <span class="intensity-unit">時間/日</span>
-                </div>
-                <div class="intensity-divider">×</div>
-                <div class="intensity-item">
-                    <span class="intensity-number">5</span>
-                    <span class="intensity-unit">日/週</span>
-                </div>
-                <div class="intensity-divider">＝</div>
-                <div class="intensity-item">
-                    <span class="intensity-number intensity-accent">実務レベル</span>
-                </div>
-            </div>
-            <p class="intensity-note fade-in">これは趣味の学習ではありません。<strong>現場基準の職業訓練</strong>です。</p>
-        </div>
-    </section>
-
-    <!-- ========== 実証データセクション ========== -->
-    <section class="section section-evidence" id="evidence">
-        <div class="container">
-            <h2 class="section-title fade-in">数字で見る<span class="highlight">研修実績</span></h2>
-            <p class="section-lead fade-in">修了生のデータが、この研修の価値を証明しています。</p>
-            <div class="evidence-grid fade-in">
-                <div class="evidence-card">
-                    <span class="evidence-number" data-count="92">0</span>
-                    <span class="evidence-unit">%</span>
-                    <span class="evidence-label">カリキュラム修了率</span>
-                    <span class="evidence-desc">途中離脱はわずか8%</span>
-                </div>
-                <div class="evidence-card">
-                    <span class="evidence-number" data-count="87">0</span>
-                    <span class="evidence-unit">%</span>
-                    <span class="evidence-label">エンジニア転職成功率</span>
-                    <span class="evidence-desc">修了後6ヶ月以内</span>
-                </div>
-                <div class="evidence-card">
-                    <span class="evidence-number evidence-number-decimal" data-count="46" data-decimal="true">0</span>
-                    <span class="evidence-unit">/ 5.0</span>
-                    <span class="evidence-label">受講満足度</span>
-                    <span class="evidence-desc">修了時アンケート結果</span>
-                </div>
-                <div class="evidence-card">
-                    <span class="evidence-number" data-count="480">0</span>
-                    <span class="evidence-unit">時間+</span>
-                    <span class="evidence-label">平均学習時間</span>
-                    <span class="evidence-desc">3ヶ月間の総実践時間</span>
-                </div>
-            </div>
-            <p class="evidence-note fade-in">※ 数値は直近1年間の修了生データに基づく</p>
-        </div>
-    </section>
-
-    <!-- ========== ミニCTA ========== -->
-    <div class="mini-cta fade-in">
-        <div class="container">
-            <div class="mini-cta-inner">
-                <p class="mini-cta-text">まずは研修の詳細を聞いてみませんか？</p>
-                <a href="#cta-final" class="btn btn-primary btn-sm">無料説明会を予約する</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- ========== カリキュラムセクション（画像付き3フェーズ） ========== -->
-    <section class="section section-curriculum" id="curriculum">
-        <div class="container">
-            <h2 class="section-title fade-in">カリキュラム<span class="title-sub">3ヶ月の実践ロードマップ</span></h2>
-            <p class="section-lead fade-in">1日8時間 ×
-                週5日のフルタイム研修。<br>3つのフェーズで段階的に実務レベルへ引き上げます。<br><small>※進捗問わず3ヶ月間で研修は終了となります。</small></p>
-
-            <div class="phase-grid fade-in">
-                <!-- フェーズ1 -->
-                <div class="phase-card">
-                    <div class="phase-header phase-1">
-                        <span class="phase-number">Phase 1</span>
-                        <span class="phase-period">約1ヶ月目</span>
+            <div class="hero-inner">
+                <div class="hero-content">
+                    <div class="hero-badges">
+                        <span class="badge"><span class="badge-icon">✔</span> 累計500名以上修了</span>
+                        <span class="badge"><span class="badge-icon">✔</span> 法人研修と同一カリキュラム</span>
+                        <span class="badge"><span class="badge-icon">✔</span> 20〜35歳限定</span>
                     </div>
-                    <div class="phase-body">
-                        <h3>基礎固め</h3>
-                        <div class="phase-image">
-                            <picture>
-                                <source srcset="images/coding-workspace.webp" type="image/webp"><img
-                                    src="images/coding-workspace.png" alt="Phase1基礎固め：Javaプログラミング学習環境の画面"
-                                    loading="lazy">
-                            </picture>
-                        </div>
-                        <p>Java・HTML/CSS/JS・HTTP通信の基礎を徹底的に学習。プログラミングの土台を固めます。</p>
-                        <div class="phase-tags">
-                            <span class="tag">Java</span>
-                            <span class="tag">OOP</span>
-                            <span class="tag">HTML/CSS</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">HTTP</span>
-                        </div>
+                    <p class="hero-target-label">独学・スクールで挫折した方へ</p>
+                    <h1 class="hero-title">「<span class="highlight">実務経験がない</span>」で<br>落とされる面接を、<br>終わらせませんか？</h1>
+                    <p class="hero-desc">法人向け50万円の研修と同じカリキュラムで、<br><strong>3ヶ月後、面接で「開発経験あります」と言えるようになります。</strong></p>
+                    <!-- FVオファーバッジ -->
+                    <div class="hero-offer-badge">
+                        <span class="hero-offer-label">特別価格</span>
+                        <span class="hero-offer-original">法人価格 ¥500,000</span>
+                        <span class="hero-offer-arrow">→</span>
+                        <span class="hero-offer-price">今だけ <strong>¥70,000</strong></span>
+                        <span class="hero-offer-off">86%OFF</span>
+                    </div>
+                    <div class="hero-cta">
+                        <a href="#cta-final" class="btn btn-primary btn-pulse">まず無料説明会で聞いてみる</a>
+                        <span class="hero-cta-note">約30分・無理な勧誘なし・オンライン対応</span>
+                        <p class="hero-company">運営：freeks株式会社（IT人材事業 / 法人研修事業）</p>
                     </div>
                 </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-card fade-in">
+                    <span class="stat-number" data-count="500">0</span>
+                    <span class="stat-unit">名+</span>
+                    <span class="stat-label">累計修了者</span>
+                </div>
+                <div class="stat-card fade-in">
+                    <span class="stat-number" data-count="3">0</span>
+                    <span class="stat-unit">ヶ月</span>
+                    <span class="stat-label">研修期間</span>
+                </div>
+                <div class="stat-card fade-in">
+                    <span class="stat-number" data-count="7">0</span>
+                    <span class="stat-unit">万円</span>
+                    <span class="stat-label">受講料金</span>
+                </div>
+                <div class="stat-card fade-in">
+                    <span class="stat-number" data-count="86">0</span>
+                    <span class="stat-unit">%OFF</span>
+                    <span class="stat-label">法人価格から</span>
+                </div>
+            </div>
+        </section>
 
-                <!-- フェーズ2 -->
-                <div class="phase-card">
-                    <div class="phase-header phase-2">
-                        <span class="phase-number">Phase 2</span>
-                        <span class="phase-period">約2ヶ月目</span>
+        <!-- ========== 信頼バー ========== -->
+        <section class="trust-bar" id="trust">
+            <div class="container">
+                <div class="trust-bar-inner">
+                    <div class="trust-item">
+                        <span class="trust-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 21h18" />
+                                <path d="M5 21V7l8-4v18" />
+                                <path d="M19 21V11l-6-4" />
+                                <path d="M9 9v.01" />
+                                <path d="M9 12v.01" />
+                                <path d="M9 15v.01" />
+                                <path d="M9 18v.01" />
+                            </svg></span>
+                        <span class="trust-text">法人研修<strong>導入実績あり</strong></span>
                     </div>
-                    <div class="phase-body">
-                        <h3>実践スキル習得</h3>
-                        <div class="phase-image">
-                            <picture>
-                                <source srcset="images/linux-terminal.webp" type="image/webp"><img
-                                    src="images/linux-terminal.png" alt="Phase2実践スキル習得：LinuxターミナルとSQL操作の実践画面"
-                                    loading="lazy">
-                            </picture>
-                        </div>
-                        <p>クイズシステムの開発、Linux操作、SQL/DB設計を実践。現場で必須のスキルを身につけます。</p>
-                        <div class="phase-tags">
-                            <span class="tag">Linux</span>
-                            <span class="tag">SQL</span>
-                            <span class="tag">DB設計</span>
-                            <span class="tag">設計</span>
-                            <span class="tag">実装</span>
-                        </div>
+                    <div class="trust-divider"></div>
+                    <div class="trust-item">
+                        <span class="trust-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" />
+                                <path d="M8 21h8" />
+                                <path d="M12 17v4" />
+                                <path d="M7 8h2" />
+                                <path d="M7 11h4" />
+                            </svg></span>
+                        <span class="trust-text">自社エンジニア育成にも<strong>同一カリキュラム使用</strong></span>
+                    </div>
+                    <div class="trust-divider"></div>
+                    <div class="trust-item">
+                        <span class="trust-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 20h-1a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1" />
+                                <path d="M12 20h-1a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h1" />
+                                <path d="M7 20H6a2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2h1" />
+                            </svg></span>
+                        <span class="trust-text">累計<strong>500名以上</strong>が修了</span>
+                    </div>
+                    <div class="trust-divider"></div>
+                    <div class="trust-item">
+                        <span class="trust-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                                <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" />
+                            </svg></span>
+                        <span class="trust-text">修了生の<strong>多数がエンジニア転職</strong>に成功</span>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- フェーズ3 -->
-                <div class="phase-card phase-card-main">
-                    <div class="phase-header phase-3">
-                        <span class="phase-number">Phase 3</span>
-                        <span class="phase-period">約3ヶ月目</span>
-                        <span class="phase-badge">メイン課題</span>
-                    </div>
-                    <div class="phase-body">
-                        <h3>在庫管理システム開発 + テスト</h3>
-                        <div class="phase-image phase-image-main">
-                            <picture>
-                                <source srcset="images/inventory-system.webp" type="image/webp"><img
-                                    src="images/inventory-system.png" alt="Phase3メイン課題：在庫管理システムの開発画面" loading="lazy">
-                            </picture>
-                            <span class="phase-image-caption">▲ 実際に開発する在庫管理システムのイメージ</span>
-                        </div>
-                        <p>実務想定のWebシステムを設計から開発。単体テスト・結合テストまで経験し、卒業テストに挑みます。</p>
-                        <ul class="phase-details">
-                            <li>データ設計・業務ロジック構築</li>
-                            <li>画面実装・データ管理</li>
-                            <li>単体テスト・結合テスト</li>
-                            <li>卒業テスト（基準未達は修了不可）</li>
+        <!-- ========== 対象者セクション ========== -->
+        <section class="section section-target" id="target" aria-labelledby="target-title">
+            <div class="container">
+                <h2 class="section-title fade-in" id="target-title">この研修は<span class="highlight">あなたのため</span>に<br
+                        class="sp-only">作られました</h2>
+                <p class="section-lead fade-in">3ヶ月間フルタイムで学ぶ覚悟がある、<strong>20〜35歳</strong>の方が対象です。</p>
+                <div class="target-grid fade-in">
+                    <div class="target-card target-yes">
+                        <h3>こんな方におすすめ</h3>
+                        <ul>
+                            <li><span class="check">✔</span> 独学やスクールで学んだが、面接で手応えがない</li>
+                            <li><span class="check">✔</span> 「実務経験がない」と言われて転職がうまくいかない</li>
+                            <li><span class="check">✔</span> 本気でエンジニアに転職したい（20〜35歳）</li>
+                            <li><span class="check">✔</span> 3ヶ月間、フルタイムでやり切る覚悟がある</li>
                         </ul>
-                        <p class="phase-emphasis">ここまでやるから「開発経験あり」と言える。</p>
-                        <div class="phase-tags">
-                            <span class="tag">Java</span>
-                            <span class="tag">SQL</span>
-                            <span class="tag">Web開発</span>
-                            <span class="tag">テスト</span>
-                            <span class="tag">設計</span>
+                    </div>
+                    <div class="target-card target-no">
+                        <h3>正直に言うと、向いていない方</h3>
+                        <ul>
+                            <li><span class="cross">✕</span> まずは軽く触ってみたい程度の方</li>
+                            <li><span class="cross">✕</span> 動画を見て学びたい方（本研修は実践型です）</li>
+                            <li><span class="cross">✕</span> 3ヶ月間の学習時間を確保できない方</li>
+                            <li><span class="cross">✕</span> 研修期間中に収入が必要な方</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 問題提起セクション ========== -->
+        <section class="section section-problem" id="problem" aria-labelledby="problem-title">
+            <div class="container">
+                <h2 class="section-title fade-in" id="problem-title">Progate、Udemy、スクール…<br><span
+                        class="highlight">それでも面接で落ちる</span>理由</h2>
+                <p class="section-lead fade-in">努力が足りないのではありません。<br><strong>「面接で語れる開発経験」がない</strong>だけです。</p>
+
+                <div class="problem-grid fade-in">
+                    <div class="problem-card problem-bad">
+                        <div class="problem-icon">✕</div>
+                        <h3>よくあるパターン</h3>
+                        <ul>
+                            <li>動画講座を見て「わかった気」になる</li>
+                            <li>ポートフォリオはあるが実務とかけ離れている</li>
+                            <li>LinuxやSQLを触ったことがない</li>
+                            <li>テスト工程を知らない</li>
+                        </ul>
+                        <p class="problem-result">→ 面接で「実務経験は？」と聞かれて詰まる</p>
+                    </div>
+                    <div class="problem-card problem-good">
+                        <div class="problem-icon">◎</div>
+                        <h3>この研修で変わること</h3>
+                        <ul>
+                            <li>実務想定の在庫管理システムを設計〜実装</li>
+                            <li>Linux・SQL・サーバー操作を実践</li>
+                            <li>単体テスト・結合テストまで経験</li>
+                            <li>企業の新人研修と同じ内容を修了</li>
+                            <li class="blind-bullet">面接官が必ず聞く"あの質問"に自信を持って答えられる方法</li>
+                            <li class="blind-bullet">書類選考を通過した先輩たちが共通してやっていた、たった1つのこと</li>
+                        </ul>
+                        <p class="problem-result">→ 面接で「開発経験があります」と言える</p>
+                    </div>
+                </div>
+
+                <div class="intensity-block fade-in">
+                    <div class="intensity-item">
+                        <span class="intensity-number">8</span>
+                        <span class="intensity-unit">時間/日</span>
+                    </div>
+                    <div class="intensity-divider">×</div>
+                    <div class="intensity-item">
+                        <span class="intensity-number">5</span>
+                        <span class="intensity-unit">日/週</span>
+                    </div>
+                    <div class="intensity-divider">＝</div>
+                    <div class="intensity-item">
+                        <span class="intensity-number intensity-accent">実務レベル</span>
+                    </div>
+                </div>
+                <p class="intensity-note fade-in">これは趣味の学習ではありません。<strong>現場基準の職業訓練</strong>です。</p>
+            </div>
+        </section>
+
+        <!-- ========== 実証データセクション ========== -->
+        <section class="section section-evidence" id="evidence" aria-labelledby="evidence-title">
+            <div class="container">
+                <h2 class="section-title fade-in" id="evidence-title">数字で見る<span class="highlight">研修実績</span></h2>
+                <p class="section-lead fade-in">修了生のデータが、この研修の価値を証明しています。</p>
+                <div class="evidence-grid fade-in">
+                    <div class="evidence-card">
+                        <span class="evidence-number" data-count="92">0</span>
+                        <span class="evidence-unit">%</span>
+                        <span class="evidence-label">カリキュラム修了率</span>
+                        <span class="evidence-desc">途中離脱はわずか8%</span>
+                    </div>
+                    <div class="evidence-card">
+                        <span class="evidence-number" data-count="87">0</span>
+                        <span class="evidence-unit">%</span>
+                        <span class="evidence-label">エンジニア転職成功率</span>
+                        <span class="evidence-desc">修了後6ヶ月以内</span>
+                    </div>
+                    <div class="evidence-card">
+                        <span class="evidence-number evidence-number-decimal" data-count="46"
+                            data-decimal="true">0</span>
+                        <span class="evidence-unit">/ 5.0</span>
+                        <span class="evidence-label">受講満足度</span>
+                        <span class="evidence-desc">修了時アンケート結果</span>
+                    </div>
+                    <div class="evidence-card">
+                        <span class="evidence-number" data-count="480">0</span>
+                        <span class="evidence-unit">時間+</span>
+                        <span class="evidence-label">平均学習時間</span>
+                        <span class="evidence-desc">3ヶ月間の総実践時間</span>
+                    </div>
+                </div>
+                <p class="evidence-note fade-in">※ 数値は直近1年間の修了生データに基づく</p>
+            </div>
+        </section>
+
+        <!-- ========== ミニCTA ========== -->
+        <div class="mini-cta fade-in">
+            <div class="container">
+                <div class="mini-cta-inner">
+                    <p class="mini-cta-text">まずは研修の詳細を聞いてみませんか？</p>
+                    <a href="#cta-final" class="btn btn-primary btn-sm">無料説明会を予約する</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== カリキュラムセクション（画像付き3フェーズ） ========== -->
+        <section class="section section-curriculum" id="curriculum" aria-labelledby="curriculum-title">
+            <div class="container">
+                <h2 class="section-title fade-in" id="curriculum-title">カリキュラム<span
+                        class="title-sub">3ヶ月の実践ロードマップ</span></h2>
+                <p class="section-lead fade-in">1日8時間 ×
+                    週5日のフルタイム研修。<br>3つのフェーズで段階的に実務レベルへ引き上げます。<br><small>※進捗問わず3ヶ月間で研修は終了となります。</small></p>
+
+                <div class="phase-grid fade-in">
+                    <!-- フェーズ1 -->
+                    <div class="phase-card">
+                        <div class="phase-header phase-1">
+                            <span class="phase-number">Phase 1</span>
+                            <span class="phase-period">約1ヶ月目</span>
+                        </div>
+                        <div class="phase-body">
+                            <h3>基礎固め</h3>
+                            <div class="phase-image">
+                                <picture>
+                                    <source srcset="images/coding-workspace.webp" type="image/webp"><img
+                                        src="images/coding-workspace.png" alt="Phase1基礎固め：Javaプログラミング学習環境の画面"
+                                        loading="lazy">
+                                </picture>
+                            </div>
+                            <p>Java・HTML/CSS/JS・HTTP通信の基礎を徹底的に学習。プログラミングの土台を固めます。</p>
+                            <div class="phase-tags">
+                                <span class="tag">Java</span>
+                                <span class="tag">OOP</span>
+                                <span class="tag">HTML/CSS</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">HTTP</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- フェーズ2 -->
+                    <div class="phase-card">
+                        <div class="phase-header phase-2">
+                            <span class="phase-number">Phase 2</span>
+                            <span class="phase-period">約2ヶ月目</span>
+                        </div>
+                        <div class="phase-body">
+                            <h3>実践スキル習得</h3>
+                            <div class="phase-image">
+                                <picture>
+                                    <source srcset="images/linux-terminal.webp" type="image/webp"><img
+                                        src="images/linux-terminal.png" alt="Phase2実践スキル習得：LinuxターミナルとSQL操作の実践画面"
+                                        loading="lazy">
+                                </picture>
+                            </div>
+                            <p>クイズシステムの開発、Linux操作、SQL/DB設計を実践。現場で必須のスキルを身につけます。</p>
+                            <div class="phase-tags">
+                                <span class="tag">Linux</span>
+                                <span class="tag">SQL</span>
+                                <span class="tag">DB設計</span>
+                                <span class="tag">設計</span>
+                                <span class="tag">実装</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- フェーズ3 -->
+                    <div class="phase-card phase-card-main">
+                        <div class="phase-header phase-3">
+                            <span class="phase-number">Phase 3</span>
+                            <span class="phase-period">約3ヶ月目</span>
+                            <span class="phase-badge">メイン課題</span>
+                        </div>
+                        <div class="phase-body">
+                            <h3>在庫管理システム開発 + テスト</h3>
+                            <div class="phase-image phase-image-main">
+                                <picture>
+                                    <source srcset="images/inventory-system.webp" type="image/webp"><img
+                                        src="images/inventory-system.png" alt="Phase3メイン課題：在庫管理システムの開発画面"
+                                        loading="lazy">
+                                </picture>
+                                <span class="phase-image-caption">▲ 実際に開発する在庫管理システムのイメージ</span>
+                            </div>
+                            <p>実務想定のWebシステムを設計から開発。単体テスト・結合テストまで経験し、卒業テストに挑みます。</p>
+                            <ul class="phase-details">
+                                <li>データ設計・業務ロジック構築</li>
+                                <li>画面実装・データ管理</li>
+                                <li>単体テスト・結合テスト</li>
+                                <li>卒業テスト（基準未達は修了不可）</li>
+                            </ul>
+                            <p class="phase-emphasis">ここまでやるから「開発経験あり」と言える。</p>
+                            <div class="phase-tags">
+                                <span class="tag">Java</span>
+                                <span class="tag">SQL</span>
+                                <span class="tag">Web開発</span>
+                                <span class="tag">テスト</span>
+                                <span class="tag">設計</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ========== 料金セクション ========== -->
-    <section class="section section-pricing" id="pricing">
-        <div class="container">
-            <h2 class="section-title fade-in">なぜ<span class="highlight">7万円</span>なのか？</h2>
+        <!-- ========== 料金セクション ========== -->
+        <section class="section section-pricing" id="pricing" aria-labelledby="pricing-title">
+            <div class="container">
+                <h2 class="section-title fade-in" id="pricing-title">なぜ<span class="highlight">7万円</span>なのか？</h2>
 
-            <div class="pricing-story fade-in">
-                <div class="pricing-compare">
-                    <div class="pricing-card pricing-original">
-                        <span class="pricing-label">通常価格（法人向け）</span>
-                        <span class="pricing-amount"><span class="pricing-yen">¥</span>500,000</span>
-                        <span class="pricing-note">企業が新人エンジニアに実施する法人研修</span>
-                    </div>
-                    <div class="pricing-arrow">
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                            <path d="M20 8L20 32M20 32L10 22M20 32L30 22" stroke="currentColor" stroke-width="3"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                    <div class="pricing-card pricing-special">
-                        <span class="pricing-label">一般開放 特別価格</span>
-                        <span class="pricing-amount"><span class="pricing-yen">¥</span>70,000</span>
-                        <span class="pricing-savings">86%OFF</span>
-                        <span class="pricing-note">エンジニア不足解消のため特別価格で提供</span>
-                    </div>
-                </div>
-
-                <!-- 他社比較表 -->
-                <div class="compare-table-wrapper fade-in">
-                    <h3 class="compare-title">他のスクールとの違い</h3>
-                    <table class="compare-table">
-                        <thead>
-                            <tr>
-                                <th>比較項目</th>
-                                <th>一般的なスクール</th>
-                                <th class="compare-highlight">本研修</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>料金</td>
-                                <td>30〜80万円</td>
-                                <td class="compare-highlight"><strong>7万円</strong></td>
-                            </tr>
-                            <tr>
-                                <td>学習スタイル</td>
-                                <td>動画学習が中心</td>
-                                <td class="compare-highlight"><strong>実務開発 + テスト</strong></td>
-                            </tr>
-                            <tr>
-                                <td>期間</td>
-                                <td>2〜6ヶ月（パートタイム）</td>
-                                <td class="compare-highlight"><strong>3ヶ月（フルタイム）</strong></td>
-                            </tr>
-                            <tr>
-                                <td>カリキュラム</td>
-                                <td>教材用に作成</td>
-                                <td class="compare-highlight"><strong>法人研修と同一</strong></td>
-                            </tr>
-                            <tr>
-                                <td>Linux / SQL</td>
-                                <td>触れない or 軽く紹介</td>
-                                <td class="compare-highlight"><strong>実践的に習得</strong></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- 料金の重要情報 -->
-                <div class="pricing-essential fade-in">
-                    <h3>お支払いについて</h3>
-                    <div class="pricing-essential-grid">
-                        <div class="essential-item">
-                            <span class="essential-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <line x1="12" y1="1" x2="12" y2="23" />
-                                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                                </svg></span>
-                            <div>
-                                <strong>一括70,000円（税込）</strong>
-                                <p>分割払いについてはお問い合わせください</p>
-                            </div>
+                <div class="pricing-story fade-in">
+                    <div class="pricing-compare">
+                        <div class="pricing-card pricing-original">
+                            <span class="pricing-label">通常価格（法人向け）</span>
+                            <span class="pricing-amount"><span class="pricing-yen">¥</span>500,000</span>
+                            <span class="pricing-note">企業が新人エンジニアに実施する法人研修</span>
                         </div>
-                        <div class="essential-item">
-                            <span class="essential-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path d="M9 14 4 9l5-5" />
-                                    <path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11" />
-                                </svg></span>
-                            <div>
-                                <strong>返金ポリシー</strong>
-                                <p>開始後の返金は原則不可。まず無料説明会でご確認ください</p>
-                            </div>
+                        <div class="pricing-arrow">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <path d="M20 8L20 32M20 32L10 22M20 32L30 22" stroke="currentColor" stroke-width="3"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
                         </div>
-                        <div class="essential-item">
-                            <span class="essential-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <rect x="2" y="3" width="20" height="14" rx="2" />
-                                    <path d="M8 21h8" />
-                                    <path d="M12 17v4" />
-                                </svg></span>
-                            <div>
-                                <strong>必要な環境</strong>
-                                <p>PC（メモリ8GB以上推奨）+ インターネット環境</p>
-                            </div>
+                        <div class="pricing-card pricing-special">
+                            <span class="pricing-label">一般開放 特別価格</span>
+                            <span class="pricing-amount"><span class="pricing-yen">¥</span>70,000</span>
+                            <span class="pricing-savings">86%OFF</span>
+                            <span class="pricing-note">エンジニア不足解消のため特別価格で提供</span>
                         </div>
-                        <div class="essential-item">
-                            <span class="essential-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <rect x="3" y="4" width="18" height="18" rx="2" />
-                                    <path d="M16 2v4" />
-                                    <path d="M8 2v4" />
-                                    <path d="M3 10h18" />
-                                    <path d="M8 14h.01" />
-                                    <path d="M12 14h.01" />
-                                    <path d="M16 14h.01" />
-                                    <path d="M8 18h.01" />
-                                    <path d="M12 18h.01" />
-                                </svg></span>
-                            <div>
-                                <strong>受講スタイル</strong>
-                                <p>1日8時間 × 週5日のフルタイム形式</p>
+                    </div>
+
+                    <!-- 他社比較表 -->
+                    <div class="compare-table-wrapper fade-in">
+                        <h3 class="compare-title">他のスクールとの違い</h3>
+                        <table class="compare-table">
+                            <thead>
+                                <tr>
+                                    <th>比較項目</th>
+                                    <th>一般的なスクール</th>
+                                    <th class="compare-highlight">本研修</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>料金</td>
+                                    <td>30〜80万円</td>
+                                    <td class="compare-highlight"><strong>7万円</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>学習スタイル</td>
+                                    <td>動画学習が中心</td>
+                                    <td class="compare-highlight"><strong>実務開発 + テスト</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>期間</td>
+                                    <td>2〜6ヶ月（パートタイム）</td>
+                                    <td class="compare-highlight"><strong>3ヶ月（フルタイム）</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>カリキュラム</td>
+                                    <td>教材用に作成</td>
+                                    <td class="compare-highlight"><strong>法人研修と同一</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Linux / SQL</td>
+                                    <td>触れない or 軽く紹介</td>
+                                    <td class="compare-highlight"><strong>実践的に習得</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- 料金の重要情報 -->
+                    <div class="pricing-essential fade-in">
+                        <h3>お支払いについて</h3>
+                        <div class="pricing-essential-grid">
+                            <div class="essential-item">
+                                <span class="essential-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <line x1="12" y1="1" x2="12" y2="23" />
+                                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                                    </svg></span>
+                                <div>
+                                    <strong>一括70,000円（税込）</strong>
+                                    <p>分割払いについてはお問い合わせください</p>
+                                </div>
+                            </div>
+                            <div class="essential-item">
+                                <span class="essential-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M9 14 4 9l5-5" />
+                                        <path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11" />
+                                    </svg></span>
+                                <div>
+                                    <strong>返金ポリシー</strong>
+                                    <p>開始後の返金は原則不可。まず無料説明会でご確認ください</p>
+                                </div>
+                            </div>
+                            <div class="essential-item">
+                                <span class="essential-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <rect x="2" y="3" width="20" height="14" rx="2" />
+                                        <path d="M8 21h8" />
+                                        <path d="M12 17v4" />
+                                    </svg></span>
+                                <div>
+                                    <strong>必要な環境</strong>
+                                    <p>PC（メモリ8GB以上推奨）+ インターネット環境</p>
+                                </div>
+                            </div>
+                            <div class="essential-item">
+                                <span class="essential-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" />
+                                        <path d="M16 2v4" />
+                                        <path d="M8 2v4" />
+                                        <path d="M3 10h18" />
+                                        <path d="M8 14h.01" />
+                                        <path d="M12 14h.01" />
+                                        <path d="M16 14h.01" />
+                                        <path d="M8 18h.01" />
+                                        <path d="M12 18h.01" />
+                                    </svg></span>
+                                <div>
+                                    <strong>受講スタイル</strong>
+                                    <p>1日8時間 × 週5日のフルタイム形式</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ========== ミニCTA ========== -->
-    <div class="mini-cta fade-in">
-        <div class="container">
-            <div class="mini-cta-inner">
-                <p class="mini-cta-text">料金やスケジュールについて詳しく聞きたい方は</p>
-                <a href="#cta-final" class="btn btn-primary btn-sm">無料説明会を予約する</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- ========== 受講者の声 ========== -->
-    <section class="section section-voices" id="voices">
-        <div class="container">
-            <h2 class="section-title fade-in">修了生のリアルな声と<span class="highlight">その後</span></h2>
-            <p class="section-lead fade-in">実際に修了した方の声をそのまま掲載しています</p>
-
-            <div class="voices-grid">
-                <div class="voice-card fade-in">
-                    <div class="voice-header">
-                        <div class="voice-avatar">
-                            <picture>
-                                <source srcset="images/avatar-tk.webp" type="image/webp"><img src="images/avatar-tk.png"
-                                    alt="修了生T.Kさんの写真" loading="lazy">
-                            </picture>
-                        </div>
-                        <div class="voice-info">
-                            <span class="voice-name">T.K さん（23歳）</span>
-                            <span class="voice-role">フリーター → Webエンジニア</span>
-                            <span class="voice-transition">修了後2ヶ月で内定獲得</span>
-                        </div>
-                    </div>
-                    <div class="voice-rating">★★★★★</div>
-                    <p class="voice-text">
-                        正直、最初の1ヶ月はとても大変でした。<br>
-                        ですが、在庫管理システムを完成させたときの達成感は忘れられません。<br>
-                        面接で『開発経験があります』と自信を持って言えたのが一番大きかったです。<br>
-                        今は受託開発の会社でJavaを書いています。
-                    </p>
-                    <p class="voice-note">※個人の感想です</p>
-                </div>
-
-                <div class="voice-card fade-in">
-                    <div class="voice-header">
-                        <div class="voice-avatar">
-                            <picture>
-                                <source srcset="images/avatar-sm.webp" type="image/webp"><img src="images/avatar-sm.png"
-                                    alt="修了生S.Mさんの写真" loading="lazy">
-                            </picture>
-                        </div>
-                        <div class="voice-info">
-                            <span class="voice-name">S.M さん（28歳）</span>
-                            <span class="voice-role">営業職 → 社内SE</span>
-                            <span class="voice-transition">研修内容が面接で高評価</span>
-                        </div>
-                    </div>
-                    <div class="voice-rating">★★★★★</div>
-                    <p class="voice-text">
-                        独学でProgateやUdemyを試しましたが、<br>
-                        結局『何が作れるの？』と聞かれても答えられませんでした。<br>
-                        この研修はとにかく手を動かして作ります。<br>
-                        Linuxもテストも実践するので、面接で具体的に話せるようになりました。<br>
-                        今は自社サービスのバックエンドを担当しています。
-                    </p>
-                    <p class="voice-note">※個人の感想です</p>
-                </div>
-
-                <div class="voice-card fade-in">
-                    <div class="voice-header">
-                        <div class="voice-avatar">
-                            <picture>
-                                <source srcset="images/avatar-ay.webp" type="image/webp"><img src="images/avatar-ay.png"
-                                    alt="修了生A.Yさんの写真" loading="lazy">
-                            </picture>
-                        </div>
-                        <div class="voice-info">
-                            <span class="voice-name">A.Y さん（32歳）</span>
-                            <span class="voice-role">工場勤務 → バックエンドエンジニア</span>
-                            <span class="voice-transition">32歳からのキャリアチェンジに成功</span>
-                        </div>
-                    </div>
-                    <div class="voice-rating">★★★★☆</div>
-                    <p class="voice-text">
-                        32歳で未経験だったので、正直不安しかありませんでした。<br>
-                        1日8時間の学習は想像以上にハードでしたが、だからこそ力がつきました。<br>
-                        SQLとLinuxは今の仕事で毎日使っています。<br>
-                        フロントエンドの比重がもう少しあるとなお良かったですが、<br>
-                        バックエンドの基礎は確実に身につきました。
-                    </p>
-                    <p class="voice-note">※個人の感想です</p>
-                </div>
-
-                <div class="voice-card fade-in">
-                    <div class="voice-header">
-                        <div class="voice-avatar">
-                            <picture>
-                                <source srcset="images/avatar-rt.webp" type="image/webp"><img src="images/avatar-rt.png"
-                                    alt="修了生R.Tさんの写真" loading="lazy">
-                            </picture>
-                        </div>
-                        <div class="voice-info">
-                            <span class="voice-name">R.T さん（25歳）</span>
-                            <span class="voice-role">飲食店スタッフ → Javaエンジニア</span>
-                            <span class="voice-transition">他スクール挫折後に受講</span>
-                        </div>
-                    </div>
-                    <div class="voice-rating">★★★★★</div>
-                    <p class="voice-text">
-                        以前別のスクールに30万円支払いましたが、<br>
-                        動画を見るだけで身につきませんでした。<br>
-                        この研修は毎日手を動かすので、自然と覚えることができます。<br>
-                        在庫管理システムの開発経験は面接で何度も聞かれました。<br>
-                        今はSES企業でJavaの開発案件に携わっています。
-                    </p>
-                    <p class="voice-note">※個人の感想です</p>
-                </div>
-
-                <div class="voice-card fade-in">
-                    <div class="voice-header">
-                        <div class="voice-avatar">
-                            <picture>
-                                <source srcset="images/avatar-mh.webp" type="image/webp"><img src="images/avatar-mh.png"
-                                    alt="修了生M.Hさんの写真" loading="lazy">
-                            </picture>
-                        </div>
-                        <div class="voice-info">
-                            <span class="voice-name">M.H さん（27歳）</span>
-                            <span class="voice-role">事務職 → 開発エンジニア</span>
-                            <span class="voice-transition">修了後1ヶ月で自社開発企業に内定</span>
-                        </div>
-                    </div>
-                    <div class="voice-rating">★★★★☆</div>
-                    <p class="voice-text">
-                        事務職からの転職で不安だらけでしたが、<br>
-                        フルタイムで集中できたのがとても良かったです。<br>
-                        ただ、3ヶ月は本当にあっという間で、もう少し長くても良いと感じました。<br>
-                        就職サポートがない点は厳しかったですが、<br>
-                        研修の実績が証明となり、結果的に内定をいただくことができました。
-                    </p>
-                    <p class="voice-note">※個人の感想です</p>
+        <!-- ========== ミニCTA ========== -->
+        <div class="mini-cta fade-in">
+            <div class="container">
+                <div class="mini-cta-inner">
+                    <p class="mini-cta-text">料金やスケジュールについて詳しく聞きたい方は</p>
+                    <a href="#cta-final" class="btn btn-primary btn-sm">無料説明会を予約する</a>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- ========== FAQセクション ========== -->
-    <section class="section section-faq" id="faq" role="region" aria-label="よくある質問">
-        <div class="container">
-            <h2 class="section-title fade-in">よくある質問</h2>
+        <!-- ========== 受講者の声 ========== -->
+        <section class="section section-voices" id="voices" aria-labelledby="voices-title">
+            <div class="container">
+                <h2 class="section-title fade-in" id="voices-title">修了生のリアルな声と<span class="highlight">その後</span></h2>
+                <p class="section-lead fade-in">実際に修了した方の声をそのまま掲載しています</p>
 
-            <div class="faq-list">
-                <div class="faq-item fade-in">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>プログラミング完全未経験でも大丈夫ですか？</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>
-                            はい、未経験から始める方を対象にしたカリキュラムです。<br>
-                            Java基礎から丁寧に学び、段階的に実務レベルまで引き上げます。<br>
-                            受講者の約8割がプログラミング未経験からスタートしています。<br>
-                            ただし、1日8時間×週5日の学習を3ヶ月間継続する覚悟は必要です。
+                <div class="voices-grid">
+                    <div class="voice-card fade-in">
+                        <div class="voice-header">
+                            <div class="voice-avatar">
+                                <picture>
+                                    <source srcset="images/avatar-tk.webp" type="image/webp"><img
+                                        src="images/avatar-tk.png" alt="修了生T.Kさんの写真" loading="lazy">
+                                </picture>
+                            </div>
+                            <div class="voice-info">
+                                <span class="voice-name">T.K さん（23歳）</span>
+                                <span class="voice-role">フリーター → Webエンジニア</span>
+                                <span class="voice-transition">修了後2ヶ月で内定獲得</span>
+                            </div>
+                        </div>
+                        <div class="voice-rating">★★★★★</div>
+                        <p class="voice-text">
+                            正直、最初の1ヶ月はとても大変でした。<br>
+                            ですが、在庫管理システムを完成させたときの達成感は忘れられません。<br>
+                            面接で『開発経験があります』と自信を持って言えたのが一番大きかったです。<br>
+                            今は受託開発の会社でJavaを書いています。
                         </p>
+                        <p class="voice-note">※個人の感想です</p>
                     </div>
-                </div>
 
-                <div class="faq-item fade-in">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>修了後の就職サポートはありますか？</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>
-                            本研修はスキル習得に特化したプログラムです。<br>
-                            就職斡旋は行っておりませんが、研修で得たスキルと開発実績は面接で大きなアドバンテージとなります。<br>
-                            実際に多くの修了生がエンジニアとしてのキャリアをスタートさせています。
+                    <div class="voice-card fade-in">
+                        <div class="voice-header">
+                            <div class="voice-avatar">
+                                <picture>
+                                    <source srcset="images/avatar-sm.webp" type="image/webp"><img
+                                        src="images/avatar-sm.png" alt="修了生S.Mさんの写真" loading="lazy">
+                                </picture>
+                            </div>
+                            <div class="voice-info">
+                                <span class="voice-name">S.M さん（28歳）</span>
+                                <span class="voice-role">営業職 → 社内SE</span>
+                                <span class="voice-transition">研修内容が面接で高評価</span>
+                            </div>
+                        </div>
+                        <div class="voice-rating">★★★★★</div>
+                        <p class="voice-text">
+                            独学でProgateやUdemyを試しましたが、<br>
+                            結局『何が作れるの？』と聞かれても答えられませんでした。<br>
+                            この研修はとにかく手を動かして作ります。<br>
+                            Linuxもテストも実践するので、面接で具体的に話せるようになりました。<br>
+                            今は自社サービスのバックエンドを担当しています。
                         </p>
+                        <p class="voice-note">※個人の感想です</p>
                     </div>
-                </div>
 
-                <div class="faq-item fade-in">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>オンラインで受講できますか？</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>
-                            受講形式の詳細については、無料説明会にてご案内しております。<br>
-                            お気軽にお申し込みください。
+                    <div class="voice-card fade-in">
+                        <div class="voice-header">
+                            <div class="voice-avatar">
+                                <picture>
+                                    <source srcset="images/avatar-ay.webp" type="image/webp"><img
+                                        src="images/avatar-ay.png" alt="修了生A.Yさんの写真" loading="lazy">
+                                </picture>
+                            </div>
+                            <div class="voice-info">
+                                <span class="voice-name">A.Y さん（32歳）</span>
+                                <span class="voice-role">工場勤務 → バックエンドエンジニア</span>
+                                <span class="voice-transition">32歳からのキャリアチェンジに成功</span>
+                            </div>
+                        </div>
+                        <div class="voice-rating">★★★★☆</div>
+                        <p class="voice-text">
+                            32歳で未経験だったので、正直不安しかありませんでした。<br>
+                            1日8時間の学習は想像以上にハードでしたが、だからこそ力がつきました。<br>
+                            SQLとLinuxは今の仕事で毎日使っています。<br>
+                            フロントエンドの比重がもう少しあるとなお良かったですが、<br>
+                            バックエンドの基礎は確実に身につきました。
                         </p>
+                        <p class="voice-note">※個人の感想です</p>
                     </div>
-                </div>
 
-                <div class="faq-item fade-in">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>働きながら受講できますか？</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>
-                            本研修は1日8時間×週5日のフルタイム形式です。<br>
-                            そのため、日中のお仕事と並行しての受講は困難です。<br>
-                            退職・休職後に集中して取り組む方、求職中の方に最適なプログラムです。
+                    <div class="voice-card fade-in">
+                        <div class="voice-header">
+                            <div class="voice-avatar">
+                                <picture>
+                                    <source srcset="images/avatar-rt.webp" type="image/webp"><img
+                                        src="images/avatar-rt.png" alt="修了生R.Tさんの写真" loading="lazy">
+                                </picture>
+                            </div>
+                            <div class="voice-info">
+                                <span class="voice-name">R.T さん（25歳）</span>
+                                <span class="voice-role">飲食店スタッフ → Javaエンジニア</span>
+                                <span class="voice-transition">他スクール挫折後に受講</span>
+                            </div>
+                        </div>
+                        <div class="voice-rating">★★★★★</div>
+                        <p class="voice-text">
+                            以前別のスクールに30万円支払いましたが、<br>
+                            動画を見るだけで身につきませんでした。<br>
+                            この研修は毎日手を動かすので、自然と覚えることができます。<br>
+                            在庫管理システムの開発経験は面接で何度も聞かれました。<br>
+                            今はSES企業でJavaの開発案件に携わっています。
                         </p>
+                        <p class="voice-note">※個人の感想です</p>
                     </div>
-                </div>
 
-                <div class="faq-item fade-in">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>途中でついていけなくなった場合のサポートはありますか？</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>
-                            講師への質問は随時可能です。<br>
-                            わからない部分はその場で解消できる環境を用意しています。<br>
-                            ただし、学習の主体はあくまでご自身です。<br>
-                            「教えてもらう」ではなく「自分で調べ、手を動かす」姿勢が求められます。
+                    <div class="voice-card fade-in">
+                        <div class="voice-header">
+                            <div class="voice-avatar">
+                                <picture>
+                                    <source srcset="images/avatar-mh.webp" type="image/webp"><img
+                                        src="images/avatar-mh.png" alt="修了生M.Hさんの写真" loading="lazy">
+                                </picture>
+                            </div>
+                            <div class="voice-info">
+                                <span class="voice-name">M.H さん（27歳）</span>
+                                <span class="voice-role">事務職 → 開発エンジニア</span>
+                                <span class="voice-transition">修了後1ヶ月で自社開発企業に内定</span>
+                            </div>
+                        </div>
+                        <div class="voice-rating">★★★★☆</div>
+                        <p class="voice-text">
+                            事務職からの転職で不安だらけでしたが、<br>
+                            フルタイムで集中できたのがとても良かったです。<br>
+                            ただ、3ヶ月は本当にあっという間で、もう少し長くても良いと感じました。<br>
+                            就職サポートがない点は厳しかったですが、<br>
+                            研修の実績が証明となり、結果的に内定をいただくことができました。
                         </p>
-                    </div>
-                </div>
-
-                <div class="faq-item fade-in">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>受講に必要なパソコンのスペックは？</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>
-                            Windows 10以降またはmacOSのPCが必要です。<br>
-                            メモリは8GB以上を推奨しています。<br>
-                            安定したインターネット環境もご用意ください。<br>
-                            詳しい要件は無料説明会にてご案内いたします。
-                        </p>
-                    </div>
-                </div>
-
-                <div class="faq-item fade-in">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>他のプログラミングスクールとの違いは何ですか？</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>
-                            最大の違いは「法人向け研修と同じカリキュラム」を使用している点です。<br>
-                            動画学習が中心の一般的なスクールとは異なり、実務と同じ環境で在庫管理システムの設計・開発・テストまで行います。<br>
-                            Linux操作やSQL、単体テスト・結合テストなど、現場で必須のスキルを実践的に習得できます。
-                        </p>
-                    </div>
-                </div>
-
-                <div class="faq-item fade-in">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>卒業テストに不合格だった場合はどうなりますか？</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>
-                            卒業テストの基準に達しなかった場合、修了証書の発行はできません。<br>
-                            ただし、3ヶ月間の研修で身につけたスキルや開発経験自体は、転職活動で十分に活かしていただけます。<br>
-                            研修期間中に基準を超えられるよう、講師が全力でサポートいたします。
-                        </p>
+                        <p class="voice-note">※個人の感想です</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ========== クロージングCTA ========== -->
-    <section class="section section-cta" id="cta-final">
-        <div class="container">
-            <div class="cta-block fade-in">
-                <p class="cta-question">このまま「実務経験なし」で<br>面接を受け続けますか？<br><strong>3ヶ月で変わる道があります。</strong></p>
+        <!-- ========== FAQセクション ========== -->
+        <section class="section section-faq" id="faq" role="region" aria-labelledby="faq-title">
+            <div class="container">
+                <h2 class="section-title fade-in" id="faq-title">よくある質問</h2>
 
-                <!-- 修了証モックアップ -->
-                <div class="curriculum-certificate cta-certificate">
-                    <div class="curriculum-certificate-inner">
-                        <div class="curriculum-certificate-img">
-                            <picture>
-                                <source srcset="images/certificate.webp" type="image/webp"><img
-                                    src="images/certificate.png" alt="Java実務研修プログラム修了証書のイメージ" loading="lazy">
-                            </picture>
+                <div class="faq-list">
+                    <div class="faq-item fade-in">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>プログラミング完全未経験でも大丈夫ですか？</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                はい、未経験から始める方を対象にしたカリキュラムです。<br>
+                                Java基礎から丁寧に学び、段階的に実務レベルまで引き上げます。<br>
+                                受講者の約8割がプログラミング未経験からスタートしています。<br>
+                                ただし、1日8時間×週5日の学習を3ヶ月間継続する覚悟は必要です。
+                            </p>
                         </div>
-                        <div class="curriculum-certificate-text">
-                            <p class="curriculum-certificate-title">全課程修了で<strong>修了証書</strong>を発行</p>
-                            <p class="curriculum-certificate-desc">3ヶ月の実務研修を完走した証。<br>面接時のポートフォリオとしても活用できます。</p>
+                    </div>
+
+                    <div class="faq-item fade-in">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>修了後の就職サポートはありますか？</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                本研修はスキル習得に特化したプログラムです。<br>
+                                就職斡旋は行っておりませんが、研修で得たスキルと開発実績は面接で大きなアドバンテージとなります。<br>
+                                実際に多くの修了生がエンジニアとしてのキャリアをスタートさせています。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item fade-in">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>オンラインで受講できますか？</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                受講形式の詳細については、無料説明会にてご案内しております。<br>
+                                お気軽にお申し込みください。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item fade-in">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>働きながら受講できますか？</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                本研修は1日8時間×週5日のフルタイム形式です。<br>
+                                そのため、日中のお仕事と並行しての受講は困難です。<br>
+                                退職・休職後に集中して取り組む方、求職中の方に最適なプログラムです。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item fade-in">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>途中でついていけなくなった場合のサポートはありますか？</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                講師への質問は随時可能です。<br>
+                                わからない部分はその場で解消できる環境を用意しています。<br>
+                                ただし、学習の主体はあくまでご自身です。<br>
+                                「教えてもらう」ではなく「自分で調べ、手を動かす」姿勢が求められます。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item fade-in">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>受講に必要なパソコンのスペックは？</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Windows 10以降またはmacOSのPCが必要です。<br>
+                                メモリは8GB以上を推奨しています。<br>
+                                安定したインターネット環境もご用意ください。<br>
+                                詳しい要件は無料説明会にてご案内いたします。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item fade-in">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>他のプログラミングスクールとの違いは何ですか？</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                最大の違いは「法人向け研修と同じカリキュラム」を使用している点です。<br>
+                                動画学習が中心の一般的なスクールとは異なり、実務と同じ環境で在庫管理システムの設計・開発・テストまで行います。<br>
+                                Linux操作やSQL、単体テスト・結合テストなど、現場で必須のスキルを実践的に習得できます。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item fade-in">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>卒業テストに不合格だった場合はどうなりますか？</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                卒業テストの基準に達しなかった場合、修了証書の発行はできません。<br>
+                                ただし、3ヶ月間の研修で身につけたスキルや開発経験自体は、転職活動で十分に活かしていただけます。<br>
+                                研修期間中に基準を超えられるよう、講師が全力でサポートいたします。
+                            </p>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="cta-offer">
-                    <div class="cta-price-compare">
-                        <span class="cta-original">通常 ¥500,000</span>
-                        <span class="cta-arrow">→</span>
-                        <span class="cta-special">今だけ <strong>¥70,000</strong></span>
-                    </div>
-                    <p class="cta-urgency">🔥 先着<strong>20名</strong>限定 ― 残りわずか</p>
-                    <!-- カウントダウンタイマー -->
-                    <div class="countdown-timer" id="countdownTimer">
-                        <span class="countdown-label">この価格での募集終了まで</span>
-                        <div class="countdown-digits">
-                            <div class="countdown-item">
-                                <span class="countdown-num" id="cdDays">00</span>
-                                <span class="countdown-unit">日</span>
+        <!-- ========== クロージングCTA ========== -->
+        <section class="section section-cta" id="cta-final">
+            <div class="container">
+                <div class="cta-block fade-in">
+                    <p class="cta-question">このまま「実務経験なし」で<br>面接を受け続けますか？<br><strong>3ヶ月で変わる道があります。</strong></p>
+
+                    <!-- 修了証モックアップ -->
+                    <div class="curriculum-certificate cta-certificate">
+                        <div class="curriculum-certificate-inner">
+                            <div class="curriculum-certificate-img">
+                                <picture>
+                                    <source srcset="images/certificate.webp" type="image/webp"><img
+                                        src="images/certificate.png" alt="Java実務研修プログラム修了証書のイメージ" loading="lazy">
+                                </picture>
                             </div>
-                            <span class="countdown-sep">:</span>
-                            <div class="countdown-item">
-                                <span class="countdown-num" id="cdHours">00</span>
-                                <span class="countdown-unit">時間</span>
-                            </div>
-                            <span class="countdown-sep">:</span>
-                            <div class="countdown-item">
-                                <span class="countdown-num" id="cdMinutes">00</span>
-                                <span class="countdown-unit">分</span>
-                            </div>
-                            <span class="countdown-sep">:</span>
-                            <div class="countdown-item">
-                                <span class="countdown-num" id="cdSeconds">00</span>
-                                <span class="countdown-unit">秒</span>
+                            <div class="curriculum-certificate-text">
+                                <p class="curriculum-certificate-title">全課程修了で<strong>修了証書</strong>を発行</p>
+                                <p class="curriculum-certificate-desc">3ヶ月の実務研修を完走した証。<br>面接時のポートフォリオとしても活用できます。</p>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- 説明会の内容 + 画像 -->
-                <div class="cta-session-info">
-                    <div class="cta-session-visual">
-                        <picture>
-                            <source srcset="images/online-consultation.webp" type="image/webp"><img
-                                src="images/online-consultation.png" alt="オンライン無料説明会の様子：講師と受講者がビデオ通話で相談" loading="lazy">
-                        </picture>
-                    </div>
-                    <div class="cta-session-content">
-                        <h3>無料説明会でわかること</h3>
-                        <div class="session-items">
-                            <div class="session-item">
-                                <span class="session-num">①</span>
-                                <span>カリキュラムの詳細と進め方</span>
-                            </div>
-                            <div class="session-item">
-                                <span class="session-num">②</span>
-                                <span>修了生の転職実績</span>
-                            </div>
-                            <div class="session-item">
-                                <span class="session-num">③</span>
-                                <span>あなたの状況に合わせた個別アドバイス</span>
+                    <div class="cta-offer">
+                        <div class="cta-price-compare">
+                            <span class="cta-original">通常 ¥500,000</span>
+                            <span class="cta-arrow">→</span>
+                            <span class="cta-special">今だけ <strong>¥70,000</strong></span>
+                        </div>
+                        <p class="cta-urgency">🔥 先着<strong>20名</strong>限定 ― 残りわずか</p>
+                        <!-- カウントダウンタイマー -->
+                        <div class="countdown-timer" id="countdownTimer">
+                            <span class="countdown-label">この価格での募集終了まで</span>
+                            <div class="countdown-digits">
+                                <div class="countdown-item">
+                                    <span class="countdown-num" id="cdDays">00</span>
+                                    <span class="countdown-unit">日</span>
+                                </div>
+                                <span class="countdown-sep">:</span>
+                                <div class="countdown-item">
+                                    <span class="countdown-num" id="cdHours">00</span>
+                                    <span class="countdown-unit">時間</span>
+                                </div>
+                                <span class="countdown-sep">:</span>
+                                <div class="countdown-item">
+                                    <span class="countdown-num" id="cdMinutes">00</span>
+                                    <span class="countdown-unit">分</span>
+                                </div>
+                                <span class="countdown-sep">:</span>
+                                <div class="countdown-item">
+                                    <span class="countdown-num" id="cdSeconds">00</span>
+                                    <span class="countdown-unit">秒</span>
+                                </div>
                             </div>
                         </div>
-                        <!-- 講師情報 -->
-                        <div class="cta-instructor">
+                    </div>
+
+                    <!-- 説明会の内容 + 画像 -->
+                    <div class="cta-session-info">
+                        <div class="cta-session-visual">
                             <picture>
-                                <source srcset="images/instructor.webp" type="image/webp"><img
-                                    src="images/instructor.png" alt="無料説明会の担当講師（現役エンジニア）" class="instructor-photo"
+                                <source srcset="images/online-consultation.webp" type="image/webp"><img
+                                    src="images/online-consultation.png" alt="オンライン無料説明会の様子：講師と受講者がビデオ通話で相談"
                                     loading="lazy">
                             </picture>
-                            <div class="instructor-info">
-                                <span class="instructor-label">担当講師</span>
-                                <span class="instructor-note">現役エンジニアが直接ご案内します</span>
+                        </div>
+                        <div class="cta-session-content">
+                            <h3>無料説明会でわかること</h3>
+                            <div class="session-items">
+                                <div class="session-item">
+                                    <span class="session-num">①</span>
+                                    <span>カリキュラムの詳細と進め方</span>
+                                </div>
+                                <div class="session-item">
+                                    <span class="session-num">②</span>
+                                    <span>修了生の転職実績</span>
+                                </div>
+                                <div class="session-item">
+                                    <span class="session-num">③</span>
+                                    <span>あなたの状況に合わせた個別アドバイス</span>
+                                </div>
+                            </div>
+                            <!-- 講師情報 -->
+                            <div class="cta-instructor">
+                                <picture>
+                                    <source srcset="images/instructor.webp" type="image/webp"><img
+                                        src="images/instructor.png" alt="無料説明会の担当講師（現役エンジニア）" class="instructor-photo"
+                                        loading="lazy">
+                                </picture>
+                                <div class="instructor-info">
+                                    <span class="instructor-label">担当講師</span>
+                                    <span class="instructor-note">現役エンジニアが直接ご案内します</span>
+                                </div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- ステップフォーム -->
+                    <div class="step-form" id="stepForm">
+                        <div class="step-form-progress">
+                            <div class="step-dot active" data-step="1">1</div>
+                            <div class="step-line"></div>
+                            <div class="step-dot" data-step="2">2</div>
+                            <div class="step-line"></div>
+                            <div class="step-dot" data-step="3">3</div>
+                        </div>
+
+                        <div class="step-panel active" data-step="1">
+                            <p class="step-question">あなたの年齢は？</p>
+                            <div class="step-options">
+                                <button class="step-option" data-value="20-24" data-next="2">20〜24歳</button>
+                                <button class="step-option" data-value="25-29" data-next="2">25〜29歳</button>
+                                <button class="step-option" data-value="30-35" data-next="2">30〜35歳</button>
+                                <button class="step-option" data-value="other" data-next="2">その他</button>
+                            </div>
+                        </div>
+
+                        <div class="step-panel" data-step="2">
+                            <p class="step-question">プログラミング経験は？</p>
+                            <div class="step-options">
+                                <button class="step-option" data-value="none" data-next="3">完全未経験</button>
+                                <button class="step-option" data-value="self-study" data-next="3">独学で少し触った程度</button>
+                                <button class="step-option" data-value="school" data-next="3">スクール受講経験あり</button>
+                                <button class="step-option" data-value="work" data-next="3">実務経験あり</button>
+                            </div>
+                        </div>
+
+                        <div class="step-panel" data-step="3">
+                            <p class="step-question">無料説明会に申し込む</p>
+                            <p class="step-result-text">あなたに合ったご案内をいたします。<br>まずはお気軽にご参加ください。</p>
+                            <div class="step-options">
+                                <a href="#"
+                                    class="step-option step-final btn btn-primary btn-pulse">無料説明会を予約する（約30分）</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <p class="cta-micro-copy">※ 無料説明会は約30分。質問だけでもOK。無理な勧誘は一切ありません。</p>
                 </div>
-
-                <!-- ステップフォーム -->
-                <div class="step-form" id="stepForm">
-                    <div class="step-form-progress">
-                        <div class="step-dot active" data-step="1">1</div>
-                        <div class="step-line"></div>
-                        <div class="step-dot" data-step="2">2</div>
-                        <div class="step-line"></div>
-                        <div class="step-dot" data-step="3">3</div>
-                    </div>
-
-                    <div class="step-panel active" data-step="1">
-                        <p class="step-question">あなたの年齢は？</p>
-                        <div class="step-options">
-                            <button class="step-option" data-value="20-24" data-next="2">20〜24歳</button>
-                            <button class="step-option" data-value="25-29" data-next="2">25〜29歳</button>
-                            <button class="step-option" data-value="30-35" data-next="2">30〜35歳</button>
-                            <button class="step-option" data-value="other" data-next="2">その他</button>
-                        </div>
-                    </div>
-
-                    <div class="step-panel" data-step="2">
-                        <p class="step-question">プログラミング経験は？</p>
-                        <div class="step-options">
-                            <button class="step-option" data-value="none" data-next="3">完全未経験</button>
-                            <button class="step-option" data-value="self-study" data-next="3">独学で少し触った程度</button>
-                            <button class="step-option" data-value="school" data-next="3">スクール受講経験あり</button>
-                            <button class="step-option" data-value="work" data-next="3">実務経験あり</button>
-                        </div>
-                    </div>
-
-                    <div class="step-panel" data-step="3">
-                        <p class="step-question">無料説明会に申し込む</p>
-                        <p class="step-result-text">あなたに合ったご案内をいたします。<br>まずはお気軽にご参加ください。</p>
-                        <div class="step-options">
-                            <a href="#" class="step-option step-final btn btn-primary btn-pulse">無料説明会を予約する（約30分）</a>
-                        </div>
-
-                    </div>
-                </div>
-
-                <p class="cta-micro-copy">※ 無料説明会は約30分。質問だけでもOK。無理な勧誘は一切ありません。</p>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- ========== 特定商取引法に基づく表記 ========== -->
     <section class="section section-legal" id="tokushoho">
@@ -1009,6 +1032,109 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <!-- 構造化データ: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "プログラミング完全未経験でも大丈夫ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "はい、未経験から始める方を対象にしたカリキュラムです。Java基礎から丁寧に学び、段階的に実務レベルまで引き上げます。受講者の約8割がプログラミング未経験からスタートしています。ただし、1日8時間×週5日の学習を3ヶ月間継続する覚悟は必要です。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "修了後の就職サポートはありますか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "本研修はスキル習得に特化したプログラムです。就職斡旋は行っておりませんが、研修で得たスキルと開発実績は面接で大きなアドバンテージとなります。実際に多くの修了生がエンジニアとしてのキャリアをスタートさせています。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "オンラインで受講できますか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "受講形式の詳細については、無料説明会にてご案内しております。お気軽にお申し込みください。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "働きながら受講できますか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "本研修は1日8時間×週5日のフルタイム形式です。そのため、日中のお仕事と並行しての受講は困難です。退職・休職後に集中して取り組む方、求職中の方に最適なプログラムです。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "途中でついていけなくなった場合のサポートはありますか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "講師への質問は随時可能です。わからない部分はその場で解消できる環境を用意しています。ただし、学習の主体はあくまでご自身です。「教えてもらう」ではなく「自分で調べ、手を動かす」姿勢が求められます。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "受講に必要なパソコンのスペックは？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Windows 10以降またはmacOSのPCが必要です。メモリは8GB以上を推奨しています。安定したインターネット環境もご用意ください。詳しい要件は無料説明会にてご案内いたします。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "他のプログラミングスクールとの違いは何ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "最大の違いは「法人向け研修と同じカリキュラム」を使用している点です。動画学習が中心の一般的なスクールとは異なり、実務と同じ環境で在庫管理システムの設計・開発・テストまで行います。Linux操作やSQL、単体テスト・結合テストなど、現場で必須のスキルを実践的に習得できます。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "卒業テストに不合格だった場合はどうなりますか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "卒業テストの基準に達しなかった場合、修了証書の発行はできません。ただし、3ヶ月間の研修で身につけたスキルや開発経験自体は、転職活動で十分に活かしていただけます。研修期間中に基準を超えられるよう、講師が全力でサポートいたします。"
+                }
+            }
+        ]
+    }
+    </script>
+    <!-- 構造化データ: Service -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "freeks Training Service — Java実務研修プログラム",
+        "description": "法人向け50万円のJava実務研修を一般開放。3ヶ月間のフルタイム研修で、在庫管理システムの設計・開発・テストまで実践し、未経験からエンジニア転職を目指します。",
+        "provider": {
+            "@type": "Organization",
+            "name": "freeks株式会社",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "渋谷2丁目21番1号 渋谷ヒカリエ 33F",
+                "addressLocality": "渋谷区",
+                "addressRegion": "東京都",
+                "postalCode": "150-8510",
+                "addressCountry": "JP"
+            }
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "70000",
+            "priceCurrency": "JPY",
+            "availability": "https://schema.org/InStock"
+        },
+        "serviceType": "プログラミング研修",
+        "areaServed": "JP"
+    }
+    </script>
 </body>
 
 </html>

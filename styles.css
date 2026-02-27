@@ -3480,17 +3480,17 @@ details[open]>.legal-title {
     margin-bottom: 48px;
     padding-bottom: 20px;
     border-bottom: 3px solid var(--accent-blue);
-    max-width: 700px;
+    max-width: 860px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .pp-content {
-    max-width: 700px;
+    max-width: 860px;
     margin: 0 auto;
-    font-size: 0.92rem;
+    font-size: 0.95rem;
     color: var(--text-secondary);
-    line-height: 1.9;
+    line-height: 2;
 }
 
 .pp-content h2 {
@@ -3554,23 +3554,35 @@ details[open]>.legal-title {
 
 @media (max-width: 480px) {
     .pp-title {
-        font-size: 1.4rem;
-        margin-bottom: 36px;
+        font-size: 1.3rem;
+        margin-bottom: 32px;
+        padding-bottom: 16px;
     }
 
     .pp-content h2 {
-        font-size: 0.92rem;
+        font-size: 0.9rem;
         padding-left: 10px;
         margin-top: 28px;
     }
 
     .pp-content {
         font-size: 0.85rem;
+        line-height: 1.9;
+    }
+
+    .pp-content p {
+        word-break: normal;
+        overflow-wrap: anywhere;
+    }
+
+    .pp-address {
+        padding: 12px 16px;
+        font-size: 0.83rem;
     }
 }
 
 .pp-back {
-    max-width: 700px;
+    max-width: 860px;
     margin: 40px auto 0;
     text-align: center;
 }

@@ -156,7 +156,7 @@ function initStepForm() {
 
 /* ----- カウントアップアニメーション ----- */
 function initCountUp() {
-    const counters = document.querySelectorAll('.stat-number[data-count]');
+    const counters = document.querySelectorAll('.achievement-number[data-count]');
 
     const observer = new IntersectionObserver(
         (entries) => {

@@ -622,60 +622,129 @@ img {
     }
 }
 
-/* 螳溽ｸｾ繧ｫ繝ｼ繝・*/
-.hero-stats {
+/* ==========================================
+   実績バナー - プレミアムデザイン
+   ========================================== */
+.section-achievements {
+    position: relative;
+    background: linear-gradient(180deg, #f0f4f8 0%, #f8fafc 50%, #f0f4f8 100%);
+    padding: 28px 24px;
+    overflow: hidden;
+}
+
+/* 背景のグロー効果 */
+.achievements-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 200px;
+    background: radial-gradient(ellipse, rgba(251, 191, 36, 0.07) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* 上下のゴールドラインアクセント */
+.section-achievements::before,
+.section-achievements::after {
+    content: '';
+    position: absolute;
+    left: 15%;
+    right: 15%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(217, 119, 6, 0.25) 20%, rgba(245, 158, 11, 0.4) 50%, rgba(217, 119, 6, 0.25) 80%, transparent);
+}
+
+.section-achievements::before {
+    top: 0;
+}
+
+.section-achievements::after {
+    bottom: 0;
+}
+
+.achievements-inner {
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    z-index: 1;
-    width: 100%;
-    max-width: 1000px;
+    gap: 0;
+    max-width: 960px;
+    margin: 0 auto;
 }
 
-.stat-card {
-    background: rgba(255, 255, 255, 0.55);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    border-radius: var(--border-radius);
-    padding: 20px 28px;
+.achievement-item {
+    flex: 1;
     text-align: center;
-    min-width: 140px;
-    transition: all var(--transition-normal);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    padding: 12px 16px;
+    position: relative;
 }
 
-.stat-card:hover {
-    border-color: rgba(147, 197, 253, 0.4);
-    box-shadow: 0 4px 24px rgba(37, 99, 235, 0.2);
-    transform: translateY(-4px) scale(1.02);
+/* ゴールドディバイダー */
+.achievement-divider {
+    width: 1px;
+    height: 64px;
+    background: linear-gradient(180deg, transparent, rgba(217, 119, 6, 0.2) 30%, rgba(245, 158, 11, 0.35) 50%, rgba(217, 119, 6, 0.2) 70%, transparent);
+    flex-shrink: 0;
 }
 
-.stat-number {
-    display: inline;
-    font-size: 2rem;
+/* 数字 - 大きく目立つゴールドグラデーション */
+.achievement-number {
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+    font-size: 3.4rem;
     font-weight: 900;
-    background: var(--accent-gradient);
+    letter-spacing: -0.04em;
+    line-height: 1;
+    background: linear-gradient(170deg, #fbbf24 0%, #f59e0b 35%, #d97706 65%, #f59e0b 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    filter: drop-shadow(0 1px 3px rgba(245, 158, 11, 0.25));
+    display: inline-block;
 }
 
-.stat-unit {
-    font-size: 0.95rem;
-    font-weight: 700;
-    background: var(--accent-gradient);
+.achievement-suffix {
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #f59e0b, #d97706);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    margin-left: 2px;
 }
 
-.stat-label {
+.achievement-label {
     display: block;
-    font-size: 0.8rem;
-    color: rgba(255, 255, 255, 0.95);
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-    margin-top: 4px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    letter-spacing: 0.1em;
+    margin-top: 8px;
+}
+
+/* 実績バナー モバイル対応 */
+@media (max-width: 600px) {
+    .section-achievements {
+        padding: 36px 16px;
+    }
+
+    .achievements-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px 0;
+    }
+
+    .achievement-divider {
+        display: none;
+    }
+
+    .achievement-number {
+        font-size: 2.4rem;
+    }
+
+    .achievement-suffix {
+        font-size: 0.95rem;
+    }
 }
 
 /* 繝偵・繝ｭ繝ｼ蜀・・繧｢繧ｯ繧ｻ繝ｳ繝医き繝ｩ繝ｼ隱ｿ謨ｴ */
@@ -2487,16 +2556,16 @@ img {
         min-height: auto;
         background-image: url('images/hero-sp.webp');
         background-size: cover;
-        background-position: center center;
+        background-position: 40% 35%;
     }
 
     .hero::before {
         background: linear-gradient(180deg,
-                rgba(15, 23, 42, 0.45) 0%,
-                rgba(15, 23, 42, 0.55) 30%,
-                rgba(15, 23, 42, 0.65) 50%,
-                rgba(15, 23, 42, 0.80) 70%,
-                rgba(15, 23, 42, 0.90) 100%);
+                rgba(15, 23, 42, 0.15) 0%,
+                rgba(15, 23, 42, 0.30) 20%,
+                rgba(15, 23, 42, 0.55) 40%,
+                rgba(15, 23, 42, 0.80) 60%,
+                rgba(15, 23, 42, 0.92) 100%);
     }
 
     .hero-image {

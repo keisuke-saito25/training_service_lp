@@ -81,7 +81,7 @@ body {
     font-size: var(--font-size-body);
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
-    word-break: keep-all;
+
     overflow-wrap: anywhere;
 }
 
@@ -152,6 +152,10 @@ img {
     display: none;
 }
 
+.pc-only {
+    display: inline;
+}
+
 /* =============================================
    蜈ｱ騾壹さ繝ｳ繝昴・繝阪Φ繝・
    ============================================= */
@@ -182,6 +186,10 @@ img {
     font-size: 1.05rem;
     margin-bottom: 48px;
     line-height: 1.8;
+}
+
+.section-lead small {
+    font-size: 0.72rem;
 }
 
 .highlight {
@@ -1528,7 +1536,7 @@ img {
     line-height: 2;
     margin-bottom: 12px;
     letter-spacing: 0.02em;
-    word-break: auto-phrase;
+
 }
 
 .voice-note {
@@ -1785,7 +1793,7 @@ img {
 
 .cta-price-compare {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: center;
     gap: 16px;
     flex-wrap: wrap;
@@ -2436,6 +2444,7 @@ img {
     font-size: 0.82rem;
     color: var(--text-muted);
     line-height: 1.5;
+
 }
 
 /* CTA説明会情報：旧スタイル削除済み。新スタイルはファイル末尾参照 */
@@ -2476,6 +2485,7 @@ img {
 
     .hero-content {
         max-width: 100%;
+        text-align: center;
     }
 
     .hero-badges {
@@ -2506,6 +2516,10 @@ img {
 
     .sp-only {
         display: inline;
+    }
+
+    .pc-only {
+        display: none;
     }
 
     /* 繝翫ン */
@@ -2598,8 +2612,30 @@ img {
         grid-template-columns: 1fr;
     }
 
+    .problem-card {
+        padding: 24px 20px;
+
+    }
+
+    .problem-card li {
+        font-size: 0.88rem;
+    }
+
+    .problem-result {
+        font-size: 0.95rem;
+    }
+
     .pricing-reasons {
         grid-template-columns: 1fr;
+    }
+
+    .pricing-card {
+        padding: 24px 20px;
+        text-align: center;
+    }
+
+    .pricing-amount {
+        font-size: 2rem;
     }
 
 
@@ -2633,11 +2669,25 @@ img {
 
     /* CTA */
     .cta-question {
-        font-size: 1.3rem;
+        font-size: 1.15rem;
     }
 
     .cta-question strong {
         font-size: 1.5rem;
+    }
+
+    .cta-price-compare {
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+    }
+
+    .cta-arrow {
+        display: none;
+    }
+
+    .cta-urgency {
+        text-align: center;
     }
 
     .step-form {
@@ -2670,6 +2720,25 @@ img {
         gap: 2px;
     }
 
+    /* 対象者チェックリスト */
+    .target-checklist li {
+        font-size: 0.95rem;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .target-icon {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+        margin-top: 2px;
+    }
+
+    .target-icon svg {
+        width: 18px;
+        height: 18px;
+    }
+
     /* 菫｡鬆ｼ繝舌・ */
     .trust-bar-inner {
         flex-direction: column;
@@ -2681,8 +2750,10 @@ img {
     }
 
     .trust-item {
-        padding: 4px 16px;
-        font-size: 0.82rem;
+        padding: 4px 12px;
+        font-size: 0.7rem;
+        white-space: nowrap;
+        justify-content: center;
     }
 
     /* 繝輔ぉ繝ｼ繧ｺ繧ｫ繝ｼ繝・*/
@@ -2726,11 +2797,15 @@ img {
 
     .hero-cta {
         flex-direction: column;
+        align-items: center;
+        text-align: center;
         width: 100%;
     }
 
     .hero-cta .btn {
         width: 100%;
+        padding: 16px 24px;
+        font-size: 1rem;
     }
 
     .future-skills {
@@ -2971,6 +3046,14 @@ img {
         border-radius: 8px;
     }
 
+    .phase-image img {
+        max-height: 180px;
+    }
+
+    .phase-image-main img {
+        max-height: 180px;
+    }
+
     .instructor-photo {
         width: 44px;
         height: 44px;
@@ -3204,6 +3287,10 @@ img {
 @media (max-width: 480px) {
     .evidence-number {
         font-size: 2.2rem;
+    }
+
+    .evidence-unit {
+        white-space: nowrap;
     }
 
     .evidence-card {
@@ -3737,7 +3824,6 @@ details[open]>.legal-title {
     }
 
     .pp-content p {
-        word-break: normal;
         overflow-wrap: anywhere;
     }
 

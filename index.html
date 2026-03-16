@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ja" dir="ltr">
 
 <head>
@@ -31,7 +31,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=Noto+Sans+JP:wght@400;700;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20260313f">
     <!-- Google Analytics (GA4) — Measurement ID を取得後に G-XXXXXXXXXX を差し替えてください -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
@@ -88,11 +88,10 @@
                         <span class="badge"><span class="badge-icon">✔</span> 法人研修と同一カリキュラム</span>
                         <span class="badge"><span class="badge-icon">✔</span> 20〜35歳限定</span>
                     </div>
-                    <p class="hero-target-label">独学・スクールで挫折した方へ</p>
-                    <h1 class="hero-title">「<span class="highlight highlight-hero">開発経験がない</span>」で<br
-                            class="pc-only">落とされる面接を、<br class="pc-only">終わらせませんか？</h1>
-                    <p class="hero-desc">法人向け50万円の研修と同じカリキュラムで、<br
-                            class="pc-only"><strong>3か月後、面接でシステム開発について語れるようになります。</strong></p>
+                    <p class="hero-target-label">未経験からエンジニアへ</p>
+                    <h1 class="hero-title">未経験から現場で使える<br class="pc-only"><span
+                            class="highlight highlight-hero">開発スキル</span>を身につける</h1>
+                    <p class="hero-desc">法人向け研修と同じカリキュラムで<br class="pc-only"><strong>実際の開発に近い形で学べるエンジニアスクール</strong></p>
                     <!-- FVオファーバッジ -->
                     <div class="hero-offer-badge">
                         <span class="hero-offer-label">特別価格</span>
@@ -105,6 +104,13 @@
                         <a href="#cta-final" class="btn btn-primary btn-pulse btn-lg">まず無料説明会で聞いてみる</a>
                         <span class="hero-cta-note">約30分・無理な勧誘なし・オンライン対応</span>
                         <p class="hero-company">運営：freeks株式会社（エンジニアリングサービス/法人向け開発研修）</p>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-visual-wrapper">
+                        <img src="images/hero-person.png" alt="研修を受講する若きエンジニア" width="480" height="480" loading="eager">
+                        <div class="hero-visual-accent hero-visual-accent-1"></div>
+                        <div class="hero-visual-accent hero-visual-accent-2"></div>
                     </div>
                 </div>
             </div>
@@ -823,52 +829,50 @@
             <section class="section section-cta" id="cta-final">
                 <div class="container">
                     <div class="cta-block fade-in">
-                        <p class="cta-question">このまま「開発経験なし」で<br>面接を受け続けますか？<br><strong>3か月で変わる道があります。</strong></p>
+                        <div class="cta-hero-area">
+                            <img src="images/cta-developer.png" alt="" class="cta-hero-bg-img" loading="lazy"
+                                aria-hidden="true">
+                            <p class="cta-question">このまま「開発経験なし」で<br>面接を受け続けますか？<br><strong>3か月で変わる道があります。</strong></p>
 
-                        <!-- 研修成果物のポートフォリオ活用 -->
-                        <div class="curriculum-certificate cta-certificate">
-                            <div class="curriculum-certificate-inner">
-                                <div class="curriculum-certificate-img">
-                                    <picture>
-                                        <source srcset="images/certificate.webp" type="image/webp"><img
-                                            src="images/certificate.png" alt="Java実務研修プログラムの成果物イメージ" loading="lazy">
-                                    </picture>
-                                </div>
-                                <div class="curriculum-certificate-text">
-                                    <p class="curriculum-certificate-title">研修の成果物を<strong
-                                            style="font-size: 1.15em">ポートフォリオ</strong>として活用</p>
-                                    <p class="curriculum-certificate-desc">
-                                        3か月の実務研修で開発したシステムを<br class="pc-only">転職活動のポートフォリオとしてそのまま使えます。
-                                    </p>
+                            <!-- 価格カード -->
+                            <div class="cta-price-card">
+                                <div class="cta-price-card-inner">
+                                    <div class="cta-price-row">
+                                        <span class="cta-original">法人向け研修価格 ¥500,000</span>
+                                        <span class="cta-price-badge">86%OFF</span>
+                                    </div>
+                                    <div class="cta-price-main">
+                                        <span class="cta-price-now">今だけ</span>
+                                        <span class="cta-price-amount">¥70,000</span>
+                                        <span class="cta-price-tax">（税抜）</span>
+                                    </div>
+                                    <p class="cta-urgency"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" style="vertical-align: -2px; margin-right: 4px;">
+                                            <path
+                                                d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                                            <line x1="12" y1="9" x2="12" y2="13" />
+                                            <line x1="12" y1="17" x2="12.01" y2="17" />
+                                        </svg>モニター期間は予告なく<br class="sp-only">終了する可能性があります</p>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="cta-offer">
-                            <div class="cta-price-compare">
-                                <span class="cta-original">通常 ¥500,000</span>
-                                <span class="cta-arrow">→</span>
-                                <span class="cta-special">今だけ <strong>¥70,000</strong><small>（税抜）</small></span>
+                            <!-- 研修成果物のポートフォリオ活用 -->
+                            <div class="curriculum-certificate cta-certificate">
+                                <div class="curriculum-certificate-inner">
+                                    <div class="curriculum-certificate-text">
+                                        <p class="curriculum-certificate-title">研修の成果物を<strong
+                                                style="font-size: 1.15em">ポートフォリオ</strong>として活用</p>
+                                        <p class="curriculum-certificate-desc">
+                                            3か月の実務研修で開発したシステムを<br class="pc-only">転職活動のポートフォリオとしてそのまま使えます。
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
-                            <p class="cta-urgency"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" style="vertical-align: -2px; margin-right: 4px;">
-                                    <path
-                                        d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
-                                    <line x1="12" y1="9" x2="12" y2="13" />
-                                    <line x1="12" y1="17" x2="12.01" y2="17" />
-                                </svg>モニター期間は予告なく<br class="sp-only">終了する可能性があります</p>
                         </div>
 
                         <!-- 説明会の内容 + 画像 -->
                         <div class="cta-session-info">
-                            <div class="cta-session-visual">
-                                <picture>
-                                    <source srcset="images/online-consultation.webp" type="image/webp"><img
-                                        src="images/online-consultation.png" alt="オンライン無料説明会の様子：講師と受講者がビデオ通話で相談"
-                                        loading="lazy">
-                                </picture>
-                            </div>
+
                             <div class="cta-session-content">
                                 <h3>無料説明会でわかること</h3>
                                 <div class="session-items">
@@ -938,7 +942,6 @@
                                     <a href="#"
                                         class="step-option step-final btn btn-primary btn-pulse">無料説明会を予約する（約30分）</a>
                                 </div>
-
                             </div>
                         </div>
 

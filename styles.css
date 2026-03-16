@@ -2013,12 +2013,44 @@ img {
 }
 
 @media (max-width: 600px) {
+    .cta-hero-area {
+        padding: 40px 16px;
+        border-radius: 16px;
+    }
+
     .cta-price-card-inner {
-        padding: 24px 20px;
+        padding: 24px 16px;
+    }
+
+    .cta-price-row {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+    }
+
+    .cta-price-main {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .cta-price-amount {
-        font-size: 2.2rem;
+        font-size: 2rem;
+    }
+
+    .cta-price-now {
+        font-size: 0.85rem;
+    }
+
+    .cta-question {
+        font-size: 1.1rem;
+    }
+
+    .cta-question strong {
+        font-size: 1.3rem;
+    }
+
+    .cta-certificate .curriculum-certificate-title {
+        font-size: 1rem;
     }
 
     .cta-session-points {
@@ -2749,17 +2781,21 @@ img {
     }
 
     .hero-visual {
-        position: relative;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: auto;
         width: 100%;
-        height: 300px;
+        height: 70%;
+        opacity: 0.25;
     }
 
     .hero-visual-wrapper::before {
-        width: 100%;
-        height: 40%;
-        background: linear-gradient(to bottom, #ffffff 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%);
-        left: 0;
-        top: 0;
+        display: none;
+    }
+
+    .hero-visual-wrapper::after {
+        display: none;
     }
 
     .hero-image {
@@ -2842,17 +2878,8 @@ img {
     }
 
     .hero-visual {
-        position: relative;
-        width: 100%;
-        height: 250px;
-    }
-
-    .hero-visual-wrapper::before {
-        width: 100%;
-        height: 50%;
-        background: linear-gradient(to bottom, #ffffff 0%, rgba(255, 255, 255, 0.5) 40%, transparent 100%);
-        left: 0;
-        top: 0;
+        height: 65%;
+        opacity: 0.25;
     }
 
     .hero-image {
@@ -3069,8 +3096,15 @@ img {
 
 @media (max-width: 480px) {
     .hero-badges {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .badge {
+        font-size: 0.72rem;
+        padding: 6px 12px;
     }
 
     .hero-cta {

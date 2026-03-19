@@ -433,7 +433,7 @@ img {
     align-items: center;
     position: relative;
     padding: 120px 60px 60px;
-    background: #ffffff;
+    background: #1e293b;
     overflow: hidden;
 }
 
@@ -537,14 +537,14 @@ img {
     align-items: center;
     gap: 6px;
     padding: 8px 18px;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(37, 99, 235, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 30px;
     font-size: 0.82rem;
-    color: var(--text-secondary);
+    color: #ffffff;
     font-weight: 600;
-    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.06);
+    box-shadow: none;
 }
 
 .badge-icon {
@@ -566,7 +566,7 @@ img {
     line-height: 1.4;
     margin-bottom: 20px;
     letter-spacing: -0.02em;
-    color: var(--text-primary);
+    color: #ffffff;
 }
 
 .hero-title-line {
@@ -575,13 +575,13 @@ img {
 
 .hero-desc {
     font-size: 1.05rem;
-    color: #4b5563;
+    color: rgba(255, 255, 255, 0.85);
     margin-bottom: 28px;
     line-height: 1.9;
 }
 
 .hero-desc strong {
-    color: var(--accent-blue);
+    color: #93c5fd;
     font-size: 1.15rem;
     font-weight: 700;
 }
@@ -593,12 +593,12 @@ img {
     gap: 10px;
 }
 
-/* ヒーロー人物画像 — 右側背景同化スタイル */
+/* ヒーロー人物画像 — 全幅背景スタイル */
 .hero-visual {
     position: absolute;
     top: 0;
-    right: 0;
-    width: 45%;
+    left: 0;
+    width: 100%;
     height: 100%;
     z-index: 0;
     overflow: hidden;
@@ -618,15 +618,15 @@ img {
     display: block;
 }
 
-/* 画像の左側フェード：白背景への自然なグラデーション */
+/* 画像の左側オーバーレイ：テキスト可読性のためのダークグラデーション */
 .hero-visual-wrapper::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    width: 45%;
+    width: 65%;
     height: 100%;
-    background: linear-gradient(to right, #ffffff 0%, rgba(255,255,255,0.85) 30%, rgba(255,255,255,0.4) 60%, transparent 100%);
+    background: linear-gradient(to right, rgba(15,23,42,0.72) 0%, rgba(15,23,42,0.45) 45%, rgba(15,23,42,0.1) 75%, transparent 100%);
     z-index: 2;
     pointer-events: none;
 }
@@ -639,7 +639,7 @@ img {
     left: 0;
     width: 100%;
     height: 30%;
-    background: linear-gradient(to top, #ffffff 0%, rgba(255,255,255,0.6) 40%, transparent 100%);
+    background: linear-gradient(to top, rgba(15,23,42,0.5) 0%, rgba(15,23,42,0.2) 40%, transparent 100%);
     z-index: 2;
     pointer-events: none;
 }
@@ -2834,19 +2834,20 @@ img {
     .hero-visual {
         position: absolute;
         top: 0;
-        right: 0;
-        bottom: auto;
+        left: 0;
         width: 100%;
-        height: 70%;
-        opacity: 0.25;
+        height: 100%;
+        opacity: 1;
     }
 
     .hero-visual-wrapper::before {
-        display: none;
+        width: 100%;
+        background: rgba(15,23,42,0.55);
     }
 
     .hero-visual-wrapper::after {
-        display: none;
+        display: block;
+        background: linear-gradient(to top, rgba(15,23,42,0.6) 0%, transparent 60%);
     }
 
     .hero-image {
@@ -2929,8 +2930,8 @@ img {
     }
 
     .hero-visual {
-        height: 65%;
-        opacity: 0.25;
+        height: 100%;
+        opacity: 1;
     }
 
     .hero-image {

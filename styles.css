@@ -586,7 +586,7 @@ img {
 }
 
 .hero-desc strong {
-    color: #bae6fd;
+    color: #facc15;
     font-size: 1.15rem;
     font-weight: 700;
 }
@@ -891,9 +891,9 @@ img {
 
 /* FV「開発スキル」ハイライト */
 .hero .highlight-hero {
-    color: #bae6fd;
+    color: #facc15;
     font-weight: 900;
-    background: linear-gradient(transparent 60%, rgba(250, 204, 21, 0.35) 60%);
+    background: linear-gradient(transparent 60%, rgba(250, 204, 21, 0.25) 60%);
     padding: 0 4px;
 }
 

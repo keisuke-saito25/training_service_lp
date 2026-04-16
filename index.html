@@ -11,19 +11,19 @@
     <meta property="og:title" content="未経験から3か月でエンジニアへ｜Tech Bridge">
     <meta property="og:description"
         content="【今だけ7万円（税抜）】法人向け50万円のJava実務研修を一般開放。累計500名以上が修了。未経験から3か月でシステム開発の実務を理解できるエンジニアへ。">
-    <meta property="og:image" content="https://keisuke-saito25.github.io/training_service_lp/images/ogp.png">
-    <meta property="og:url" content="https://keisuke-saito25.github.io/training_service_lp/">
+    <meta property="og:image" content="https://techbridge-academy.co.jp/images/ogp.png">
+    <meta property="og:url" content="https://techbridge-academy.co.jp/">
     <meta property="og:site_name" content="Tech Bridge">
     <meta property="og:locale" content="ja_JP">
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="未経験から3か月でエンジニアへ｜Tech Bridge">
     <meta name="twitter:description" content="【今だけ7万円（税抜）】法人向け50万円のJava実務研修を一般開放。累計500名以上が修了。">
-    <meta name="twitter:image" content="https://keisuke-saito25.github.io/training_service_lp/images/ogp.png">
+    <meta name="twitter:image" content="https://techbridge-academy.co.jp/images/ogp.png">
     <!-- favicon -->
     <link rel="icon" type="image/png" href="images/icons/logo_icn.png">
     <!-- canonical -->
-    <link rel="canonical" href="https://keisuke-saito25.github.io/training_service_lp/">
+    <link rel="canonical" href="https://techbridge-academy.co.jp/">
     <!-- リソースヒント -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,13 +32,13 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=Noto+Sans+JP:wght@400;700;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css?v=20260313f">
-    <!-- Google Analytics (GA4) — Measurement ID を取得後に G-XXXXXXXXXX を差し替えてください -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <!-- Google Analytics (GA4) — 本番プロパティ: freeks Inc. / Tech Bridge LP -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5T1FWERLQZ"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
+        gtag('config', 'G-5T1FWERLQZ');
     </script>
 </head>
 
@@ -940,11 +940,76 @@
                             </div>
 
                             <div class="step-panel" data-step="3">
-                                <p class="step-question">無料カウンセリングに申し込む</p>
-                                <p class="step-result-text">あなたに合ったご案内をいたします。<br>まずはお気軽にご参加ください。</p>
-                                <div class="step-options">
-                                    <a href="#"
-                                        class="step-option step-final btn btn-primary btn-pulse">無料カウンセリングを予約（約30分）</a>
+                                <p class="step-question">お申し込み情報を入力</p>
+                                <p class="step-result-text">30秒で完了します。24時間以内にご連絡いたします。</p>
+                                <form id="contactForm" class="contact-form" novalidate>
+                                    <!-- Web3Forms アクセスキー -->
+                                    <input type="hidden" name="access_key" value="608d28fd-f37f-4339-9d3f-d0533f133066">
+                                    <input type="hidden" name="subject" value="【Tech Bridge】無料説明会のお申し込み">
+                                    <input type="hidden" name="from_name" value="Tech Bridge LP">
+                                    <!-- スパム防止用ハニーポット -->
+                                    <input type="checkbox" name="botcheck" style="display:none;">
+                                    <!-- ステップ1・2の回答を送信 -->
+                                    <input type="hidden" name="age_range" id="formAgeRange">
+                                    <input type="hidden" name="experience" id="formExperience">
+                                    <!-- 流入元トラッキング（自動入力 / 広告成果計測用） -->
+                                    <input type="hidden" name="utm_source" id="formUtmSource">
+                                    <input type="hidden" name="utm_medium" id="formUtmMedium">
+                                    <input type="hidden" name="utm_campaign" id="formUtmCampaign">
+                                    <input type="hidden" name="utm_content" id="formUtmContent">
+                                    <input type="hidden" name="utm_term" id="formUtmTerm">
+                                    <input type="hidden" name="gclid" id="formGclid">
+                                    <input type="hidden" name="landing_page" id="formLandingPage">
+                                    <input type="hidden" name="referrer" id="formReferrer">
+
+                                    <div class="form-group">
+                                        <label for="formName" class="form-label">お名前 <span class="form-required">必須</span></label>
+                                        <input type="text" id="formName" name="name" required placeholder="山田 太郎" class="form-input" autocomplete="name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="formEmail" class="form-label">メールアドレス <span class="form-required">必須</span></label>
+                                        <input type="email" id="formEmail" name="email" required placeholder="example@email.com" class="form-input" autocomplete="email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="formPhone" class="form-label">電話番号 <span class="form-optional">任意</span></label>
+                                        <input type="tel" id="formPhone" name="phone" placeholder="090-1234-5678" class="form-input" autocomplete="tel">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="formPreferredTime" class="form-label">ご希望の時間帯 <span class="form-optional">任意</span></label>
+                                        <select id="formPreferredTime" name="preferred_time" class="form-select">
+                                            <option value="">選択してください</option>
+                                            <option value="平日 午前（10:00〜12:00）">平日 午前（10:00〜12:00）</option>
+                                            <option value="平日 午後（13:00〜17:00）">平日 午後（13:00〜17:00）</option>
+                                            <option value="平日 夜（18:00〜20:00）">平日 夜（18:00〜20:00）</option>
+                                            <option value="土日">土日</option>
+                                        </select>
+                                    </div>
+                                    <button type="submit" id="formSubmitBtn" class="btn btn-primary btn-pulse btn-lg form-submit-btn">
+                                        無料説明会に申し込む
+                                    </button>
+                                    <p class="form-privacy-note">
+                                        <a href="privacy-policy.html" target="_blank" rel="noopener">プライバシーポリシー</a>に同意の上、送信してください
+                                    </p>
+                                </form>
+                            </div>
+
+                            <!-- サンクス画面 -->
+                            <div class="step-panel" data-step="thanks" id="stepThanks">
+                                <div class="thanks-content">
+                                    <div class="thanks-icon">✅</div>
+                                    <p class="thanks-title">お申し込みありがとうございます！</p>
+                                    <p class="thanks-message">
+                                        ご登録のメールアドレスに確認メールをお送りしました。<br>
+                                        <strong>24時間以内</strong>に担当者よりご連絡いたします。
+                                    </p>
+                                    <div class="thanks-next">
+                                        <p class="thanks-next-title">📋 次のステップ</p>
+                                        <ol class="thanks-steps">
+                                            <li>確認メールをご確認ください</li>
+                                            <li>担当者から日程調整のご連絡をお送りします</li>
+                                            <li>オンラインで無料説明会を実施（約30分）</li>
+                                        </ol>
+                                    </div>
                                 </div>
                             </div>
                         </div>

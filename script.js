@@ -3,6 +3,7 @@
    ============================================= */
 
 document.addEventListener('DOMContentLoaded', () => {
+    initTrafficAttribution();
     initStickyNav();
     initMobileMenu();
     initSmoothScroll();
@@ -14,6 +15,70 @@ document.addEventListener('DOMContentLoaded', () => {
     initEvidenceCountUp();
     initAnalyticsEvents();
 });
+
+/* ----- 流入元トラッキング（UTM / GCLID）-----
+   Google広告等の流入元をlocalStorageに最大90日保持し、
+   問い合わせフォーム送信時にWeb3Forms経由でスプレッドシート運用に引き渡す。
+   将来のオフラインコンバージョンインポート（Google広告）の前提データにもなる。 */
+function initTrafficAttribution() {
+    const STORAGE_KEY = 'tb_attribution';
+    const EXPIRY_DAYS = 90;
+    const TRACKED_PARAMS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'gclid'];
+    const FIELD_MAP = {
+        utm_source: 'formUtmSource',
+        utm_medium: 'formUtmMedium',
+        utm_campaign: 'formUtmCampaign',
+        utm_content: 'formUtmContent',
+        utm_term: 'formUtmTerm',
+        gclid: 'formGclid',
+        landing_page: 'formLandingPage',
+        referrer: 'formReferrer',
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    let attribution = {};
+
+    // 既存データ読み込み（期限切れなら破棄）
+    try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (raw) {
+            const stored = JSON.parse(raw);
+            const ageDays = (Date.now() - new Date(stored.captured_at).getTime()) / (1000 * 60 * 60 * 24);
+            if (ageDays <= EXPIRY_DAYS) {
+                attribution = stored;
+            } else {
+                localStorage.removeItem(STORAGE_KEY);
+            }
+        }
+    } catch (e) { /* 破損データは無視 */ }
+
+    // URLに新しい流入パラメータがあれば上書き（新しい広告クリックを優先）
+    const hasNewAttribution = TRACKED_PARAMS.some(key => params.has(key));
+    if (hasNewAttribution) {
+        attribution = { captured_at: new Date().toISOString() };
+        TRACKED_PARAMS.forEach(key => {
+            if (params.has(key)) attribution[key] = params.get(key);
+        });
+        attribution.landing_page = window.location.href;
+        attribution.referrer = document.referrer || '(direct)';
+    } else if (!attribution.landing_page) {
+        // 初回到達時のみ landing_page / referrer を記録
+        attribution.captured_at = new Date().toISOString();
+        attribution.landing_page = window.location.href;
+        attribution.referrer = document.referrer || '(direct)';
+    }
+
+    // localStorageに保存（プライベートモード等で失敗する環境はスキップ）
+    try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(attribution));
+    } catch (e) { /* 無視 */ }
+
+    // hidden input に反映
+    Object.entries(FIELD_MAP).forEach(([key, elemId]) => {
+        const el = document.getElementById(elemId);
+        if (el && attribution[key]) el.value = attribution[key];
+    });
+}
 
 /* ----- スティッキーナビ ----- */
 function initStickyNav() {
@@ -110,10 +175,13 @@ function initFAQ() {
     });
 }
 
-/* ----- ステップフォーム ----- */
+/* ----- ステップフォーム + 問い合わせフォーム送信 ----- */
 function initStepForm() {
     const form = document.getElementById('stepForm');
     if (!form) return;
+
+    // ステップ1・2の選択値を記録
+    const formData = { age: '', experience: '' };
 
     form.querySelectorAll('.step-option:not(.step-final)').forEach(option => {
         option.addEventListener('click', () => {
@@ -124,6 +192,10 @@ function initStepForm() {
             // 現在のパネルを非表示
             const currentPanel = form.querySelector('.step-panel.active');
             const currentStepNum = currentPanel.getAttribute('data-step');
+
+            // ステップ値を記録
+            if (currentStepNum === '1') formData.age = value;
+            if (currentStepNum === '2') formData.experience = value;
 
             currentPanel.classList.remove('active');
 
@@ -140,18 +212,94 @@ function initStepForm() {
             if (currentDot) currentDot.classList.replace('active', 'completed');
             if (nextDot) nextDot.classList.add('active');
 
+            // hiddenフィールドに値をセット
+            const ageField = document.getElementById('formAgeRange');
+            const expField = document.getElementById('formExperience');
+            if (ageField) ageField.value = formData.age;
+            if (expField) expField.value = formData.experience;
+
             // GA4: ステップフォーム進捗イベント
             trackEvent('step_form_progress', { step: currentStepNum, value: value });
         });
     });
 
-    // GA4: フォーム最終ステップクリック
-    const finalBtn = form.querySelector('.step-final');
-    if (finalBtn) {
-        finalBtn.addEventListener('click', () => {
-            trackEvent('step_form_complete', { action: 'reservation_click' });
+    // 問い合わせフォーム送信
+    const contactForm = document.getElementById('contactForm');
+    if (!contactForm) return;
+
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        // バリデーション
+        const nameInput = document.getElementById('formName');
+        const emailInput = document.getElementById('formEmail');
+        let isValid = true;
+
+        // エラー状態をリセット
+        contactForm.querySelectorAll('.form-input, .form-select').forEach(el => {
+            el.classList.remove('error');
         });
-    }
+
+        if (!nameInput.value.trim()) {
+            nameInput.classList.add('error');
+            nameInput.focus();
+            isValid = false;
+        }
+
+        if (!emailInput.value.trim() || !emailInput.validity.valid) {
+            emailInput.classList.add('error');
+            if (isValid) emailInput.focus();
+            isValid = false;
+        }
+
+        if (!isValid) return;
+
+        // ボタンをローディング状態に
+        const submitBtn = document.getElementById('formSubmitBtn');
+        const originalText = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span class="spinner"></span>送信中...';
+
+        try {
+            // Web3Forms API に送信
+            const data = new FormData(contactForm);
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: data,
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                // GA4: フォーム送信完了イベント
+                trackEvent('step_form_complete', {
+                    action: 'form_submitted',
+                    age_range: formData.age,
+                    experience: formData.experience,
+                });
+
+                // サンクス画面を表示
+                const step3 = form.querySelector('.step-panel[data-step="3"]');
+                const thanksPanel = document.getElementById('stepThanks');
+                const dot3 = form.querySelector('.step-dot[data-step="3"]');
+
+                if (step3) step3.classList.remove('active');
+                if (thanksPanel) thanksPanel.classList.add('active');
+                if (dot3) dot3.classList.replace('active', 'completed');
+
+                // スクロール
+                form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } else {
+                throw new Error(result.message || '送信に失敗しました');
+            }
+        } catch (error) {
+            // エラー時はボタンを戻す
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalText;
+            alert('送信に失敗しました。お手数ですが、しばらく時間をおいて再度お試しください。');
+            console.error('Form submission error:', error);
+        }
+    });
 }
 
 /* ----- カウントアップアニメーション ----- */

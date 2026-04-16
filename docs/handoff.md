@@ -1,6 +1,6 @@
 # freeks Training Service LP — 引き継ぎドキュメント
 
-最終更新: 2026-02-27
+最終更新: 2026-04-06
 
 ---
 
@@ -84,13 +84,16 @@ training_service_lp/
 - [x] stat-cardの背景・ラベル視認性向上
 - [x] stat-cardのSP表示を2列×2行グリッドに修正
 - [x] GA4 計測タグ設置（プレースホルダーID）
-- [x] CVイベント設計5種（CTAクリック/フォーム進捗/スクロール深度/FAQ開閉）
+- [x] CVイベント実装5種（`cta_click` / `step_form_progress` / `step_form_complete` / `scroll_depth` / `faq_open`）
 - [x] 画像WebP最適化（hero-sp 547KB→25KB、hero-bg 112KB→42KB）
 - [x] CSS背景をWebPに切替（PC/SP両対応）
 - [x] canonical URL / dns-prefetch 追加
 - [x] JSON-LD 構造化データ（FAQPage 8問 + Service）
 - [x] アクセシビリティ改善（スキップナビ/main/aria-labelledby/focus-visible）
 - [x] sitemap.xml / robots.txt 作成
+- [x] LP内埋め込み型の問い合わせフォーム実装（ページ遷移なし・CVR最大化）
+- [x] フォーム送信後のサンクス画面と次のステップ案内追加
+- [x] Web3Forms API を利用したサーバーレスメール送信実装
 
 ---
 
@@ -101,7 +104,7 @@ training_service_lp/
 | # | 課題 | 詳細 |
 |---|------|------|
 | 1 | **~~SP全体レスポンシブ確認~~** | ✅ 完了 |
-| 2 | **フォームリンク先** | 説明会予約ボタンのhrefが `#` のまま。実際の予約URLへの差し替えが必要 |
+| 2 | **Web3Forms アクセスキー設定** | LP内フォームを使用するため、Web3Formsでアクセスキーを取得し `index.html` のプレースホルダーを差し替える必要がある |
 | 3 | **GA4 Measurement ID 差替** | `G-XXXXXXXXXX` プレースホルダーを実際のIDに差し替え（index.html L33, L38） |
 
 ### 🟡 優先度中

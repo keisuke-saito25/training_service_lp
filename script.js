@@ -297,40 +297,41 @@ function initStepForm() {
         submitBtn.disabled = true;
         submitBtn.innerHTML = '<span class="spinner"></span>送信中...';
 
+        // EmailJS 設定（docs/email-templates.md と対応）
+        const EMAILJS_SERVICE_ID = 'service_e8mf6ci';
+        const EMAILJS_TEMPLATE_ADMIN = 'template_jj49gu6';     // 運営通知（Admin Notification）
+        const EMAILJS_TEMPLATE_AUTOREPLY = 'template_dxbburs'; // ユーザー自動返信（Auto Reply to User）
+
         try {
-            // Web3Forms API に送信
-            const data = new FormData(contactForm);
-            const response = await fetch('https://api.web3forms.com/submit', {
-                method: 'POST',
-                body: data,
+            // 運営通知メール（contact@ 宛）を送信
+            await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ADMIN, contactForm);
+
+            // 運営通知が成功したらサンクス表示を進める（自動返信失敗でも申込は成立）
+            trackEvent('step_form_complete', {
+                action: 'form_submitted',
+                age_range: formData.age,
+                experience: formData.experience,
             });
 
-            const result = await response.json();
+            const step3 = form.querySelector('.step-panel[data-step="3"]');
+            const thanksPanel = document.getElementById('stepThanks');
+            const dot3 = form.querySelector('.step-dot[data-step="3"]');
 
-            if (result.success) {
-                // GA4: フォーム送信完了イベント
-                trackEvent('step_form_complete', {
-                    action: 'form_submitted',
-                    age_range: formData.age,
-                    experience: formData.experience,
-                });
+            if (step3) step3.classList.remove('active');
+            if (thanksPanel) thanksPanel.classList.add('active');
+            if (dot3) dot3.classList.replace('active', 'completed');
 
-                // サンクス画面を表示
-                const step3 = form.querySelector('.step-panel[data-step="3"]');
-                const thanksPanel = document.getElementById('stepThanks');
-                const dot3 = form.querySelector('.step-dot[data-step="3"]');
+            form.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
-                if (step3) step3.classList.remove('active');
-                if (thanksPanel) thanksPanel.classList.add('active');
-                if (dot3) dot3.classList.replace('active', 'completed');
-
-                // スクロール
-                form.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            } else {
-                throw new Error(result.message || '送信に失敗しました');
+            // ユーザー向け自動返信メールを送信（失敗してもUX上は成功扱い）
+            try {
+                await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_AUTOREPLY, contactForm);
+            } catch (autoReplyError) {
+                // 自動返信の失敗は運営がログで把握、ユーザー体験には影響させない
+                console.error('Auto-reply send failed:', autoReplyError);
             }
         } catch (error) {
-            // エラー時はボタンを戻す
+            // 運営通知の送信自体が失敗した場合はユーザーに再送を促す
             submitBtn.disabled = false;
             submitBtn.textContent = originalText;
             alert('送信に失敗しました。お手数ですが、しばらく時間をおいて再度お試しください。');

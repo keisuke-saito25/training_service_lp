@@ -30,10 +30,24 @@
 
 | # | 作業 | 所要 | 優先 |
 |---|------|------|:----:|
-| 1 | GA4: `step_form_complete` / `cta_click` をキーイベント化 | 2分 | 🥇 翌日以降 |
-| 2 | Web3Forms 自動返信メール設定（テンプレは[email-templates.md](email-templates.md)に準備済） | 5分 | 🥇 |
-| 3 | Google広告アカウント開設（Ads-Phase A開始） | 30分 | 🥈 (1完了後) |
-| 4 | Search Console サイトマップ再送信（取得できませんでした場合） | 1分 | 🥉 翌日以降 |
+| 1 | GA4: `step_form_complete` / `cta_click` / `timerex_click` をキーイベント化 | 2分 | 🥇 翌日以降 |
+| 2 | Google広告アカウント開設（Ads-Phase A開始） | 30分 | 🥈 (1完了後) |
+| 3 | Search Console サイトマップ再送信（取得できませんでした場合） | 1分 | 🥉 翌日以降 |
+
+### 🔄 EmailJS移行メモ（2026-04-20）
+
+Web3Forms（自動返信が有料プラン）から EmailJS（自動返信が無料枠内）に移行完了。
+
+| 変更内容 | 詳細 |
+|---|---|
+| フォーム送信基盤 | Web3Forms → EmailJS |
+| 送信経路 | EmailJS → ムームーSMTP（contact@techbridge-academy.co.jp）|
+| 運営通知メール | template `template_jj49gu6`（Admin Notification） |
+| ユーザー自動返信 | template `template_dxbburs`（Auto Reply to User） |
+| 月次枠 | 200リクエスト/月 = 約100件のフォーム送信まで無料 |
+| 超過時対応 | EmailJS Pro（$8/月）or Web3Forms Pro（$5/月）への切替検討 |
+
+※詳細は [memory/external-services.md](../../.claude/projects/c--Users-skeis-Projects-training-service-lp/memory/external-services.md) にも記録済
 
 ---
 

@@ -1,16 +1,29 @@
 # メール文面テンプレート集
 
 > 作成日: 2026-04-16
-> 用途: Web3Forms自動返信メール / 担当者返信用テンプレート
+> 最終更新: 2026-04-20（EmailJS移行）
+> 用途: EmailJS 自動返信メール / 担当者返信用テンプレート
 > 関連: [google-ads-plan.md](google-ads-plan.md) / [remaining-tasks.md](remaining-tasks.md)
+
+## メール送信基盤（2026-04-20 変更）
+
+Web3Forms（自動返信が有料プラン限定）から **EmailJS** に移行。
+
+| 項目 | 値 |
+|---|---|
+| Service ID | `service_e8mf6ci`（SMTP: ムームーメール / contact@techbridge-academy.co.jp） |
+| Template: Admin Notification | `template_jj49gu6` |
+| Template: Auto Reply to User | `template_dxbburs` |
+| Public Key | `Va5s2GIZMdHv3Xtpr` |
+| 無料枠 | 月200リクエスト（= 約100件/月 の送信まで） |
 
 ---
 
-## 1. Web3Forms 自動返信メール（お客様向け）
+## 1. EmailJS 自動返信メール（お客様向け）
 
 ### 設定場所
 
-Web3Formsダッシュボード → 対象フォーム → 設定 → **Auto-Reply** タブ
+EmailJS ダッシュボード → Email Templates → `Auto Reply to User` テンプレート（`template_dxbburs`）
 
 ### 件名（Subject）
 

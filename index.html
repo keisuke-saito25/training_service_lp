@@ -40,6 +40,16 @@
         gtag('js', new Date());
         gtag('config', 'G-5T1FWERLQZ');
     </script>
+
+    <!-- EmailJS SDK（問い合わせフォームのメール送信） -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init({
+                publicKey: "Va5s2GIZMdHv3Xtpr"
+            });
+        })();
+    </script>
 </head>
 
 <body>
@@ -943,12 +953,6 @@
                                 <p class="step-question">お申し込み情報を入力</p>
                                 <p class="step-result-text">30秒で完了します。24時間以内にご連絡いたします。</p>
                                 <form id="contactForm" class="contact-form" novalidate>
-                                    <!-- Web3Forms アクセスキー -->
-                                    <input type="hidden" name="access_key" value="608d28fd-f37f-4339-9d3f-d0533f133066">
-                                    <input type="hidden" name="subject" value="【Tech Bridge Academy】無料説明会のお申し込み">
-                                    <input type="hidden" name="from_name" value="Tech Bridge Academy">
-                                    <!-- スパム防止用ハニーポット -->
-                                    <input type="checkbox" name="botcheck" style="display:none;">
                                     <!-- ステップ1・2の回答を送信 -->
                                     <input type="hidden" name="age_range" id="formAgeRange">
                                     <input type="hidden" name="experience" id="formExperience">

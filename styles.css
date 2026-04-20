@@ -2466,6 +2466,30 @@ img {
     color: #fbbf24;
 }
 
+.thanks-cta-wrapper {
+    margin: 8px 0 28px;
+    text-align: center;
+}
+
+.thanks-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-width: 260px;
+    padding: 16px 32px;
+    font-size: 1.05rem;
+    font-weight: 800;
+    box-shadow: 0 6px 18px rgba(27, 114, 232, 0.35);
+}
+
+.thanks-cta-note {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.5;
+}
+
 .thanks-next {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.15);

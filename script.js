@@ -4,6 +4,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     initTrafficAttribution();
+    initTimerexLink();
     initStickyNav();
     initMobileMenu();
     initSmoothScroll();
@@ -15,6 +16,42 @@ document.addEventListener('DOMContentLoaded', () => {
     initEvidenceCountUp();
     initAnalyticsEvents();
 });
+
+/* ----- TimeRex 予約リンクの制御 -----
+   URLが【TIMEREX_URL_HERE】プレースホルダのままの場合はボタンを非表示にし、
+   代替のフォールバックメッセージを表示する。実URL差替後は自動でボタン表示に切り替わる。 */
+function initTimerexLink() {
+    const timerexLink = document.getElementById('timerexLink');
+    if (!timerexLink) return;
+
+    const isPlaceholder = timerexLink.href.includes('TIMEREX_URL_HERE');
+
+    const ctaWrapper = document.getElementById('thanksCtaWrapper');
+    const msgWithTimerex = document.getElementById('thanksMessageWithTimerex');
+    const msgFallback = document.getElementById('thanksMessageFallback');
+    const nextWithTimerex = document.getElementById('thanksNextWithTimerex');
+    const nextFallback = document.getElementById('thanksNextFallback');
+
+    if (isPlaceholder) {
+        // URL未設定: ボタン非表示・フォールバックメッセージを表示
+        return; // 既に hidden 属性が付いているので何もしない
+    }
+
+    // URL設定済: TimeRex導線を表示し、フォールバックを隠す
+    if (ctaWrapper) ctaWrapper.hidden = false;
+    if (msgWithTimerex) msgWithTimerex.hidden = false;
+    if (msgFallback) msgFallback.hidden = true;
+    if (nextWithTimerex) nextWithTimerex.hidden = false;
+    if (nextFallback) nextFallback.hidden = true;
+
+    // クリック時のGA4イベント
+    timerexLink.addEventListener('click', () => {
+        trackEvent('timerex_click', {
+            source: 'thanks_page',
+            link_url: timerexLink.href
+        });
+    });
+}
 
 /* ----- 流入元トラッキング（UTM / GCLID）-----
    Google広告等の流入元をlocalStorageに最大90日保持し、

@@ -974,16 +974,6 @@
                                         <label for="formPhone" class="form-label">電話番号 <span class="form-optional">任意</span></label>
                                         <input type="tel" id="formPhone" name="phone" placeholder="090-1234-5678" class="form-input" autocomplete="tel">
                                     </div>
-                                    <div class="form-group">
-                                        <label for="formPreferredTime" class="form-label">ご希望の時間帯 <span class="form-optional">任意</span></label>
-                                        <select id="formPreferredTime" name="preferred_time" class="form-select">
-                                            <option value="">選択してください</option>
-                                            <option value="平日 午前（10:00〜12:00）">平日 午前（10:00〜12:00）</option>
-                                            <option value="平日 午後（13:00〜17:00）">平日 午後（13:00〜17:00）</option>
-                                            <option value="平日 夜（18:00〜20:00）">平日 夜（18:00〜20:00）</option>
-                                            <option value="土日">土日</option>
-                                        </select>
-                                    </div>
                                     <button type="submit" id="formSubmitBtn" class="btn btn-primary btn-pulse btn-lg form-submit-btn">
                                         無料説明会に申し込む
                                     </button>
@@ -998,11 +988,34 @@
                                 <div class="thanks-content">
                                     <div class="thanks-icon">✅</div>
                                     <p class="thanks-title">お申し込みありがとうございます！</p>
-                                    <p class="thanks-message">
+                                    <p class="thanks-message" id="thanksMessageWithTimerex" hidden>
+                                        ご登録のメールアドレスに確認メールをお送りしました。<br>
+                                        続いて、<strong>下記ボタンから説明会の日時</strong>をお選びください。
+                                    </p>
+                                    <p class="thanks-message" id="thanksMessageFallback">
                                         ご登録のメールアドレスに確認メールをお送りしました。<br>
                                         <strong>24時間以内</strong>に担当者よりご連絡いたします。
                                     </p>
-                                    <div class="thanks-next">
+                                    <!-- TimeRex 予約ボタン -->
+                                    <div class="thanks-cta-wrapper" id="thanksCtaWrapper" hidden>
+                                        <a href="https://timerex.net/s/techbridge-academy/033d4438?utm_source=thanks_page&utm_medium=page&utm_campaign=form_followup"
+                                           class="btn btn-primary btn-lg thanks-cta-btn"
+                                           id="timerexLink"
+                                           target="_blank"
+                                           rel="noopener">
+                                            📅 説明会の日時を選ぶ
+                                        </a>
+                                        <p class="thanks-cta-note">所要時間 約30分 / オンライン / 無料</p>
+                                    </div>
+                                    <div class="thanks-next" id="thanksNextWithTimerex" hidden>
+                                        <p class="thanks-next-title">📋 次のステップ</p>
+                                        <ol class="thanks-steps">
+                                            <li>上記ボタンから日時を選択</li>
+                                            <li>カレンダーに自動登録・リマインド送信</li>
+                                            <li>当日オンラインで無料説明会を実施（約30分）</li>
+                                        </ol>
+                                    </div>
+                                    <div class="thanks-next" id="thanksNextFallback">
                                         <p class="thanks-next-title">📋 次のステップ</p>
                                         <ol class="thanks-steps">
                                             <li>確認メールをご確認ください</li>

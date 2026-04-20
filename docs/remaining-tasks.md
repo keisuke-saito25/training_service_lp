@@ -1,9 +1,39 @@
 # LP完成までの残作業一覧
 
 > 作成日: 2026-02-27
-> 最終更新: 2026-04-14
+> 最終更新: 2026-04-16
 > 分類: 🔧 技術実装（AIが対応可）/ 👤 オーナー作業 / 🤝 共同作業
-> 関連計画: [Google広告 運用計画](google-ads-plan.md)（Phase 0-1 完了後に着手）
+> 関連計画: [Google広告 運用計画](google-ads-plan.md) / [メール文面テンプレート](email-templates.md)
+
+## 🎯 現在のマイルストーン（2026-04-16時点）
+
+### ✅ 完了（LP技術基盤）
+
+- Web3Forms アクセスキー取得・反映（contact@techbridge-academy.co.jp）
+- GA4 プロパティ作成・測定ID取得（G-5T1FWERLQZ / freeks Inc.）
+- GA4計測タグのサイト反映 + リアルタイム計測動作確認
+- GA4 データ保持期間14ヶ月変更
+- GA4 内部トラフィック除外（自社IPフィルタ有効化）
+- UTM/GCLIDトラッキング実装（localStorage 90日保持）
+- ムームードメイン DNS設定（既存MX/SPF/DMARC保持、A×4 + CNAME追加 + Search Console TXT）
+- 本番ドメイン公開（https://techbridge-academy.co.jp/ + HTTPS）
+- コード内URL全置換（canonical / OGP / sitemap / robots.txt）
+- Web3Forms通知メール到達確認（UTM/GCLID/landing_page等が本文に含まれることを確認）
+- localStorage保存動作確認（URLパラメータ→localStorage→JSONとして取得可能）
+- Search Console ドメインプロパティ登録・所有権確認・サイトマップ送信・GA4連携
+- フォーム「ご希望の時間帯」削除（TimeRex移行のため）
+- サンクスページに TimeRex 予約ボタン実装 + `timerex_click` イベント計測
+- TimeRex アカウント作成・予約ページ発行（`techbridge-academy` チーム / URL: `https://timerex.net/s/techbridge-academy/033d4438`）
+- LP内 TimeRex URL反映（サンクスページ + email-templatesドキュメント）
+
+### ⬜ 次の着手候補（すべて👤オーナー側のUI作業）
+
+| # | 作業 | 所要 | 優先 |
+|---|------|------|:----:|
+| 1 | GA4: `step_form_complete` / `cta_click` をキーイベント化 | 2分 | 🥇 翌日以降 |
+| 2 | Web3Forms 自動返信メール設定（テンプレは[email-templates.md](email-templates.md)に準備済） | 5分 | 🥇 |
+| 3 | Google広告アカウント開設（Ads-Phase A開始） | 30分 | 🥈 (1完了後) |
+| 4 | Search Console サイトマップ再送信（取得できませんでした場合） | 1分 | 🥉 翌日以降 |
 
 ---
 

@@ -1,9 +1,9 @@
 # LP完成までの残作業一覧
 
 > 作成日: 2026-02-27
-> 最終更新: 2026-04-16
+> 最終更新: 2026-04-20
 > 分類: 🔧 技術実装（AIが対応可）/ 👤 オーナー作業 / 🤝 共同作業
-> 関連計画: [Google広告 運用計画](google-ads-plan.md) / [メール文面テンプレート](email-templates.md)
+> 関連: [インフラ構成書](infrastructure-setup.md) / [Google広告 運用計画](google-ads-plan.md) / [メール文面テンプレート](email-templates.md)
 
 ## 🎯 現在のマイルストーン（2026-04-16時点）
 

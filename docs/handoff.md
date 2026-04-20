@@ -1,11 +1,20 @@
-# freeks Training Service LP — 引き継ぎドキュメント
+# Tech Bridge Academy LP — 引き継ぎドキュメント
 
-最終更新: 2026-04-06
+最終更新: 2026-04-20
+
+## 関連ドキュメント
+
+- **[インフラ構成書](infrastructure-setup.md)** — 外部サービス（GA4/EmailJS/TimeRex/DNS等）の全設定値・構築履歴（2026-04-20新設）
+- [残タスク一覧](remaining-tasks.md) — 広告運用開始までに必要な未着手タスク
+- [Google広告 運用計画](google-ads-plan.md) — Ads-Phase A〜E / 月5万円運用計画
+- [メール文面テンプレート](email-templates.md) — EmailJS設定文面・担当者返信テンプレ
 
 ---
 
 ## 1. プロジェクト概要
 
+- **サービス名**: Tech Bridge Academy（2026-04-16 「Tech Bridge」からリブランド）
+- **本番URL**: https://techbridge-academy.co.jp/
 - **目的**: エンジニア実務研修（Java 3ヶ月）の無料説明会申し込みを獲得するLP
 - **運営**: freeks株式会社
 - **ターゲット**: 20〜35歳、未経験からエンジニア転職を目指す方

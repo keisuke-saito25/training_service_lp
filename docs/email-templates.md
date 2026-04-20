@@ -15,7 +15,7 @@ Web3Formsダッシュボード → 対象フォーム → 設定 → **Auto-Repl
 ### 件名（Subject）
 
 ```
-【Tech Bridge】無料説明会のお申し込みありがとうございます
+【Tech Bridge Academy】無料説明会のお申し込みありがとうございます
 ```
 
 ### 本文（Body）
@@ -25,7 +25,7 @@ TimeRex予約URL: `https://timerex.net/s/techbridge-academy/033d4438`（2026-04-
 ```
 {{name}} 様
 
-この度は Tech Bridge にお問い合わせいただき、誠にありがとうございます。
+この度は Tech Bridge Academy にお問い合わせいただき、誠にありがとうございます。
 お申し込みを確かに承りました。
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -58,7 +58,7 @@ https://timerex.net/s/techbridge-academy/033d4438?utm_source=email_autoreply&utm
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Tech Bridge 運営事務局
+Tech Bridge Academy 運営事務局
 freeks株式会社
 お問い合わせ: contact@techbridge-academy.co.jp
 サイト: https://techbridge-academy.co.jp/
@@ -85,14 +85,14 @@ Web3Formsからの通知受信後、担当者が `contact@techbridge-academy.co.
 
 #### 件名
 ```
-【Tech Bridge】説明会のご予約ありがとうございます（MM月DD日 HH:MM〜）
+【Tech Bridge Academy】説明会のご予約ありがとうございます（MM月DD日 HH:MM〜）
 ```
 
 #### 本文
 ```
 {{お名前}} 様
 
-Tech Bridge の {{担当者名}} と申します。
+Tech Bridge Academy の {{担当者名}} と申します。
 
 このたびは説明会のご予約をいただき、ありがとうございます。
 以下の内容で承りましたのでご確認ください。
@@ -114,7 +114,7 @@ URL : {{会議URL}}
 当日お会いできるのを楽しみにしております。
 
 ━━━━━━━━━━━━━━━━━━━━━━━
-Tech Bridge 運営事務局
+Tech Bridge Academy 運営事務局
 freeks株式会社
 {{担当者名}}
 contact@techbridge-academy.co.jp
@@ -127,14 +127,14 @@ https://techbridge-academy.co.jp/
 
 #### 件名
 ```
-【Tech Bridge】説明会の日時はお決まりでしょうか
+【Tech Bridge Academy】説明会の日時はお決まりでしょうか
 ```
 
 #### 本文
 ```
 {{お名前}} 様
 
-Tech Bridge の {{担当者名}} と申します。
+Tech Bridge Academy の {{担当者名}} と申します。
 
 先日お申し込みいただきましてありがとうございます。
 説明会の日時の選択がまだの場合、下記リンクからご予約をお願いいたします。
@@ -148,7 +148,7 @@ https://timerex.net/s/techbridge-academy/033d4438
 不明点・ご不安な点があれば遠慮なくお問い合わせください。
 
 ━━━━━━━━━━━━━━━━━━━━━━━
-Tech Bridge 運営事務局
+Tech Bridge Academy 運営事務局
 freeks株式会社
 {{担当者名}}
 contact@techbridge-academy.co.jp
@@ -170,14 +170,14 @@ contact@techbridge-academy.co.jp
 
 ### 件名のプレフィックス統一
 
-全ての送信メールに `【Tech Bridge】` プレフィックスを統一。ユーザーのメールボックスで識別しやすくする。
+全ての送信メールに `【Tech Bridge Academy】` プレフィックスを統一。ユーザーのメールボックスで識別しやすくする。
 
 ### 署名の統一
 
 メール末尾の署名は全担当者で統一：
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━
-Tech Bridge 運営事務局
+Tech Bridge Academy 運営事務局
 freeks株式会社
 {{担当者名}}
 contact@techbridge-academy.co.jp

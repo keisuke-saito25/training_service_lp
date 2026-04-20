@@ -218,12 +218,14 @@ function initStepForm() {
     if (!form) return;
 
     // ステップ1・2の選択値を記録
-    const formData = { age: '', experience: '' };
+    // age/experience: 英語値（GA4集計の一貫性用） / _label: 日本語ラベル（メール本文用）
+    const formData = { age: '', age_label: '', experience: '', experience_label: '' };
 
     form.querySelectorAll('.step-option:not(.step-final)').forEach(option => {
         option.addEventListener('click', () => {
             const nextStep = option.getAttribute('data-next');
             const value = option.getAttribute('data-value');
+            const label = option.textContent.trim();
             if (!nextStep) return;
 
             // 現在のパネルを非表示
@@ -231,8 +233,14 @@ function initStepForm() {
             const currentStepNum = currentPanel.getAttribute('data-step');
 
             // ステップ値を記録
-            if (currentStepNum === '1') formData.age = value;
-            if (currentStepNum === '2') formData.experience = value;
+            if (currentStepNum === '1') {
+                formData.age = value;
+                formData.age_label = label;
+            }
+            if (currentStepNum === '2') {
+                formData.experience = value;
+                formData.experience_label = label;
+            }
 
             currentPanel.classList.remove('active');
 
@@ -249,13 +257,13 @@ function initStepForm() {
             if (currentDot) currentDot.classList.replace('active', 'completed');
             if (nextDot) nextDot.classList.add('active');
 
-            // hiddenフィールドに値をセット
+            // hiddenフィールドには日本語ラベルを入れる（メール本文の可読性優先）
             const ageField = document.getElementById('formAgeRange');
             const expField = document.getElementById('formExperience');
-            if (ageField) ageField.value = formData.age;
-            if (expField) expField.value = formData.experience;
+            if (ageField) ageField.value = formData.age_label;
+            if (expField) expField.value = formData.experience_label;
 
-            // GA4: ステップフォーム進捗イベント
+            // GA4: ステップフォーム進捗イベント（集計一貫性のため英語値を送信）
             trackEvent('step_form_progress', { step: currentStepNum, value: value });
         });
     });

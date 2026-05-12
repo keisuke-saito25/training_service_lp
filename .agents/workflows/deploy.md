@@ -19,18 +19,18 @@ description: サイト修正後にGitHub Pagesへ反映する手順
 ### 1. 変更内容の確認
 // turbo
 ```bash
-cd c:\Users\skeis\Projects\training_service_lp
+cd <your-local-path>/training_service_lp
 git diff --stat
 ```
 
 ### 2. ブラウザで表示確認
-- `file:///c:/Users/skeis/Projects/training_service_lp/index.html` をブラウザで開く
+- `file://<your-local-path>/training_service_lp/index.html` をブラウザで開く
 - 変更箇所が正しく表示されるか確認
 - 画像を追加した場合、パスが相対パス（例: `images/xxx.png`）であること
 
 ### 3. コミット＆プッシュ
 ```bash
-cd c:\Users\skeis\Projects\training_service_lp
+cd <your-local-path>/training_service_lp
 git add .
 git commit -m "変更内容をここに記載"
 git push

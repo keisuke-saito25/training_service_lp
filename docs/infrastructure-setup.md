@@ -158,7 +158,7 @@ await emailjs.sendForm(SERVICE_ID, EMAILJS_TEMPLATE_AUTOREPLY, contactForm); // 
 | ログインアカウント | オーナー個人Googleアカウント（Continue with Google） |
 | チーム名 | `Tech Bridge Academy` |
 | チームID | `techbridge-academy` |
-| 予約URL | `https://timerex.net/s/techbridge-academy/033d4438` |
+| 予約URL | `https://timerex.net/s/k-kishi_2fa9_b793/b93b8946` |
 | プラン | プレミアムトライアル中（2週間 / 自動課金なし） |
 | 連携カレンダー | Google カレンダー |
 

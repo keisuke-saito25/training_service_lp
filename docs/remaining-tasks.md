@@ -23,7 +23,7 @@
 - Search Console ドメインプロパティ登録・所有権確認・サイトマップ送信・GA4連携
 - フォーム「ご希望の時間帯」削除（TimeRex移行のため）
 - サンクスページに TimeRex 予約ボタン実装 + `timerex_click` イベント計測
-- TimeRex アカウント作成・予約ページ発行（`techbridge-academy` チーム / URL: `https://timerex.net/s/techbridge-academy/033d4438`）
+- TimeRex アカウント作成・予約ページ発行（`techbridge-academy` チーム / URL: `https://timerex.net/s/k-kishi_2fa9_b793/b93b8946`）
 - LP内 TimeRex URL反映（サンクスページ + email-templatesドキュメント）
 
 ### ⬜ 次の着手候補（すべて👤オーナー側のUI作業）

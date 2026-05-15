@@ -33,7 +33,7 @@ EmailJS ダッシュボード → Email Templates → `Auto Reply to User` テ�
 
 ### 本文（Body）
 
-TimeRex予約URL: `https://timerex.net/s/techbridge-academy/033d4438`（2026-04-16 設定済）
+TimeRex予約URL: `https://timerex.net/s/k-kishi_2fa9_b793/b93b8946`（2026-04-16 設定済）
 
 ```
 {{name}} 様
@@ -45,11 +45,15 @@ TimeRex予約URL: `https://timerex.net/s/techbridge-academy/033d4438`（2026-04-
 ■ 次のステップ：説明会の日時をお選びください
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
+※ サイト上ですでに日時のご予約まで完了されている方は、
+　TimeRex より別途お送りしている予約確定メールをご確認ください。
+　下記のボタンは、日時のご選択がまだの方向けのご案内です。
+
 下記のリンクからご都合のよい日時をお選びください。
 空いている時間帯がカレンダー形式で表示されます。
 
 ▼ 説明会の日時を選ぶ
-https://timerex.net/s/techbridge-academy/033d4438?utm_source=email_autoreply&utm_medium=email&utm_campaign=form_followup
+https://timerex.net/s/k-kishi_2fa9_b793/b93b8946?utm_source=email_autoreply&utm_medium=email&utm_campaign=form_followup
 
 ※ 所要時間：約30分
 ※ 形式：オンライン（Zoom or Google Meet）
@@ -153,7 +157,7 @@ Tech Bridge Academy の {{担当者名}} と申します。
 説明会の日時の選択がまだの場合、下記リンクからご予約をお願いいたします。
 
 ▼ 説明会の日時を選ぶ
-https://timerex.net/s/techbridge-academy/033d4438
+https://timerex.net/s/k-kishi_2fa9_b793/b93b8946
 
 ご都合のよい日時が見当たらない等、調整が必要な場合は、
 このメールに直接返信してください。個別に日程を調整させていただきます。
@@ -206,9 +210,9 @@ https://techbridge-academy.co.jp/
 
 | 用途 | URL（UTMパラメータ込み） |
 |---|---|
-| **自動返信メール用**（Web3Forms Auto-Reply） | `https://timerex.net/s/techbridge-academy/033d4438?utm_source=email_autoreply&utm_medium=email&utm_campaign=form_followup` |
-| **サンクスページ用**（index.html） | `https://timerex.net/s/techbridge-academy/033d4438?utm_source=thanks_page&utm_medium=page&utm_campaign=form_followup` |
-| **担当者フォロー用**（手動送信） | `https://timerex.net/s/techbridge-academy/033d4438` |
+| **自動返信メール用**（Web3Forms Auto-Reply） | `https://timerex.net/s/k-kishi_2fa9_b793/b93b8946?utm_source=email_autoreply&utm_medium=email&utm_campaign=form_followup` |
+| **サンクスページ用**（index.html） | `https://timerex.net/s/k-kishi_2fa9_b793/b93b8946?utm_source=thanks_page&utm_medium=page&utm_campaign=form_followup` |
+| **担当者フォロー用**（手動送信） | `https://timerex.net/s/k-kishi_2fa9_b793/b93b8946` |
 
 ### Web3Forms 自動返信メール設定（次にやる作業）
 
@@ -224,7 +228,7 @@ https://techbridge-academy.co.jp/
 
 万が一 TimeRex URL を変更する場合：
 
-- 検索: `https://timerex.net/s/techbridge-academy/033d4438`
+- 検索: `https://timerex.net/s/k-kishi_2fa9_b793/b93b8946`
 - 置換: 新URL
 - VSCodeの「プロジェクト全体で検索置換」（Ctrl+Shift+H）で一括対応
 
